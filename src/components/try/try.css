@@ -1,0 +1,371 @@
+/*
+ * Full-screen Try WordPress experience: the site fills the viewport and the
+ * controls float on top in a dark treatment built from wordpress.org's tokens.
+ */
+
+.try {
+	--try-dark-bg: var(--wp--preset--color--charcoal-1);
+	/* Floating surfaces: translucent charcoal over a blur of the site behind them. */
+	--try-glass-bg: rgb(30 30 30 / 0.92);
+	--try-glass-blur: blur(16px) saturate(160%);
+	--try-dark-hover: rgb(255 255 255 / 0.14);
+	--try-dark-border: rgb(255 255 255 / 0.12);
+	--try-dark-muted: var(--wp--preset--color--light-grey-1);
+	--try-edge: 16px;
+
+	position: fixed;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	background: var(--wp--preset--color--white);
+	font-family: var(--wp--preset--font-family--inter);
+}
+
+.try-stage {
+	position: relative;
+	flex: 1;
+	min-height: 0;
+}
+
+.try-frame,
+.try-frame__iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+/* ---- Shared dark surface + controls ---- */
+
+.try-dark {
+	background: var(--try-dark-bg);
+	color: var(--wp--preset--color--white);
+	font-size: 14px;
+	line-height: 1.3;
+}
+
+.try-dark button {
+	font: inherit;
+}
+
+.try-dark :focus-visible {
+	outline: 2px solid var(--wp--preset--color--blueberry-2, #7b90ff);
+	outline-offset: 1px;
+}
+
+.try-divider {
+	width: 1px;
+	height: 24px;
+	background: var(--try-dark-border);
+	flex-shrink: 0;
+}
+
+.try-icon-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border: 0;
+	border-radius: 999px;
+	background: transparent;
+	color: var(--try-dark-muted);
+	cursor: pointer;
+	flex-shrink: 0;
+}
+
+.try-icon-button:hover:not(:disabled) {
+	background: var(--try-dark-hover);
+	color: var(--wp--preset--color--white);
+}
+
+.try-icon-button:disabled {
+	opacity: 0.4;
+	cursor: default;
+}
+
+.try-cta {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	height: 36px;
+	padding: 0 16px;
+	border-radius: 999px;
+	background: var(--wp--preset--color--blueberry-1);
+	color: var(--wp--preset--color--white);
+	font-weight: 600;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.try-cta:hover {
+	background: var(--wp--preset--color--deep-blueberry);
+	color: var(--wp--preset--color--white);
+}
+
+/* ---- Floating dock ---- */
+
+.try-dock,
+.try-dock-collapsed {
+	position: fixed;
+	bottom: var(--try-edge);
+	left: 50%;
+	z-index: 50;
+	transform: translateX(-50%);
+	box-shadow:
+		inset 0 0 0 1px var(--try-dark-border),
+		0 1px 2px rgb(0 0 0 / 0.24),
+		0 10px 28px rgb(0 0 0 / 0.32);
+}
+
+.try-dock,
+.try-dock-collapsed {
+	background: var(--try-glass-bg);
+	-webkit-backdrop-filter: var(--try-glass-blur);
+	backdrop-filter: var(--try-glass-blur);
+}
+
+.try-dock {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	max-width: calc(100vw - 2 * var(--try-edge));
+	padding: 6px;
+	border-radius: 999px;
+	transition: width 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.try-dock__back {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	height: 36px;
+	padding: 0 12px 0 8px;
+	border-radius: 999px;
+	color: var(--try-dark-muted);
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.try-dock__back:hover {
+	background: var(--try-dark-hover);
+	color: var(--wp--preset--color--white);
+}
+
+.try-dock__item {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	height: 36px;
+	padding: 0 12px 0 8px;
+	border: 0;
+	border-radius: 999px;
+	background: transparent;
+	color: var(--try-dark-muted);
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.try-dock__item:hover:not(:disabled),
+.try-dock__item[aria-current="page"] {
+	background: var(--try-dark-hover);
+	color: var(--wp--preset--color--white);
+}
+
+.try-dock__item:disabled {
+	opacity: 0.4;
+	cursor: default;
+}
+
+/* While morphing, the pill clips its contents and fades them, so only its shape moves. */
+.try-dock--closing,
+.try-dock--opening {
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.try-dock--closing > *,
+.try-dock--opening > * {
+	flex-shrink: 0;
+}
+
+.try-dock--closing > * {
+	opacity: 0;
+	transition: opacity 0.1s ease-out;
+}
+
+.try-dock--opening > * {
+	animation: try-fade-in 0.16s ease-out 0.08s backwards;
+}
+
+.try-dock-collapsed {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	padding: 0;
+	border: 0;
+	border-radius: 999px;
+	cursor: pointer;
+	transition:
+		transform 0.15s ease-out,
+		background-color 0.15s ease-out,
+		box-shadow 0.15s ease-out;
+}
+
+.try-dock-collapsed svg {
+	animation: try-fade-in 0.12s ease-out backwards;
+}
+
+.try-dock-collapsed:hover,
+.try-dock-collapsed:focus-visible {
+	transform: translateX(-50%) scale(1.04);
+	background: var(--wp--preset--color--charcoal-1);
+	box-shadow:
+		inset 0 0 0 1px rgb(255 255 255 / 0.2),
+		0 2px 4px rgb(0 0 0 / 0.24),
+		0 12px 32px rgb(0 0 0 / 0.38);
+}
+
+.try-dock-collapsed:active {
+	transform: translateX(-50%) scale(0.97);
+}
+
+@keyframes try-fade-in {
+	from {
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.try-dock,
+	.try-dock-collapsed,
+	.try-dock-collapsed svg {
+		animation: none;
+		transition: none;
+	}
+}
+
+/* ---- Loader ---- */
+
+.try-loader {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+	padding: 24px;
+	background: var(--wp--preset--color--white);
+	text-align: center;
+}
+
+.try-loader__title {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--eb-garamond);
+	font-size: var(--wp--preset--font-size--heading-4);
+	color: var(--wp--preset--color--charcoal-1);
+}
+
+.try-loader__bar {
+	width: min(360px, 100%);
+	height: 4px;
+	border-radius: 2px;
+	background: var(--wp--preset--color--light-grey-1);
+	overflow: hidden;
+}
+
+.try-loader__bar span {
+	display: block;
+	height: 100%;
+	background: var(--wp--preset--color--blueberry-1);
+	transition: width 0.3s ease;
+}
+
+.try-loader__caption {
+	margin: 0;
+	font-size: 14px;
+	color: var(--wp--preset--color--charcoal-4);
+}
+
+/* ---- Welcome modal (inside the wporg/modal block's styles) ---- */
+
+.try-welcome .wporg-modal__modal {
+	overflow: hidden;
+	border-radius: 8px;
+	box-shadow: 0 20px 60px rgb(0 0 0 / 0.3);
+}
+
+/* The dialog takes focus on open for screen readers; it isn't a control, so no focus ring. */
+.try-welcome .wporg-modal__modal:focus {
+	outline: none;
+}
+
+.try-welcome__header {
+	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
+}
+
+.try-welcome__header h2 {
+	margin: 0;
+}
+
+.try-welcome__header p {
+	margin: 4px 0 0;
+}
+
+.try-welcome__body {
+	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
+}
+
+.try-welcome__body > p:first-child {
+	margin-top: 0;
+}
+
+.try-welcome__footer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin-top: 24px;
+}
+
+.try-welcome__aside {
+	margin: 0;
+	color: var(--wp--preset--color--charcoal-4);
+	font-size: 14px;
+}
+
+/* ---- Small screens ---- */
+
+@media (max-width: 960px) {
+	.try-dock__label {
+		display: none;
+	}
+	.try-dock__item {
+		padding: 0 8px;
+	}
+}
+
+@media (max-width: 600px) {
+	.try {
+		--try-edge: 10px;
+	}
+	.try-dock .try-divider {
+		display: none;
+	}
+	.try-dock .try-cta {
+		padding: 0 8px;
+	}
+	/* Icon-only on phones; the text stays available to screen readers. */
+	.try-dock__text {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+}
