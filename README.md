@@ -31,9 +31,10 @@ npm run build      # static site in out/
 
 ## Deployment
 
-Hosted on [Spacefast](https://spacefast.com) as the public space `trywp-now`
-(https://trywp-now.view.fast/, soon https://trywp.now). The space is linked in
-`.spacefast/space.json`.
+Live at **https://trywp.now**, hosted on [Spacefast](https://spacefast.com) as the public
+space `trywp-now` (also reachable at https://trywp-now.view.fast/). The space is linked in
+`.spacefast/space.json`. DNS for trywp.now is managed at Porkbun: A records for the apex and
+`www` point at Spacefast, and `www` redirects to the apex.
 
 - Manual deploy: `npm run build && sf publish out`
 - Pushes to `main` deploy automatically through the Spacefast GitHub App; pull requests and other branches get preview versions.
