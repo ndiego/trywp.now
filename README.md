@@ -36,7 +36,7 @@ Hosted on [Spacefast](https://spacefast.com) as the public space `trywp-now`
 `.spacefast/space.json`.
 
 - Manual deploy: `npm run build && sf publish out`
-- Pushes to `main` will deploy automatically once the Spacefast GitHub App is connected to this repo.
+- Pushes to `main` deploy automatically through the Spacefast GitHub App; pull requests and other branches get preview versions.
 
 ## License
 
