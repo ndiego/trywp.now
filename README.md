@@ -31,7 +31,12 @@ npm run build      # static site in out/
 
 ## Deployment
 
-TBD.
+Hosted on [Spacefast](https://spacefast.com) as the public space `trywp-now`
+(https://trywp-now.view.fast/, soon https://trywp.now). The space is linked in
+`.spacefast/space.json`.
+
+- Manual deploy: `npm run build && sf publish out`
+- Pushes to `main` will deploy automatically once the Spacefast GitHub App is connected to this repo.
 
 ## License
 
