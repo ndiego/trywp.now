@@ -41,9 +41,10 @@ export const DEFAULT_BLUEPRINT_ID = tryBlueprints[0].id;
 
 /**
  * Remove WordPress's default content (Hello world, Sample Page, the draft Privacy
- * Policy) and empty the trash, so only the blueprint's own content shows.
+ * Policy). Runs before the blueprint's steps, so content they import under the same
+ * slugs is kept.
  */
-const cleanupStep: StepDefinition = {
+const removeDefaultContentStep: StepDefinition = {
   step: "runPHP",
   code: `<?php
 require '/wordpress/wp-load.php';
@@ -51,14 +52,21 @@ foreach ([['hello-world', 'post'], ['sample-page', 'page'], ['privacy-policy', '
   $post = get_page_by_path($slug, OBJECT, $type);
   if ($post) wp_delete_post($post->ID, true);
 }
-update_option('wp_page_for_privacy_policy', 0);
+update_option('wp_page_for_privacy_policy', 0);`,
+};
+
+/** Empty the trash after the blueprint's steps, since demo content can import trashed posts. */
+const emptyTrashStep: StepDefinition = {
+  step: "runPHP",
+  code: `<?php
+require '/wordpress/wp-load.php';
 $trashed = get_posts(['post_type' => get_post_types(), 'post_status' => 'trash', 'numberposts' => -1, 'fields' => 'ids']);
 foreach ($trashed as $id) wp_delete_post($id, true);`,
 };
 
 /**
- * The full Playground blueprint for one of `tryBlueprints`: shared setup, the
- * blueprint's own steps, then cleanup.
+ * The full Playground blueprint for one of `tryBlueprints`: shared setup and
+ * default-content removal, the blueprint's own steps, then emptying the trash.
  *
  * Reference: https://wordpress.github.io/wordpress-playground/blueprints
  */
@@ -70,7 +78,11 @@ export function getTryBlueprint(id: string, origin: string): Blueprint {
     preferredVersions: { php: "8.3", wp: "latest" },
     features: { networking: true },
     login: true,
-    steps: [...blueprint.steps((file) => `${origin}/demo/${blueprint.id}/${file}`), cleanupStep],
+    steps: [
+      removeDefaultContentStep,
+      ...blueprint.steps((file) => `${origin}/demo/${blueprint.id}/${file}`),
+      emptyTrashStep,
+    ],
   };
 }
 
