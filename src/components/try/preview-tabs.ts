@@ -39,30 +39,48 @@ function previewTabsScript(origin: string) {
   if (!scope || window.top === window) return;
   const inSite = (url) => url.origin === location.origin && (url.pathname === scope || url.pathname.startsWith(scope + "/"));
   const previewUrl = (url) => previewPage + (url ? "?url=" + encodeURIComponent(url.href) : "");
-  const resolve = (url) => new URL(String(url), location.href);
+  const resolve = (url) => {
+    try {
+      return new URL(String(url), location.href);
+    } catch {
+      return null;
+    }
+  };
+  // Where a tab should go for a URL: the preview page for in-site URLs, anywhere else as given.
+  const destination = (url) => {
+    const resolved = resolve(url);
+    return resolved && inSite(resolved) ? previewUrl(resolved) : String(url);
+  };
+  const sameWindow = ["_self", "_parent", "_top", "playground"];
   const nativeOpen = window.open.bind(window);
 
   window.open = (url, target, features) => {
     const resolved = url ? resolve(url) : null;
-    if (resolved && !inSite(resolved)) return nativeOpen(url, target, features);
+    if (sameWindow.includes(target) || (url && !(resolved && inSite(resolved)))) {
+      return nativeOpen(url, target, features);
+    }
     const tab = nativeOpen(previewUrl(resolved), target, features);
     if (!tab) return tab;
-    const navigate = (to) => { tab.location = previewUrl(resolve(to)); };
+    const tabLocation = {
+      assign: (to) => { tab.location = destination(to); },
+      replace: (to) => tab.location.replace(destination(to)),
+      set href(to) { tab.location = destination(to); },
+    };
     return {
       focus: () => tab.focus(),
       close: () => tab.close(),
       get closed() { return tab.closed; },
-      get location() { return { set href(to) { navigate(to); } }; },
-      set location(to) { navigate(to); },
+      get location() { return tabLocation; },
+      set location(to) { tab.location = destination(to); },
     };
   };
 
   window.addEventListener("click", (event) => {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const link = event.target instanceof Element ? event.target.closest("a[href][target]") : null;
-    if (!link || ["", "_self", "_parent", "_top", "playground"].includes(link.target)) return;
+    if (!link || link.target === "" || sameWindow.includes(link.target)) return;
     const url = resolve(link.href);
-    if (!inSite(url)) return;
+    if (!url || !inSite(url)) return;
     event.preventDefault();
     window.open(url.href, link.target);
   });
