@@ -26,6 +26,10 @@ npm run build      # static site in out/
   demo content (`public/demo/ipsum/`). Refresh a blueprint's files with
   `scripts/build-demo-content.sh [blueprint] [git-ref]` (defaults: `ipsum`, `trunk`); to add a
   blueprint, add its source to that script and its definition to `tryBlueprints`.
+- **New tabs** that WordPress opens (the editor's Preview, "View site") would otherwise land on
+  playground.wordpress.net, outside the visitor's site, and 404. A must-use plugin the blueprint installs
+  (`src/components/try/preview-tabs.ts`) opens them on trywp.now's `/preview` page instead, which embeds
+  the page and so reaches the WordPress still running in the visitor's original tab.
 - **Look and feel**: the UI uses wordpress.org's design tokens, block styles (buttons, the `wporg/modal`
   block), fonts (EB Garamond, Inter), and Dashicons. That CSS and the fonts/assets it references are
   vendored into `public/wporg/` and loaded in `src/app/layout.tsx` in the order listed in
