@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from "react";
 import type { PlaygroundClient } from "@wp-playground/client";
+import { DEFAULT_BLUEPRINT_ID } from "./blueprint";
 import { FloatingDock } from "./controls/FloatingDock";
 import { getActivePath, type TryControls } from "./destinations";
 import { PlaygroundFrame, type BootStatus } from "./PlaygroundFrame";
@@ -9,20 +10,23 @@ import { WelcomeModal } from "./WelcomeModal";
 
 /** Full-screen "Try WordPress" experience: a live Playground with floating controls on top. */
 export function TryWordPress() {
-  const [session, setSession] = useState(0);
+  // Which blueprint is running, and a counter that remounts Playground for a fresh boot.
+  const [run, setRun] = useState({ blueprintId: DEFAULT_BLUEPRINT_ID, session: 0 });
   const [client, setClient] = useState<PlaygroundClient | null>(null);
   const [status, setStatus] = useState<BootStatus>({ progress: 0, caption: "Starting WordPress" });
   const [path, setPath] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [welcome, setWelcome] = useState<"pending" | "open" | "seen">("pending");
 
-  const reset = useCallback(() => {
+  /** Boots a fresh site from `blueprintId`, or from the current blueprint when omitted. */
+  const boot = useCallback((blueprintId?: string) => {
     setClient(null);
     setPath("");
     setError(null);
     setStatus({ progress: 0, caption: "Starting a fresh site" });
-    setSession((s) => s + 1);
+    setRun((r) => ({ blueprintId: blueprintId ?? r.blueprintId, session: r.session + 1 }));
   }, []);
+  const reset = useCallback(() => boot(), [boot]);
 
   const onReady = useCallback((c: PlaygroundClient) => {
     // The client is a callable Comlink proxy; wrap it so React doesn't treat it as an updater.
@@ -52,7 +56,8 @@ export function TryWordPress() {
 
       <div className="try-stage">
         <PlaygroundFrame
-          key={session}
+          key={`${run.blueprintId}:${run.session}`}
+          blueprintId={run.blueprintId}
           onProgress={setStatus}
           onReady={onReady}
           onNavigate={setPath}

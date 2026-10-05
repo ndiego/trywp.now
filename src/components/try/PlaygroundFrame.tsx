@@ -7,6 +7,8 @@ import { PLAYGROUND_REMOTE_URL, getTryBlueprint } from "./blueprint";
 export type BootStatus = { progress: number; caption: string };
 
 type Props = {
+  /** Which of `tryBlueprints` to boot. */
+  blueprintId: string;
   onProgress: (status: BootStatus) => void;
   onReady: (client: PlaygroundClient) => void;
   onNavigate: (url: string) => void;
@@ -17,7 +19,7 @@ type Props = {
  * Boots WordPress Playground into an iframe it owns. Each mount creates a fresh
  * iframe (and a fresh WordPress), so remounting with a new `key` resets the site.
  */
-export function PlaygroundFrame({ onProgress, onReady, onNavigate, onError }: Props) {
+export function PlaygroundFrame({ blueprintId, onProgress, onReady, onNavigate, onError }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   // Keep callbacks current without re-booting Playground when they change.
   const callbacks = useRef({ onProgress, onReady, onNavigate, onError });
@@ -47,7 +49,7 @@ export function PlaygroundFrame({ onProgress, onReady, onNavigate, onError }: Pr
       const client = await startPlaygroundWeb({
         iframe,
         remoteUrl: PLAYGROUND_REMOTE_URL,
-        blueprint: getTryBlueprint(window.location.origin),
+        blueprint: getTryBlueprint(blueprintId, window.location.origin),
         // Same class, but a separately bundled copy, so the nominal types differ.
         progressTracker: tracker as unknown as StartPlaygroundWebOptions["progressTracker"],
         disableProgressBar: true,
@@ -62,7 +64,7 @@ export function PlaygroundFrame({ onProgress, onReady, onNavigate, onError }: Pr
       cancelled = true;
       iframe.remove();
     };
-  }, []);
+  }, [blueprintId]);
 
   return <div ref={containerRef} className="try-frame" />;
 }
