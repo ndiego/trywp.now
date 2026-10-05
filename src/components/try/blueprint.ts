@@ -51,6 +51,7 @@ foreach ([['hello-world', 'post'], ['sample-page', 'page'], ['privacy-policy', '
   $post = get_page_by_path($slug, OBJECT, $type);
   if ($post) wp_delete_post($post->ID, true);
 }
+update_option('wp_page_for_privacy_policy', 0);
 $trashed = get_posts(['post_type' => get_post_types(), 'post_status' => 'trash', 'numberposts' => -1, 'fields' => 'ids']);
 foreach ($trashed as $id) wp_delete_post($id, true);`,
 };
