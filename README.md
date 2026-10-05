@@ -19,10 +19,13 @@ npm run build      # static site in out/
   shows a loader while it starts, greets the visitor with a welcome modal (`WelcomeModal.tsx`), and
   floats a dock of controls on top (`controls/FloatingDock.tsx`; destinations in `destinations.ts`).
   Styles are in `try.css`.
-- **What the visitor lands in** is defined by the blueprint in `src/components/try/blueprint.ts`: the
-  [Ipsum](https://github.com/WordPress/ipsum) theme and its demo content, served from `public/demo/`
-  (`ipsum.zip`, `ipsum-demo-content.xml`, and `SOURCE`, which records the Ipsum commit they came from).
-  Refresh them with `scripts/build-demo-content.sh [git-ref]` (default: `trunk`).
+- **What the visitor lands in** is one of the blueprints in `src/components/try/blueprint.ts`
+  (`tryBlueprints`; the first is the default). Each adds its own steps between shared setup and cleanup,
+  and serves its theme and demo content from `public/demo/<id>/`, with a `SOURCE` file recording the
+  commit they came from. Today there's one: the [Ipsum](https://github.com/WordPress/ipsum) theme and its
+  demo content (`public/demo/ipsum/`). Refresh a blueprint's files with
+  `scripts/build-demo-content.sh [blueprint] [git-ref]` (defaults: `ipsum`, `trunk`); to add a
+  blueprint, add its source to that script and its definition to `tryBlueprints`.
 - **Look and feel**: the UI uses wordpress.org's design tokens, block styles (buttons, the `wporg/modal`
   block), fonts (EB Garamond, Inter), and Dashicons. That CSS and the fonts/assets it references are
   vendored into `public/wporg/` and loaded in `src/app/layout.tsx` in the order listed in
