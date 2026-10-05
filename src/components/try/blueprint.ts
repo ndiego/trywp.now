@@ -1,4 +1,5 @@
 import type { Blueprint, StepDefinition } from "@wp-playground/client";
+import { previewTabsStep } from "./preview-tabs";
 
 /**
  * A site the visitor can land in. Its theme and demo content are served from
@@ -66,7 +67,8 @@ foreach ($trashed as $id) wp_delete_post($id, true);`,
 
 /**
  * The full Playground blueprint for one of `tryBlueprints`: shared setup and
- * default-content removal, the blueprint's own steps, then emptying the trash.
+ * default-content removal, the blueprint's own steps, then emptying the trash and
+ * installing the plugin that keeps new tabs on trywp.now (see preview-tabs.ts).
  *
  * Reference: https://wordpress.github.io/wordpress-playground/blueprints
  */
@@ -82,6 +84,7 @@ export function getTryBlueprint(id: string, origin: string): Blueprint {
       removeDefaultContentStep,
       ...blueprint.steps((file) => `${origin}/demo/${blueprint.id}/${file}`),
       emptyTrashStep,
+      previewTabsStep(origin),
     ],
   };
 }
