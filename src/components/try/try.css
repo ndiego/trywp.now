@@ -134,20 +134,20 @@
  * it shrinks toward the middle. `translate` centers it, leaving `transform` free for
  * dragging and `scale` for hover.
  */
-[data-y="bottom"]:is(.try-dock, .try-dock-collapsed) {
+[data-dock-y="bottom"] {
 	bottom: var(--try-edge);
 }
-[data-y="top"]:is(.try-dock, .try-dock-collapsed) {
+[data-dock-y="top"] {
 	/* Below the WordPress admin bar, which is always showing (the visitor is logged in). */
 	top: calc(var(--try-admin-bar) + var(--try-edge));
 }
-[data-x="left"]:is(.try-dock, .try-dock-collapsed) {
+[data-dock-x="left"] {
 	left: var(--try-edge);
 }
-[data-x="right"]:is(.try-dock, .try-dock-collapsed) {
+[data-dock-x="right"] {
 	right: var(--try-edge);
 }
-[data-x="center"]:is(.try-dock, .try-dock-collapsed) {
+[data-dock-x="center"] {
 	left: 50%;
 	translate: -50% 0;
 }
@@ -155,16 +155,6 @@
 /* While the dock is pressed, the pointer passes over the Playground iframe to this page. */
 .try-dock-pressed iframe {
 	pointer-events: none;
-}
-
-/* Links and icons would otherwise start the browser's own drag instead of moving the dock. */
-.try-dock a,
-.try-dock svg {
-	-webkit-user-drag: none;
-}
-
-.try-dock--dragging {
-	cursor: grabbing;
 }
 
 .try-dock--dragging,

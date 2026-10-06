@@ -1,5 +1,6 @@
 import { useCallback, useLayoutEffect, useRef, useSyncExternalStore } from "react";
-import type { MouseEvent, PointerEvent } from "react";
+import type { DragEvent, MouseEvent, PointerEvent } from "react";
+import { prefersReducedMotion } from "../motion";
 
 /** Where the dock sits: one of six spots along the top and bottom edges. */
 export type DockPosition = { y: "top" | "bottom"; x: "left" | "center" | "right" };
@@ -10,8 +11,6 @@ const STORAGE_KEY = "try-dock-position";
 const DRAG_THRESHOLD = 5;
 /** How long the dock takes to glide from where it was dropped into its spot. */
 const SNAP_MS = 260;
-
-const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // The chosen spot lives in localStorage, read through a tiny external store so
 // the prerendered page (which can't know it) hydrates cleanly.
@@ -59,7 +58,7 @@ function nearestSpot(rect: DOMRect): DockPosition {
  */
 export function useDockPosition() {
   const position = useSyncExternalStore(subscribe, getPosition, () => DEFAULT_POSITION);
-  const element = useRef<HTMLElement | null>(null);
+  const ref = useRef<HTMLElement>(null);
   // Where the dock was dropped, so the next layout can glide it from there.
   const droppedAt = useRef<DOMRect | null>(null);
   // Set after a drag, so the click that ends it doesn't also press a button.
@@ -69,18 +68,13 @@ export function useDockPosition() {
   // Ends the current press; a new press ends one whose release went missing.
   const endPress = useRef<(() => void) | null>(null);
 
-  const ref = useCallback((node: HTMLElement | null) => {
-    element.current = node;
-  }, []);
-
   // Glide from the drop point into the new spot (FLIP: start where it was, animate to
   // zero). A separate animation, so the dock's own CSS transitions keep working.
   useLayoutEffect(() => {
-    const el = element.current;
+    const el = ref.current;
     const from = droppedAt.current;
     droppedAt.current = null;
-    if (!el || !from) return;
-    if (prefersReducedMotion()) return;
+    if (!el || !from || prefersReducedMotion()) return;
 
     const to = el.getBoundingClientRect();
     glide.current = el.animate(
@@ -126,7 +120,7 @@ export function useDockPosition() {
     const move = (e: globalThis.PointerEvent) => {
       if (e.pointerId !== event.pointerId) return;
       // No button held means the release went missing (e.g. after a context menu).
-      if (!(e.buttons & 1)) return cancel(e);
+      if (!(e.buttons & 1)) return abort();
       const dx = e.clientX - startX;
       const dy = e.clientY - startY;
       if (!dragging) {
@@ -144,17 +138,16 @@ export function useDockPosition() {
       settle(nearestSpot(el.getBoundingClientRect()));
     };
 
-    // Interrupted: back into the spot it came from.
-    const cancel = (e: globalThis.PointerEvent) => {
-      if (e.pointerId !== event.pointerId) return;
+    // Interrupted, or its release went missing: back into the spot it came from.
+    const abort = () => {
       stop();
       settle(getPosition());
+    };
+    const cancel = (e: globalThis.PointerEvent) => {
+      if (e.pointerId === event.pointerId) abort();
     };
 
-    endPress.current = () => {
-      stop();
-      settle(getPosition());
-    };
+    endPress.current = abort;
     window.addEventListener("pointermove", move);
     window.addEventListener("pointerup", drop);
     window.addEventListener("pointercancel", cancel);
@@ -167,5 +160,8 @@ export function useDockPosition() {
     event.stopPropagation();
   }, []);
 
-  return { position, ref, handlers: { onPointerDown, onClickCapture } };
+  // Links and images would otherwise start the browser's own drag instead of moving the dock.
+  const onDragStart = useCallback((event: DragEvent<HTMLElement>) => event.preventDefault(), []);
+
+  return { position, ref, handlers: { onPointerDown, onClickCapture, onDragStart } };
 }

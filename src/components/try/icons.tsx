@@ -22,14 +22,16 @@ const strokePaths = {
 
 export type IconName = keyof typeof paths | keyof typeof strokePaths;
 
+const isStroke = (name: IconName): name is keyof typeof strokePaths => name in strokePaths;
+
 export function Icon({ name, size = 24 }: { name: IconName; size?: number }) {
   // The WordPress logo is drawn on a 20x20 grid; everything else on 24x24.
   const viewBox = name === "wordpress" ? "-2 -2 24 24" : "0 0 24 24";
   return (
     <svg viewBox={viewBox} width={size} height={size} aria-hidden="true" focusable="false">
-      {name in strokePaths ? (
+      {isStroke(name) ? (
         <path
-          d={strokePaths[name as keyof typeof strokePaths]}
+          d={strokePaths[name]}
           fill="none"
           stroke="currentColor"
           strokeWidth={1.5}
@@ -37,7 +39,7 @@ export function Icon({ name, size = 24 }: { name: IconName; size?: number }) {
           vectorEffect="non-scaling-stroke"
         />
       ) : (
-        <path fill="currentColor" d={paths[name as keyof typeof paths]} />
+        <path fill="currentColor" d={paths[name]} />
       )}
     </svg>
   );

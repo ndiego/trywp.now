@@ -1,9 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useState, type RefObject } from "react";
 import { WP_GET_URL } from "@/lib/wordpress";
 import { destinations, type TryControls } from "../destinations";
 import { ControlIcon } from "../ControlIcon";
+import { prefersReducedMotion } from "../motion";
 import { useDockPosition } from "./useDockPosition";
 
 /** open → closing (pill narrows into the button) → collapsed → opening (pill widens) → open */
@@ -14,8 +15,6 @@ const BUTTON_SIZE = 48;
 /** Matches the width transition in try.css. */
 const MORPH_MS = 220;
 
-const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
 /**
  * A dark pill with the main destinations always visible, which the visitor can drag
  * to any of six spots along the top and bottom edges. Collapses into a small
@@ -23,30 +22,15 @@ const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: r
  */
 export function FloatingDock({ ready, activePath, goTo, reset }: TryControls) {
   const [phase, setPhase] = useState<Phase>("open");
-  const navRef = useRef<HTMLElement>(null);
-  const collapsedRef = useRef<HTMLButtonElement>(null);
-  const { position, ref: dragRef, handlers } = useDockPosition();
-  const placement = { "data-x": position.x, "data-y": position.y };
-  const setNav = useCallback(
-    (node: HTMLElement | null) => {
-      navRef.current = node;
-      dragRef(node);
-    },
-    [dragRef],
-  );
-  const setCollapsed = useCallback(
-    (node: HTMLButtonElement | null) => {
-      collapsedRef.current = node;
-      dragRef(node);
-    },
-    [dragRef],
-  );
+  // One ref for whichever is showing: the pill, or the button it collapses into.
+  const { position, ref: dockRef, handlers } = useDockPosition();
+  const placement = { "data-dock-x": position.x, "data-dock-y": position.y };
 
   // Animate the pill's width between its natural size and the button's. The dock is
   // pinned to its spot's edge (or centered), so changing width alone makes it shrink
   // into and grow out of its corner (or its center).
   useLayoutEffect(() => {
-    const nav = navRef.current;
+    const nav = dockRef.current;
     if (!nav || (phase !== "closing" && phase !== "opening")) return;
 
     const natural = nav.offsetWidth;
@@ -61,17 +45,18 @@ export function FloatingDock({ ready, activePath, goTo, reset }: TryControls) {
       setPhase(phase === "closing" ? "collapsed" : "open");
     }, MORPH_MS);
     return () => clearTimeout(timer);
-  }, [phase]);
+  }, [phase, dockRef]);
 
   // The dock unmounts on collapse, so hand focus to the button that replaces it.
   useEffect(() => {
-    if (phase === "collapsed") collapsedRef.current?.focus();
-  }, [phase]);
+    if (phase === "collapsed") dockRef.current?.focus();
+  }, [phase, dockRef]);
 
   if (phase === "collapsed") {
     return (
       <button
-        ref={setCollapsed}
+        // The shared ref holds whichever element is showing; here, this button.
+        ref={dockRef as RefObject<HTMLButtonElement | null>}
         {...placement}
         {...handlers}
         type="button"
@@ -87,14 +72,14 @@ export function FloatingDock({ ready, activePath, goTo, reset }: TryControls) {
 
   return (
     <nav
-      ref={setNav}
+      ref={dockRef}
       {...placement}
       {...handlers}
       className={`try-dark try-dock${phase === "open" ? "" : ` try-dock--${phase}`}`}
       aria-label="Try WordPress controls"
     >
       {/* Opens in a new tab so the visitor's Playground site keeps running. */}
-      <a className="try-cta" href={WP_GET_URL} target="_blank" rel="noopener" draggable={false}>
+      <a className="try-cta" href={WP_GET_URL} target="_blank" rel="noopener">
         <ControlIcon icon="wordpress" dashicon="wordpress" />
         <span className="try-dock__text">Get WordPress</span>
         <span className="screen-reader-text">(opens in a new tab)</span>
