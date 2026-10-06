@@ -58,6 +58,8 @@
 .try-divider {
 	width: 1px;
 	height: 24px;
+	/* On top of the dock's 4px gap, so groups read as separate. */
+	margin: 0 4px;
 	background: var(--try-dark-border);
 	flex-shrink: 0;
 }
@@ -91,7 +93,8 @@
 	align-items: center;
 	gap: 6px;
 	height: 36px;
-	padding: 0 16px;
+	/* Like the dock's items: 8px before the round icon evens out the space around it in the pill's end. */
+	padding: 0 12px 0 8px;
 	border-radius: 999px;
 	background: var(--wp--preset--color--blueberry-1);
 	color: var(--wp--preset--color--white);
@@ -166,6 +169,8 @@
 	display: flex;
 	align-items: center;
 	gap: 4px;
+	/* An open hand between the buttons says the dock can be moved; buttons keep their pointer. */
+	cursor: grab;
 	max-width: calc(100vw - 2 * var(--try-edge));
 	padding: 6px;
 	border-radius: 999px;
@@ -310,16 +315,16 @@
 	color: var(--wp--preset--color--charcoal-4);
 }
 
-/* ---- Welcome modal (inside the wporg/modal block's styles) ---- */
+/* ---- Dialogs (inside the wporg/modal block's styles; see TryModal.tsx) ---- */
 
-.try-welcome .wporg-modal__modal {
+.try-modal .wporg-modal__modal {
 	overflow: hidden;
 	border-radius: 8px;
 	box-shadow: 0 20px 60px rgb(0 0 0 / 0.3);
 }
 
 /* The dialog takes focus on open for screen readers; it isn't a control, so no focus ring. */
-.try-welcome .wporg-modal__modal:focus {
+.try-modal .wporg-modal__modal:focus {
 	outline: none;
 }
 
@@ -335,15 +340,15 @@
 	margin: 4px 0 0;
 }
 
-.try-welcome__body {
+.try-modal__body {
 	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
 }
 
-.try-welcome__body > p:first-child {
+.try-modal__body > p:first-child {
 	margin-top: 0;
 }
 
-.try-welcome__footer {
+.try-modal__footer {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -352,10 +357,27 @@
 	margin-top: 24px;
 }
 
-.try-welcome__aside {
+.try-modal__aside {
 	margin: 0;
 	color: var(--wp--preset--color--charcoal-4);
 	font-size: 14px;
+}
+
+.try-reset .wporg-modal__modal {
+	max-width: 480px;
+}
+
+.try-reset__title {
+	margin: 0 0 8px;
+	font-size: var(--wp--preset--font-size--heading-4);
+}
+
+.try-modal__actions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 12px;
+	margin-top: 24px;
 }
 
 /* ---- Small screens ---- */

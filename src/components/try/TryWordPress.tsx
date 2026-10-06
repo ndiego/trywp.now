@@ -6,6 +6,7 @@ import { DEFAULT_BLUEPRINT_ID } from "./blueprint";
 import { FloatingDock } from "./controls/FloatingDock";
 import { getActivePath, type TryControls } from "./destinations";
 import { PlaygroundFrame, type BootStatus } from "./PlaygroundFrame";
+import { ResetModal } from "./ResetModal";
 import { WelcomeModal } from "./WelcomeModal";
 
 /** Full-screen "Try WordPress" experience: a live Playground with floating controls on top. */
@@ -17,6 +18,7 @@ export function TryWordPress() {
   const [path, setPath] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [welcome, setWelcome] = useState<"pending" | "open" | "seen">("pending");
+  const [confirmingReset, setConfirmingReset] = useState(false);
 
   /** Boots a fresh site from `blueprintId`, or from the current blueprint when omitted. */
   const boot = useCallback((blueprintId?: string) => {
@@ -40,13 +42,19 @@ export function TryWordPress() {
   }, []);
 
   const closeWelcome = useCallback(() => setWelcome("seen"), []);
+  const cancelReset = useCallback(() => setConfirmingReset(false), []);
+  const confirmReset = useCallback(() => {
+    setConfirmingReset(false);
+    reset();
+  }, [reset]);
   const goTo = useCallback((p: string) => void client?.goTo(p), [client]);
 
   const controls: TryControls = {
     ready: !!client,
     activePath: getActivePath(path),
     goTo,
-    reset,
+    // The dock asks first; "Try again" after a failed boot resets straight away.
+    reset: () => setConfirmingReset(true),
     showWelcome: () => setWelcome("open"),
   };
 
@@ -94,6 +102,7 @@ export function TryWordPress() {
       </div>
 
       <WelcomeModal open={welcome === "open" && !!client} onClose={closeWelcome} />
+      <ResetModal open={confirmingReset} onCancel={cancelReset} onConfirm={confirmReset} />
     </div>
   );
 }
