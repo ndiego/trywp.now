@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useState, type RefObject } from "react";
+import { useEffect, useLayoutEffect, useState, useSyncExternalStore, type RefObject } from "react";
 import { WP_GET_URL } from "@/lib/wordpress";
 import { destinations, type TryControls } from "../destinations";
 import { ControlIcon } from "../ControlIcon";
 import { prefersReducedMotion } from "../motion";
+import { PhoneDock } from "./PhoneDock";
 import { useDockPosition } from "./useDockPosition";
 
 /** open → closing (pill narrows into the button) → collapsed → opening (pill widens) → open */
@@ -15,12 +16,31 @@ const BUTTON_SIZE = 48;
 /** Matches the width transition in try.css. */
 const MORPH_MS = 220;
 
+/** Matches the phone breakpoint in try.css, below which the bar hides. */
+const PHONE_QUERY = "(max-width: 600px)";
+
+function subscribeToPhone(onChange: () => void) {
+  const query = window.matchMedia(PHONE_QUERY);
+  query.addEventListener("change", onChange);
+  return () => query.removeEventListener("change", onChange);
+}
+
+/** The controls: a floating bar, or on phones a button that opens a menu (PhoneDock). */
+export function FloatingDock(controls: TryControls) {
+  const isPhone = useSyncExternalStore(
+    subscribeToPhone,
+    () => window.matchMedia(PHONE_QUERY).matches,
+    () => false,
+  );
+  return isPhone ? <PhoneDock {...controls} /> : <BarDock {...controls} />;
+}
+
 /**
  * A dark pill with the main destinations always visible, which the visitor can drag
  * to any of six spots along the top and bottom edges. Collapses into a small
  * WordPress button: toward its center when centered, or into its corner.
  */
-export function FloatingDock({ ready, activePath, goTo, reset }: TryControls) {
+function BarDock({ ready, activePath, goTo, reset }: TryControls) {
   const [phase, setPhase] = useState<Phase>("open");
   // One ref for whichever is showing: the pill, or the button it collapses into.
   const { position, ref: dockRef, handlers } = useDockPosition();
@@ -65,7 +85,7 @@ export function FloatingDock({ ready, activePath, goTo, reset }: TryControls) {
         title="Show controls"
         onClick={() => setPhase(prefersReducedMotion() ? "open" : "opening")}
       >
-        <ControlIcon icon="wordpress" dashicon="wordpress" size={36} />
+        <ControlIcon icon="wordpress" dashicon="wordpress" size={34} />
       </button>
     );
   }
