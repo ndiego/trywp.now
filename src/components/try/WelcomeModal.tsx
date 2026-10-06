@@ -1,23 +1,29 @@
 "use client";
 
+import Image from "next/image";
 import { WP_DOWNLOAD_URL, WP_HOSTING_URL } from "@/lib/wordpress";
+import { getReleaseArt } from "./release-art";
 import { TryModal } from "./TryModal";
 
 type Props = {
   open: boolean;
   onClose: () => void;
-  /** The running WordPress's major.minor version ("7.1"), once known. */
+  /** The running WordPress's version ("7.1.2"), once known. */
   version: string | null;
 };
 
 /** Shown once WordPress has booted to orient first-time visitors. */
 export function WelcomeModal({ open, onClose, version }: Props) {
+  const art = getReleaseArt(version);
   return (
-    <TryModal open={open} onClose={onClose} labelledBy="try-welcome-title" className="try-welcome">
-      {/* The release page's blue and green block artwork, drawn in CSS. */}
-      <div className="try-art" aria-hidden="true">
-        {version && <span className="try-art__number">{version}</span>}
-      </div>
+    <TryModal
+      open={open}
+      onClose={onClose}
+      labelledBy="try-welcome-title"
+      className={`try-welcome${art ? " try-welcome--art" : ""}`}
+    >
+      {/* The running release's hero artwork from wordpress.org. */}
+      {art && <Image className="try-welcome__art" src={art.src} width={art.width} height={art.height} alt="" priority />}
 
       <div className="try-welcome__content">
         {version && <p className="try-eyebrow">WordPress {version}</p>}

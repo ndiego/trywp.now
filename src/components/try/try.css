@@ -323,7 +323,6 @@
  */
 
 .try-modal {
-	--try-green: #00c253;
 	--try-blue: var(--wp--preset--color--blueberry-1);
 	--try-blue-dark: var(--wp--preset--color--deep-blueberry);
 
@@ -456,55 +455,40 @@
 	background: rgb(56 88 233 / 0.06);
 }
 
-/* The release artwork's look: blueberry with blocks that fade between blue and green. */
-.try-art {
-	position: relative;
-	background:
-		linear-gradient(90deg, var(--try-green) 0 18%, transparent 18% 34%, var(--try-green) 34% 50%, transparent 50%) 0 0 / 100% 20% no-repeat,
-		linear-gradient(90deg, var(--try-blue), var(--try-green) 70%) 0 20% / 100% 14% no-repeat,
-		linear-gradient(180deg, var(--try-green), var(--try-blue)) 0 100% / 28% 34% no-repeat,
-		linear-gradient(90deg, var(--try-blue) 0 40%, var(--try-green) 40% 62%, var(--try-blue) 62% 78%, var(--try-green) 78%) 0 100% / 100% 16% no-repeat,
-		linear-gradient(135deg, var(--try-green) 0 50%, transparent 50%) 100% 34% / 46% 40% no-repeat,
-		var(--try-blue);
-}
-
-.try-art__number {
-	position: absolute;
-	inset: 0;
-	display: grid;
-	place-items: center;
-	color: var(--wp--preset--color--white);
-	font-size: 150px;
-	font-weight: 800;
-	letter-spacing: -8px;
-	line-height: 1;
-	text-shadow: 0 8px 40px rgb(0 0 0 / 0.18);
-}
-
-/* Reset: a quick confirmation, so a little tighter than the welcome. */
-.try-reset .try-modal__dialog {
-	padding: 36px;
-}
-
-/* Welcome: the artwork beside the content. */
+/* Welcome: the release's artwork (see release-art.ts) beside the content, when there is some. */
 .try-welcome .try-modal__dialog {
-	display: grid;
-	grid-template-columns: 1fr 1.15fr;
-	width: min(100%, 940px);
 	padding: 0;
 	overflow: hidden;
 }
 
-.try-welcome .try-art {
-	min-height: 520px;
+.try-welcome--art .try-modal__dialog {
+	display: grid;
+	grid-template-columns: 1fr 1.15fr;
+	width: min(100%, 940px);
 }
 
+.try-welcome__art {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 520px;
+	object-fit: cover;
+}
+
+/* A column, so the aside sits at the bottom when the artwork makes the dialog taller. */
 .try-welcome__content {
+	display: flex;
+	flex-direction: column;
 	padding: 48px;
 }
 
 .try-welcome__start {
+	align-self: flex-start;
 	margin: 32px 0 16px;
+}
+
+.try-welcome__content .try-modal__aside {
+	margin-top: auto;
 }
 
 /* ---- Small screens ---- */
@@ -525,16 +509,13 @@
 }
 
 @media (max-width: 760px) {
-	/* Welcome: the artwork becomes a band above the content. */
-	.try-welcome .try-modal__dialog {
+	/* Welcome: just the content; the eyebrow still names the version. */
+	.try-welcome--art .try-modal__dialog {
 		grid-template-columns: 1fr;
+		width: min(100%, 520px);
 	}
-	.try-welcome .try-art {
-		min-height: 160px;
-	}
-	.try-art__number {
-		font-size: 96px;
-		letter-spacing: -5px;
+	.try-welcome__art {
+		display: none;
 	}
 }
 
