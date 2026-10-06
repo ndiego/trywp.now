@@ -6,7 +6,14 @@ import { DEFAULT_BLUEPRINT_ID } from "./blueprint";
 import { FloatingDock } from "./controls/FloatingDock";
 import { getActivePath, type TryControls } from "./destinations";
 import { PlaygroundFrame, type BootStatus } from "./PlaygroundFrame";
+import { ResetModal } from "./ResetModal";
 import { WelcomeModal } from "./WelcomeModal";
+
+/** The running WordPress's major.minor version ("7.1"), read from wp-includes/version.php. */
+async function getWordPressVersion(client: PlaygroundClient): Promise<string | null> {
+  const source = await client.readFileAsText("/wordpress/wp-includes/version.php");
+  return source.match(/\$wp_version\s*=\s*'(\d+\.\d+)/)?.[1] ?? null;
+}
 
 /** Full-screen "Try WordPress" experience: a live Playground with floating controls on top. */
 export function TryWordPress() {
@@ -17,6 +24,8 @@ export function TryWordPress() {
   const [path, setPath] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [welcome, setWelcome] = useState<"pending" | "open" | "seen">("pending");
+  const [confirmingReset, setConfirmingReset] = useState(false);
+  const [wpVersion, setWpVersion] = useState<string | null>(null);
 
   /** Boots a fresh site from `blueprintId`, or from the current blueprint when omitted. */
   const boot = useCallback((blueprintId?: string) => {
@@ -29,9 +38,15 @@ export function TryWordPress() {
   const reset = useCallback(() => boot(), [boot]);
 
   const onReady = useCallback((c: PlaygroundClient) => {
-    // The client is a callable Comlink proxy; wrap it so React doesn't treat it as an updater.
-    setClient(() => c);
-    setWelcome((w) => (w === "pending" ? "open" : w));
+    // Read the version the welcome shows (a quick file read) before marking the site
+    // ready, so the dock can't open another dialog before the welcome appears.
+    getWordPressVersion(c)
+      .then(setWpVersion, () => setWpVersion(null))
+      .finally(() => {
+        // The client is a callable Comlink proxy; wrap it so React doesn't treat it as an updater.
+        setClient(() => c);
+        setWelcome((w) => (w === "pending" ? "open" : w));
+      });
   }, []);
 
   const onError = useCallback((e: unknown) => {
@@ -40,13 +55,19 @@ export function TryWordPress() {
   }, []);
 
   const closeWelcome = useCallback(() => setWelcome("seen"), []);
+  const cancelReset = useCallback(() => setConfirmingReset(false), []);
+  const confirmReset = useCallback(() => {
+    setConfirmingReset(false);
+    reset();
+  }, [reset]);
   const goTo = useCallback((p: string) => void client?.goTo(p), [client]);
 
   const controls: TryControls = {
     ready: !!client,
     activePath: getActivePath(path),
     goTo,
-    reset,
+    // The dock asks first; "Try again" after a failed boot resets straight away.
+    reset: () => setConfirmingReset(true),
     showWelcome: () => setWelcome("open"),
   };
 
@@ -93,7 +114,8 @@ export function TryWordPress() {
         )}
       </div>
 
-      <WelcomeModal open={welcome === "open" && !!client} onClose={closeWelcome} />
+      <WelcomeModal open={welcome === "open" && !!client} onClose={closeWelcome} version={wpVersion} />
+      <ResetModal open={confirmingReset} onCancel={cancelReset} onConfirm={confirmReset} />
     </div>
   );
 }

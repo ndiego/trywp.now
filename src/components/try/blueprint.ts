@@ -56,6 +56,18 @@ foreach ([['hello-world', 'post'], ['sample-page', 'page'], ['privacy-policy', '
 update_option('wp_page_for_privacy_policy', 0);`,
 };
 
+/**
+ * Show the visitor's account as "Administrator" ("Howdy, Administrator", post bylines).
+ * Its login stays `admin`, which Playground's auto-login signs in with.
+ */
+const nameAccountStep: StepDefinition = {
+  step: "runPHP",
+  code: `<?php
+require '/wordpress/wp-load.php';
+$user = get_user_by('login', 'admin');
+if ($user) wp_update_user(['ID' => $user->ID, 'display_name' => 'Administrator', 'nickname' => 'Administrator']);`,
+};
+
 /** Empty the trash after the blueprint's steps, since demo content can import trashed posts. */
 const emptyTrashStep: StepDefinition = {
   step: "runPHP",
@@ -66,8 +78,8 @@ foreach ($trashed as $id) wp_delete_post($id, true);`,
 };
 
 /**
- * The full Playground blueprint for one of `tryBlueprints`: shared setup and
- * default-content removal, the blueprint's own steps, then emptying the trash and
+ * The full Playground blueprint for one of `tryBlueprints`: shared setup (removing
+ * default content, naming the account), the blueprint's own steps, then emptying the trash and
  * installing the plugin that keeps new tabs on trywp.now (see preview-tabs.ts).
  *
  * Reference: https://wordpress.github.io/wordpress-playground/blueprints
@@ -82,6 +94,7 @@ export function getTryBlueprint(id: string, origin: string): Blueprint {
     login: true,
     steps: [
       removeDefaultContentStep,
+      nameAccountStep,
       ...blueprint.steps((file) => `${origin}/demo/${blueprint.id}/${file}`),
       emptyTrashStep,
       previewTabsStep(origin),
