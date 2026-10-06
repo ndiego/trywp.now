@@ -64,12 +64,17 @@ export function useDockPosition() {
   const droppedAt = useRef<DOMRect | null>(null);
   // Set after a drag, so the click that ends it doesn't also press a button.
   const justDragged = useRef(false);
+  // The running glide, so a new press can stop it.
+  const glide = useRef<Animation | null>(null);
+  // Ends the current press; a new press ends one whose release went missing.
+  const endPress = useRef<(() => void) | null>(null);
 
   const ref = useCallback((node: HTMLElement | null) => {
     element.current = node;
   }, []);
 
-  // Glide from the drop point into the new spot (FLIP: start where it was, animate to zero).
+  // Glide from the drop point into the new spot (FLIP: start where it was, animate to
+  // zero). A separate animation, so the dock's own CSS transitions keep working.
   useLayoutEffect(() => {
     const el = element.current;
     const from = droppedAt.current;
@@ -78,16 +83,16 @@ export function useDockPosition() {
     if (prefersReducedMotion()) return;
 
     const to = el.getBoundingClientRect();
-    el.style.transform = `translate(${from.left - to.left}px, ${from.top - to.top}px)`;
-    void el.offsetWidth; // Commit the start position before transitioning.
-    el.style.transition = `transform ${SNAP_MS}ms cubic-bezier(0.2, 0.8, 0.2, 1)`;
-    el.style.transform = "";
-    const timer = setTimeout(() => (el.style.transition = ""), SNAP_MS);
-    return () => clearTimeout(timer);
+    glide.current = el.animate(
+      [{ transform: `translate(${from.left - to.left}px, ${from.top - to.top}px)` }, { transform: "none" }],
+      { duration: SNAP_MS, easing: "cubic-bezier(0.2, 0.8, 0.2, 1)" },
+    );
   }, [position]);
 
   const onPointerDown = useCallback((event: PointerEvent<HTMLElement>) => {
     if (event.button !== 0 || !event.isPrimary) return;
+    endPress.current?.();
+    glide.current?.cancel();
     const el = event.currentTarget;
     const startX = event.clientX;
     const startY = event.clientY;
@@ -97,8 +102,31 @@ export function useDockPosition() {
     const root = document.documentElement;
     root.classList.add("try-dock-pressed");
 
+    const stop = () => {
+      window.removeEventListener("pointermove", move);
+      window.removeEventListener("pointerup", drop);
+      window.removeEventListener("pointercancel", cancel);
+      root.classList.remove("try-dock-pressed");
+      el.classList.remove("try-dock--dragging");
+      endPress.current = null;
+    };
+
+    // Ends a drag in `spot`, gliding there from wherever the dock was let go.
+    const settle = (spot: DockPosition) => {
+      if (!dragging) return;
+      // The click that ends a drag follows right away; clear the flag if none comes (touch).
+      justDragged.current = true;
+      setTimeout(() => (justDragged.current = false));
+      droppedAt.current = el.getBoundingClientRect();
+      el.style.transform = "";
+      // Always a new object, even for the same spot, so the layout effect glides it in.
+      setPosition({ ...spot });
+    };
+
     const move = (e: globalThis.PointerEvent) => {
       if (e.pointerId !== event.pointerId) return;
+      // No button held means the release went missing (e.g. after a context menu).
+      if (!(e.buttons & 1)) return cancel(e);
       const dx = e.clientX - startX;
       const dy = e.clientY - startY;
       if (!dragging) {
@@ -109,27 +137,27 @@ export function useDockPosition() {
       el.style.transform = `translate(${dx}px, ${dy}px)`;
     };
 
-    const end = (e: globalThis.PointerEvent) => {
+    // Released: into the nearest spot.
+    const drop = (e: globalThis.PointerEvent) => {
       if (e.pointerId !== event.pointerId) return;
-      window.removeEventListener("pointermove", move);
-      window.removeEventListener("pointerup", end);
-      window.removeEventListener("pointercancel", end);
-      root.classList.remove("try-dock-pressed");
-      if (!dragging) return;
-      el.classList.remove("try-dock--dragging");
-      // The click that ends a drag follows right away; clear the flag if none comes (touch).
-      justDragged.current = true;
-      setTimeout(() => (justDragged.current = false));
-      const dropped = el.getBoundingClientRect();
-      droppedAt.current = dropped;
-      el.style.transform = "";
-      // A new object even for the same spot, so the layout effect above always glides it in.
-      setPosition(nearestSpot(dropped));
+      stop();
+      settle(nearestSpot(el.getBoundingClientRect()));
     };
 
+    // Interrupted: back into the spot it came from.
+    const cancel = (e: globalThis.PointerEvent) => {
+      if (e.pointerId !== event.pointerId) return;
+      stop();
+      settle(getPosition());
+    };
+
+    endPress.current = () => {
+      stop();
+      settle(getPosition());
+    };
     window.addEventListener("pointermove", move);
-    window.addEventListener("pointerup", end);
-    window.addEventListener("pointercancel", end);
+    window.addEventListener("pointerup", drop);
+    window.addEventListener("pointercancel", cancel);
   }, []);
 
   const onClickCapture = useCallback((event: MouseEvent<HTMLElement>) => {

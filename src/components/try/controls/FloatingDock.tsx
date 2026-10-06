@@ -94,7 +94,7 @@ export function FloatingDock({ ready, activePath, goTo, reset }: TryControls) {
       aria-label="Try WordPress controls"
     >
       {/* Opens in a new tab so the visitor's Playground site keeps running. */}
-      <a className="try-cta" href={WP_GET_URL} target="_blank" rel="noopener">
+      <a className="try-cta" href={WP_GET_URL} target="_blank" rel="noopener" draggable={false}>
         <ControlIcon icon="wordpress" dashicon="wordpress" />
         <span className="try-dock__text">Get WordPress</span>
         <span className="screen-reader-text">(opens in a new tab)</span>
