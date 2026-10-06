@@ -32,8 +32,11 @@ export function PhoneDock({ ready, activePath, goTo, reset }: TryControls) {
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
+  // The chosen item disappears with the menu, so focus moves to the button first; that's
+  // also where the reset dialog hands focus back when it closes.
   const choose = (action: () => void) => () => {
     close();
+    buttonRef.current?.focus();
     action();
   };
 
