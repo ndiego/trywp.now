@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, type ReactNode } from "react";
-import { wporgModalVars } from "@/components/wporg/modal";
 
 type Props = {
   open: boolean;
@@ -9,22 +8,21 @@ type Props = {
   /** The id of the dialog's heading. */
   labelledBy: string;
   className?: string;
-  /** Whether to show the `wporg/modal` close button (white, for dialogs with a dark header). */
-  closeButton?: boolean;
   children: ReactNode;
 };
 
 /**
- * A dialog in wordpress.org's `wporg/modal` block styles. Closes on Escape and on
- * a backdrop click, takes focus when it opens, and hands it back when it closes.
+ * A dialog card over a dimmed, blurred site, styled after the WordPress 7.1 release
+ * page (see try.css). Closes on Escape and on a backdrop click, takes focus when it
+ * opens, and hands it back when it closes.
  */
-export function TryModal({ open, onClose, labelledBy, className = "", closeButton = true, children }: Props) {
-  const modalRef = useRef<HTMLDivElement>(null);
+export function TryModal({ open, onClose, labelledBy, className = "", children }: Props) {
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!open) return;
     const opener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    modalRef.current?.focus();
+    dialogRef.current?.focus();
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
     return () => {
@@ -36,19 +34,16 @@ export function TryModal({ open, onClose, labelledBy, className = "", closeButto
   if (!open) return null;
 
   return (
-    <div style={wporgModalVars} className={`wp-block-wporg-modal is-modal-open try-modal ${className}`}>
-      <div className="wporg-modal__modal-backdrop" onClick={(e) => e.target === e.currentTarget && onClose()}>
-        <div
-          ref={modalRef}
-          className="wporg-modal__modal"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby={labelledBy}
-          tabIndex={-1}
-        >
-          {closeButton && <button className="wporg-modal__modal-close" aria-label="Close" onClick={onClose} />}
-          <div className="wporg-modal__modal-content">{children}</div>
-        </div>
+    <div className={`try-modal ${className}`} onClick={(e) => e.target === e.currentTarget && onClose()}>
+      <div
+        ref={dialogRef}
+        className="try-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={labelledBy}
+        tabIndex={-1}
+      >
+        {children}
       </div>
     </div>
   );

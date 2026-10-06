@@ -315,61 +315,90 @@
 	color: var(--wp--preset--color--charcoal-4);
 }
 
-/* ---- Dialogs (inside the wporg/modal block's styles; see TryModal.tsx) ---- */
+/* ---- Dialogs (see TryModal.tsx) ----
+ *
+ * After the WordPress 7.1 release page: light, tightly tracked Inter headings with
+ * a larger EB Garamond italic accent in blueberry, a bold one-line subhead, 16/30
+ * body copy, 16px-radius cards, square buttons, and blue/green block artwork.
+ */
 
-.try-modal .wporg-modal__modal {
-	overflow: hidden;
-	border-radius: 8px;
-	box-shadow: 0 20px 60px rgb(0 0 0 / 0.3);
+.try-modal {
+	--try-green: #00c253;
+	--try-blue: var(--wp--preset--color--blueberry-1);
+	--try-blue-dark: var(--wp--preset--color--deep-blueberry);
+
+	position: fixed;
+	inset: 0;
+	z-index: 100;
+	display: grid;
+	place-items: center;
+	padding: 24px;
+	overflow-y: auto;
+	background: rgb(30 30 30 / 0.55);
+	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
+	animation: try-fade-in 0.16s ease-out;
+}
+
+.try-modal__dialog {
+	position: relative;
+	width: min(100%, 520px);
+	padding: 48px;
+	border-radius: 16px;
+	background: var(--wp--preset--color--white);
+	color: var(--wp--preset--color--charcoal-1);
+	font-family: var(--wp--preset--font-family--inter);
+	box-shadow:
+		0 2px 6px rgb(0 0 0 / 0.08),
+		0 32px 80px rgb(0 0 0 / 0.28);
 }
 
 /* The dialog takes focus on open for screen readers; it isn't a control, so no focus ring. */
-.try-modal .wporg-modal__modal:focus {
+.try-modal__dialog:focus {
 	outline: none;
 }
 
-.try-welcome__header {
-	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
-}
-
-.try-welcome__header h2 {
+.try-heading {
 	margin: 0;
+	/* wordpress.org's global styles set headings in EB Garamond; the release page uses Inter. */
+	font-family: var(--wp--preset--font-family--inter);
+	font-size: 40px;
+	font-weight: 300;
+	letter-spacing: -1.5px;
+	line-height: 1.05;
 }
 
-.try-welcome__header p {
-	margin: 4px 0 0;
+/* Larger than the words around it, as on the release page, which also makes it read bolder. */
+.try-heading em {
+	font-family: var(--wp--preset--font-family--eb-garamond);
+	font-size: 1.25em;
+	font-style: italic;
+	font-weight: 500;
+	letter-spacing: -0.5px;
+	line-height: 0.9;
+	color: var(--try-blue);
 }
 
-.try-modal__body {
-	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
+.try-eyebrow {
+	margin: 0 0 16px;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--try-blue);
 }
 
-.try-modal__body > p:first-child {
-	margin-top: 0;
+.try-subhead {
+	margin: 12px 0 0;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.5;
 }
 
-.try-modal__footer {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-	gap: 16px;
-	margin-top: 24px;
-}
-
-.try-modal__aside {
-	margin: 0;
-	color: var(--wp--preset--color--charcoal-4);
-	font-size: 14px;
-}
-
-.try-reset .wporg-modal__modal {
-	max-width: 480px;
-}
-
-.try-reset__title {
-	margin: 0 0 8px;
-	font-size: var(--wp--preset--font-size--heading-4);
+.try-body {
+	margin: 20px 0 0;
+	font-size: 16px;
+	line-height: 30px;
 }
 
 .try-modal__actions {
@@ -377,7 +406,105 @@
 	flex-wrap: wrap;
 	justify-content: flex-end;
 	gap: 12px;
-	margin-top: 24px;
+	margin-top: 32px;
+}
+
+.try-modal__aside {
+	margin: 0;
+	font-size: 14px;
+	color: var(--wp--preset--color--charcoal-4);
+}
+
+.try-modal__aside a {
+	color: var(--try-blue);
+}
+
+/* Square buttons, like the release page's "Get WordPress 7.1". */
+.try-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 52px;
+	padding: 0 32px;
+	border: 1px solid var(--try-blue);
+	border-radius: 2px;
+	background: var(--try-blue);
+	color: var(--wp--preset--color--white);
+	font: 600 16px/1 var(--wp--preset--font-family--inter);
+	cursor: pointer;
+}
+
+.try-btn:hover {
+	border-color: var(--try-blue-dark);
+	background: var(--try-blue-dark);
+}
+
+.try-btn:focus-visible {
+	outline: 2px solid var(--try-blue);
+	outline-offset: 2px;
+}
+
+.try-btn--text {
+	padding: 0 16px;
+	border-color: transparent;
+	background: transparent;
+	color: var(--try-blue);
+}
+
+.try-btn--text:hover {
+	border-color: transparent;
+	background: rgb(56 88 233 / 0.06);
+}
+
+/* The release artwork's look: blueberry with blocks that fade between blue and green. */
+.try-art {
+	position: relative;
+	background:
+		linear-gradient(90deg, var(--try-green) 0 18%, transparent 18% 34%, var(--try-green) 34% 50%, transparent 50%) 0 0 / 100% 20% no-repeat,
+		linear-gradient(90deg, var(--try-blue), var(--try-green) 70%) 0 20% / 100% 14% no-repeat,
+		linear-gradient(180deg, var(--try-green), var(--try-blue)) 0 100% / 28% 34% no-repeat,
+		linear-gradient(90deg, var(--try-blue) 0 40%, var(--try-green) 40% 62%, var(--try-blue) 62% 78%, var(--try-green) 78%) 0 100% / 100% 16% no-repeat,
+		linear-gradient(135deg, var(--try-green) 0 50%, transparent 50%) 100% 34% / 46% 40% no-repeat,
+		var(--try-blue);
+}
+
+.try-art__number {
+	position: absolute;
+	inset: 0;
+	display: grid;
+	place-items: center;
+	color: var(--wp--preset--color--white);
+	font-size: 150px;
+	font-weight: 800;
+	letter-spacing: -8px;
+	line-height: 1;
+	text-shadow: 0 8px 40px rgb(0 0 0 / 0.18);
+}
+
+/* Reset: a quick confirmation, so a little tighter than the welcome. */
+.try-reset .try-modal__dialog {
+	padding: 36px;
+}
+
+/* Welcome: the artwork beside the content. */
+.try-welcome .try-modal__dialog {
+	display: grid;
+	grid-template-columns: 1fr 1.15fr;
+	width: min(100%, 940px);
+	padding: 0;
+	overflow: hidden;
+}
+
+.try-welcome .try-art {
+	min-height: 520px;
+}
+
+.try-welcome__content {
+	padding: 48px;
+}
+
+.try-welcome__start {
+	margin: 32px 0 16px;
 }
 
 /* ---- Small screens ---- */
@@ -397,9 +524,35 @@
 	}
 }
 
+@media (max-width: 760px) {
+	/* Welcome: the artwork becomes a band above the content. */
+	.try-welcome .try-modal__dialog {
+		grid-template-columns: 1fr;
+	}
+	.try-welcome .try-art {
+		min-height: 160px;
+	}
+	.try-art__number {
+		font-size: 96px;
+		letter-spacing: -5px;
+	}
+}
+
 @media (max-width: 600px) {
 	.try {
 		--try-edge: 10px;
+	}
+	.try-modal {
+		padding: 16px;
+	}
+	.try-modal__dialog,
+	.try-reset .try-modal__dialog,
+	.try-welcome__content {
+		padding: 32px 24px;
+	}
+	.try-heading {
+		font-size: 32px;
+		letter-spacing: -1px;
 	}
 	.try-dock .try-divider {
 		display: none;

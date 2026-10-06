@@ -30,8 +30,8 @@ npm run build      # static site in out/
   playground.wordpress.net, outside the visitor's site, and 404. A must-use plugin the blueprint installs
   (`src/components/try/preview-tabs.ts`) opens them on trywp.now's `/preview` page instead, which embeds
   the page and so reaches the WordPress still running in the visitor's original tab.
-- **Look and feel**: the UI uses wordpress.org's design tokens, block styles (buttons, the `wporg/modal`
-  block), fonts (EB Garamond, Inter), and Dashicons. That CSS and the fonts/assets it references are
+- **Look and feel**: the UI uses wordpress.org's design tokens, block styles, fonts (EB Garamond, Inter),
+  and Dashicons; the dialogs (`TryModal.tsx`) follow the latest release page's typography and artwork. That CSS and the fonts/assets it references are
   vendored into `public/wporg/` and loaded in `src/app/layout.tsx` in the order listed in
   `src/wporg-styles.json`. Refresh them from the live site with `python3 scripts/vendor-wporg.py`.
   Put site-specific CSS in `src/app/globals.css`.

@@ -9,6 +9,12 @@ import { PlaygroundFrame, type BootStatus } from "./PlaygroundFrame";
 import { ResetModal } from "./ResetModal";
 import { WelcomeModal } from "./WelcomeModal";
 
+/** The running WordPress's major.minor version ("7.1"), read from wp-includes/version.php. */
+async function getWordPressVersion(client: PlaygroundClient): Promise<string | null> {
+  const source = await client.readFileAsText("/wordpress/wp-includes/version.php");
+  return source.match(/\$wp_version\s*=\s*'(\d+\.\d+)/)?.[1] ?? null;
+}
+
 /** Full-screen "Try WordPress" experience: a live Playground with floating controls on top. */
 export function TryWordPress() {
   // Which blueprint is running, and a counter that remounts Playground for a fresh boot.
@@ -19,6 +25,7 @@ export function TryWordPress() {
   const [error, setError] = useState<string | null>(null);
   const [welcome, setWelcome] = useState<"pending" | "open" | "seen">("pending");
   const [confirmingReset, setConfirmingReset] = useState(false);
+  const [wpVersion, setWpVersion] = useState<string | null>(null);
 
   /** Boots a fresh site from `blueprintId`, or from the current blueprint when omitted. */
   const boot = useCallback((blueprintId?: string) => {
@@ -33,7 +40,10 @@ export function TryWordPress() {
   const onReady = useCallback((c: PlaygroundClient) => {
     // The client is a callable Comlink proxy; wrap it so React doesn't treat it as an updater.
     setClient(() => c);
-    setWelcome((w) => (w === "pending" ? "open" : w));
+    // Open the welcome once the version it shows is known (a quick file read), or without it.
+    getWordPressVersion(c)
+      .then(setWpVersion, () => setWpVersion(null))
+      .finally(() => setWelcome((w) => (w === "pending" ? "open" : w)));
   }, []);
 
   const onError = useCallback((e: unknown) => {
@@ -101,7 +111,7 @@ export function TryWordPress() {
         )}
       </div>
 
-      <WelcomeModal open={welcome === "open" && !!client} onClose={closeWelcome} />
+      <WelcomeModal open={welcome === "open" && !!client} onClose={closeWelcome} version={wpVersion} />
       <ResetModal open={confirmingReset} onCancel={cancelReset} onConfirm={confirmReset} />
     </div>
   );
