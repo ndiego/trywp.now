@@ -15,7 +15,7 @@ export type Destination = {
 /** WordPress screens the controls offer as one-step destinations. */
 export const destinations: Destination[] = [
   { label: "Homepage", path: "/", icon: "home", dashicon: "admin-home", primary: true },
-  { label: "Dashboard", path: "/wp-admin/", icon: "wordpress", dashicon: "dashboard", primary: true },
+  { label: "Dashboard", path: "/wp-admin/", icon: "dashboard", dashicon: "dashboard", primary: true },
   {
     label: "Edit Site",
     path: "/wp-admin/site-editor.php",
@@ -23,7 +23,6 @@ export const destinations: Destination[] = [
     dashicon: "admin-appearance",
     primary: true,
   },
-  { label: "New Post", path: "/wp-admin/post-new.php", icon: "post", dashicon: "plus", primary: true },
   { label: "Plugins", path: "/wp-admin/plugins.php", icon: "plugins", dashicon: "admin-plugins" },
   { label: "Themes", path: "/wp-admin/themes.php", icon: "brush", dashicon: "admin-appearance" },
 ];

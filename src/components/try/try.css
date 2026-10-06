@@ -12,6 +12,8 @@
 	--try-dark-border: rgb(255 255 255 / 0.12);
 	--try-dark-muted: var(--wp--preset--color--light-grey-1);
 	--try-edge: 16px;
+	/* Height of the WordPress admin bar inside the site (46px on screens up to 782px wide). */
+	--try-admin-bar: 32px;
 
 	position: fixed;
 	inset: 0;
@@ -108,10 +110,11 @@
 .try-dock,
 .try-dock-collapsed {
 	position: fixed;
-	bottom: var(--try-edge);
-	left: 50%;
 	z-index: 50;
-	transform: translateX(-50%);
+	/* Dragged with the pointer (see useDockPosition.ts); taps on its buttons still work. */
+	touch-action: none;
+	-webkit-user-select: none;
+	user-select: none;
 	box-shadow:
 		inset 0 0 0 1px var(--try-dark-border),
 		0 1px 2px rgb(0 0 0 / 0.24),
@@ -125,6 +128,40 @@
 	backdrop-filter: var(--try-glass-blur);
 }
 
+/*
+ * The dock's six spots. It's pinned to its spot's edge, so when it changes width
+ * (collapsing, expanding) it shrinks into and grows out of that corner. Centered,
+ * it shrinks toward the middle. `translate` centers it, leaving `transform` free for
+ * dragging and `scale` for hover.
+ */
+[data-dock-y="bottom"] {
+	bottom: var(--try-edge);
+}
+[data-dock-y="top"] {
+	/* Below the WordPress admin bar, which is always showing (the visitor is logged in). */
+	top: calc(var(--try-admin-bar) + var(--try-edge));
+}
+[data-dock-x="left"] {
+	left: var(--try-edge);
+}
+[data-dock-x="right"] {
+	right: var(--try-edge);
+}
+[data-dock-x="center"] {
+	left: 50%;
+	translate: -50% 0;
+}
+
+/* While the dock is pressed, the pointer passes over the Playground iframe to this page. */
+.try-dock-pressed iframe {
+	pointer-events: none;
+}
+
+.try-dock--dragging,
+.try-dock--dragging * {
+	cursor: grabbing !important;
+}
+
 .try-dock {
 	display: flex;
 	align-items: center;
@@ -133,23 +170,6 @@
 	padding: 6px;
 	border-radius: 999px;
 	transition: width 0.22s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.try-dock__back {
-	display: inline-flex;
-	align-items: center;
-	gap: 4px;
-	height: 36px;
-	padding: 0 12px 0 8px;
-	border-radius: 999px;
-	color: var(--try-dark-muted);
-	text-decoration: none;
-	white-space: nowrap;
-}
-
-.try-dock__back:hover {
-	background: var(--try-dark-hover);
-	color: var(--wp--preset--color--white);
 }
 
 .try-dock__item {
@@ -209,7 +229,7 @@
 	border-radius: 999px;
 	cursor: pointer;
 	transition:
-		transform 0.15s ease-out,
+		scale 0.15s ease-out,
 		background-color 0.15s ease-out,
 		box-shadow 0.15s ease-out;
 }
@@ -220,7 +240,7 @@
 
 .try-dock-collapsed:hover,
 .try-dock-collapsed:focus-visible {
-	transform: translateX(-50%) scale(1.04);
+	scale: 1.04;
 	background: var(--wp--preset--color--charcoal-1);
 	box-shadow:
 		inset 0 0 0 1px rgb(255 255 255 / 0.2),
@@ -229,7 +249,7 @@
 }
 
 .try-dock-collapsed:active {
-	transform: translateX(-50%) scale(0.97);
+	scale: 0.97;
 }
 
 @keyframes try-fade-in {
@@ -339,6 +359,12 @@
 }
 
 /* ---- Small screens ---- */
+
+@media (max-width: 782px) {
+	.try {
+		--try-admin-bar: 46px;
+	}
+}
 
 @media (max-width: 960px) {
 	.try-dock__label {

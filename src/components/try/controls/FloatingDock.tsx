@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useState, type RefObject } from "react";
 import { WP_GET_URL } from "@/lib/wordpress";
 import { destinations, type TryControls } from "../destinations";
 import { ControlIcon } from "../ControlIcon";
+import { prefersReducedMotion } from "../motion";
+import { useDockPosition } from "./useDockPosition";
 
 /** open → closing (pill narrows into the button) → collapsed → opening (pill widens) → open */
 type Phase = "open" | "closing" | "collapsed" | "opening";
@@ -13,21 +15,22 @@ const BUTTON_SIZE = 48;
 /** Matches the width transition in try.css. */
 const MORPH_MS = 220;
 
-const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
 /**
- * A dark pill centered at the bottom of the screen with the main
- * destinations always visible. Collapses into a small WordPress button.
+ * A dark pill with the main destinations always visible, which the visitor can drag
+ * to any of six spots along the top and bottom edges. Collapses into a small
+ * WordPress button: toward its center when centered, or into its corner.
  */
 export function FloatingDock({ ready, activePath, goTo, reset }: TryControls) {
   const [phase, setPhase] = useState<Phase>("open");
-  const navRef = useRef<HTMLElement>(null);
-  const collapsedRef = useRef<HTMLButtonElement>(null);
+  // One ref for whichever is showing: the pill, or the button it collapses into.
+  const { position, ref: dockRef, handlers } = useDockPosition();
+  const placement = { "data-dock-x": position.x, "data-dock-y": position.y };
 
   // Animate the pill's width between its natural size and the button's. The dock is
-  // centered, so changing width alone makes it shrink and grow inward/outward.
+  // pinned to its spot's edge (or centered), so changing width alone makes it shrink
+  // into and grow out of its corner (or its center).
   useLayoutEffect(() => {
-    const nav = navRef.current;
+    const nav = dockRef.current;
     if (!nav || (phase !== "closing" && phase !== "opening")) return;
 
     const natural = nav.offsetWidth;
@@ -42,17 +45,20 @@ export function FloatingDock({ ready, activePath, goTo, reset }: TryControls) {
       setPhase(phase === "closing" ? "collapsed" : "open");
     }, MORPH_MS);
     return () => clearTimeout(timer);
-  }, [phase]);
+  }, [phase, dockRef]);
 
   // The dock unmounts on collapse, so hand focus to the button that replaces it.
   useEffect(() => {
-    if (phase === "collapsed") collapsedRef.current?.focus();
-  }, [phase]);
+    if (phase === "collapsed") dockRef.current?.focus();
+  }, [phase, dockRef]);
 
   if (phase === "collapsed") {
     return (
       <button
-        ref={collapsedRef}
+        // The shared ref holds whichever element is showing; here, this button.
+        ref={dockRef as RefObject<HTMLButtonElement | null>}
+        {...placement}
+        {...handlers}
         type="button"
         className="try-dark try-dock-collapsed"
         aria-label="Show WordPress controls"
@@ -66,14 +72,17 @@ export function FloatingDock({ ready, activePath, goTo, reset }: TryControls) {
 
   return (
     <nav
-      ref={navRef}
+      ref={dockRef}
+      {...placement}
+      {...handlers}
       className={`try-dark try-dock${phase === "open" ? "" : ` try-dock--${phase}`}`}
       aria-label="Try WordPress controls"
     >
-      {/* Placeholder: where "Back" goes (and its label) is still to be decided. */}
-      <a href={WP_GET_URL} className="try-dock__back">
-        <ControlIcon icon="arrowLeft" dashicon="arrow-left-alt" />
-        <span className="try-dock__text">Back</span>
+      {/* Opens in a new tab so the visitor's Playground site keeps running. */}
+      <a className="try-cta" href={WP_GET_URL} target="_blank" rel="noopener">
+        <ControlIcon icon="wordpress" dashicon="wordpress" />
+        <span className="try-dock__text">Get WordPress</span>
+        <span className="screen-reader-text">(opens in a new tab)</span>
       </a>
 
       <span className="try-divider" aria-hidden="true" />
@@ -107,12 +116,6 @@ export function FloatingDock({ ready, activePath, goTo, reset }: TryControls) {
       >
         <ControlIcon icon="rotateRight" dashicon="update" size={24} />
       </button>
-      {/* Opens in a new tab so the visitor's Playground site keeps running. */}
-      <a className="try-cta" href={WP_GET_URL} target="_blank" rel="noopener">
-        <ControlIcon icon="external" dashicon="external" />
-        <span className="try-dock__text">Get WordPress</span>
-        <span className="screen-reader-text">(opens in a new tab)</span>
-      </a>
       <button
         type="button"
         className="try-icon-button"
@@ -120,7 +123,7 @@ export function FloatingDock({ ready, activePath, goTo, reset }: TryControls) {
         title="Hide controls"
         onClick={() => setPhase(prefersReducedMotion() ? "collapsed" : "closing")}
       >
-        <ControlIcon icon="chevronDown" dashicon="arrow-down-alt2" size={24} />
+        <ControlIcon icon="close" dashicon="no-alt" size={20} />
       </button>
     </nav>
   );
