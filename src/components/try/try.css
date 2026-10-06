@@ -272,6 +272,119 @@
 	}
 }
 
+/* ---- Phone menu (see PhoneDock.tsx) ---- */
+
+/* Placed by the dock's spots, like the bar; the button inside it does the dragging. */
+.try-phone-dock {
+	position: fixed;
+	z-index: 50;
+}
+
+.try-phone-dock .try-dock-collapsed {
+	position: relative;
+}
+
+/* Catches taps outside the open menu. */
+.try-menu-backdrop {
+	position: fixed;
+	inset: 0;
+	z-index: 49;
+}
+
+.try-menu {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	width: max-content;
+	min-width: 240px;
+	max-width: calc(100vw - 2 * var(--try-edge));
+	padding: 8px;
+	border-radius: 20px;
+	background: var(--try-glass-bg);
+	-webkit-backdrop-filter: var(--try-glass-blur);
+	backdrop-filter: var(--try-glass-blur);
+	box-shadow:
+		inset 0 0 0 1px var(--try-dark-border),
+		0 1px 2px rgb(0 0 0 / 0.24),
+		0 10px 28px rgb(0 0 0 / 0.32);
+	animation: try-menu-in 0.16s ease-out;
+}
+
+/* The menu opens toward the middle of the screen from the button's spot. */
+[data-dock-y="bottom"] > .try-menu {
+	bottom: calc(100% + 8px);
+	transform-origin: bottom;
+}
+[data-dock-y="top"] > .try-menu {
+	top: calc(100% + 8px);
+	transform-origin: top;
+}
+[data-dock-x="left"] > .try-menu {
+	left: 0;
+}
+[data-dock-x="right"] > .try-menu {
+	right: 0;
+}
+[data-dock-x="center"] > .try-menu {
+	left: 50%;
+	translate: -50% 0;
+}
+
+.try-menu__item {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	height: 44px;
+	padding: 0 12px;
+	border: 0;
+	border-radius: 12px;
+	background: transparent;
+	color: var(--try-dark-muted);
+	font: inherit;
+	font-size: 16px;
+	text-align: left;
+	cursor: pointer;
+}
+
+.try-menu__item:hover:not(:disabled),
+.try-menu__item[aria-current="page"] {
+	background: var(--try-dark-hover);
+	color: var(--wp--preset--color--white);
+}
+
+.try-menu__item:disabled {
+	opacity: 0.4;
+	cursor: default;
+}
+
+.try-menu__divider {
+	height: 1px;
+	margin: 6px 4px;
+	background: var(--try-dark-border);
+}
+
+/* The menu's item radius rather than the bar's pill, so it nests evenly in the menu's corners. */
+.try-menu__cta {
+	justify-content: center;
+	height: 44px;
+	margin-top: 6px;
+	border-radius: 12px;
+}
+
+@keyframes try-menu-in {
+	from {
+		opacity: 0;
+		scale: 0.96;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.try-menu {
+		animation: none;
+	}
+}
+
 /* ---- Loader ---- */
 
 .try-loader {
@@ -540,19 +653,8 @@
 		font-size: 32px;
 		letter-spacing: -1px;
 	}
-	.try-dock .try-divider {
+	/* Phones get PhoneDock instead; hidden here too so the prerendered bar doesn't flash. */
+	.try-dock {
 		display: none;
-	}
-	.try-dock .try-cta {
-		padding: 0 8px;
-	}
-	/* Icon-only on phones; the text stays available to screen readers. */
-	.try-dock__text {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
-		clip-path: inset(50%);
-		white-space: nowrap;
 	}
 }

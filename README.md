@@ -20,6 +20,7 @@ npm run lint
 - **A welcome dialog** naming the WordPress version they're running, with that release's artwork.
 - **A floating control bar**: Get WordPress, Homepage, Dashboard, Edit Site, Reset (which asks first),
   and hide. It can be dragged to any of six spots along the top and bottom edges, and remembers its spot.
+  On phones it's a round WordPress button that opens a menu of the same options, and drags the same way.
 - **Previews that work**: pages WordPress opens in a new tab, like the editor's Preview, open on
   trywp.now and show the visitor's live site.
 
@@ -33,6 +34,7 @@ Everything lives in `src/components/try/`; `src/app/page.tsx` renders `TryWordPr
 | `PlaygroundFrame.tsx` | Boots Playground into a full-screen iframe; remounting it boots a fresh site. |
 | `blueprint.ts` | The blueprints a visitor can land in (see below). |
 | `controls/FloatingDock.tsx` | The control bar and its collapse animation; destinations are in `destinations.ts`. |
+| `controls/PhoneDock.tsx` | The phone version of the controls: a button that opens a menu. |
 | `controls/useDockPosition.ts` | Dragging the bar between its six spots, and remembering the spot. |
 | `TryModal.tsx` | The dialog shell, used by `WelcomeModal.tsx` and `ResetModal.tsx`. |
 | `release-art.ts` | Which artwork the welcome shows for each WordPress release (see below). |
