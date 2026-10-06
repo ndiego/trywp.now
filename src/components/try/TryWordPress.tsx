@@ -38,12 +38,15 @@ export function TryWordPress() {
   const reset = useCallback(() => boot(), [boot]);
 
   const onReady = useCallback((c: PlaygroundClient) => {
-    // The client is a callable Comlink proxy; wrap it so React doesn't treat it as an updater.
-    setClient(() => c);
-    // Open the welcome once the version it shows is known (a quick file read), or without it.
+    // Read the version the welcome shows (a quick file read) before marking the site
+    // ready, so the dock can't open another dialog before the welcome appears.
     getWordPressVersion(c)
       .then(setWpVersion, () => setWpVersion(null))
-      .finally(() => setWelcome((w) => (w === "pending" ? "open" : w)));
+      .finally(() => {
+        // The client is a callable Comlink proxy; wrap it so React doesn't treat it as an updater.
+        setClient(() => c);
+        setWelcome((w) => (w === "pending" ? "open" : w));
+      });
   }, []);
 
   const onError = useCallback((e: unknown) => {
