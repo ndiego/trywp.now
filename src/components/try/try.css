@@ -455,6 +455,11 @@
 	background: rgb(56 88 233 / 0.06);
 }
 
+/* Reset: a quick confirmation, so a little tighter than the welcome. */
+.try-reset .try-modal__dialog {
+	padding: 36px;
+}
+
 /* Welcome: the release's artwork (see release-art.ts) beside the content, when there is some. */
 .try-welcome .try-modal__dialog {
 	padding: 0;
