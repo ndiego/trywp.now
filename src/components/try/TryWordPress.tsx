@@ -9,10 +9,10 @@ import { PlaygroundFrame, type BootStatus } from "./PlaygroundFrame";
 import { ResetModal } from "./ResetModal";
 import { WelcomeModal } from "./WelcomeModal";
 
-/** The running WordPress's major.minor version ("7.1"), read from wp-includes/version.php. */
+/** The running WordPress's version ("7.1.2"), read from wp-includes/version.php. */
 async function getWordPressVersion(client: PlaygroundClient): Promise<string | null> {
   const source = await client.readFileAsText("/wordpress/wp-includes/version.php");
-  return source.match(/\$wp_version\s*=\s*'(\d+\.\d+)/)?.[1] ?? null;
+  return source.match(/\$wp_version\s*=\s*'([^']+)'/)?.[1] ?? null;
 }
 
 /** Full-screen "Try WordPress" experience: a live Playground with floating controls on top. */
