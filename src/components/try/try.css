@@ -400,6 +400,13 @@
 	text-align: center;
 }
 
+.try-loader .wp-block-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 12px;
+}
+
 .try-loader__title {
 	margin: 0;
 	font-family: var(--wp--preset--font-family--eb-garamond);

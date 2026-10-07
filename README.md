@@ -32,8 +32,9 @@ Like playground.wordpress.net, the page takes the versions to run from its URL:
 - `?php=` a PHP version from 7.4 to 8.5 (`8.2`). Defaults to 8.3.
 
 For example, https://trywp.now/?wp=7.0&php=8.2. Releases older than the demo theme supports (Ipsum
-needs 7.1) get plain WordPress instead: that version's default theme and sample content. Anything
-unrecognized falls back to the defaults. Reset keeps the same versions.
+needs 7.1) get plain WordPress instead: that version's default theme and sample content. Values in
+the wrong format fall back to the defaults; a release number Playground can't run (`?wp=9.9`) shows an
+error with a button to use the latest version instead. Reset keeps the same versions.
 
 ## How it's put together
 
