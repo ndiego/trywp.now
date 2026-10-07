@@ -767,11 +767,11 @@ audio/mpeg
 
 <!-- wp:gallery {"linkTo":"none","align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"blockGap":{"left":"var:preset|spacing|30"}}}} -->
 <figure class="wp-block-gallery alignwide has-nested-images columns-default is-cropped" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--60)"><!-- wp:image {"id":65,"sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|duotone-1"}}} -->
-<figure class="wp-block-image size-large"><img src="https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-staircase-silhouettes.jpg" alt="" class="wp-image-65"/></figure>
+<figure class="wp-block-image size-large"><img src="https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-staircase-silhouettes.jpg" alt="Blurred silhouettes of people climbing a stone staircase beside a pale wall, in black and white." class="wp-image-65"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"id":68,"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-minimalist-interior-with-armchair.jpg" alt="" class="wp-image-68"/></figure>
+<figure class="wp-block-image size-large"><img src="https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-minimalist-interior-with-armchair.jpg" alt="A dark, minimal room with a long low counter and a single armchair in front of a glowing white wall." class="wp-image-68"/></figure>
 <!-- /wp:image --></figure>
 <!-- /wp:gallery -->
 
@@ -1125,6 +1125,10 @@ audio/mpeg
 		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
 		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:720;s:6:"height";i:960;s:4:"file";s:39:"2026/09/ipsum-blurred-figure-orange.jpg";s:8:"filesize";i:72170;s:5:"sizes";a:2:{s:6:"medium";a:5:{s:4:"file";s:39:"ipsum-blurred-figure-orange-225x300.jpg";s:5:"width";i:225;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:8816;}s:9:"thumbnail";a:5:{s:4:"file";s:39:"ipsum-blurred-figure-orange-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:4085;}}s:10:"image_meta";a:13:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}s:3:"alt";s:0:"";}}]]></wp:meta_value>
 		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
+		<wp:meta_value><![CDATA[A blurred figure in a long dark coat walks past a bright orange window on a pale grey wall.]]></wp:meta_value>
+		</wp:postmeta>
 							</item>
 					<item>
 		<title><![CDATA[ipsum-glowing-letter-A]]></title>
@@ -1157,6 +1161,10 @@ audio/mpeg
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
 		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:720;s:6:"height";i:959;s:4:"file";s:34:"2026/09/ipsum-glowing-letter-A.jpg";s:8:"filesize";i:165249;s:5:"sizes";a:2:{s:6:"medium";a:5:{s:4:"file";s:34:"ipsum-glowing-letter-A-225x300.jpg";s:5:"width";i:225;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:9893;}s:9:"thumbnail";a:5:{s:4:"file";s:34:"ipsum-glowing-letter-A-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:3610;}}s:10:"image_meta";a:13:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}s:3:"alt";s:0:"";}}]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
+		<wp:meta_value><![CDATA[A softly glowing capital letter A raised from a brushed metal surface.]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
 					<item>
@@ -1191,6 +1199,10 @@ audio/mpeg
 		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
 		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:720;s:6:"height";i:960;s:4:"file";s:37:"2026/09/ipsum-modern-chair-design.jpg";s:8:"filesize";i:43610;s:5:"sizes";a:2:{s:6:"medium";a:5:{s:4:"file";s:37:"ipsum-modern-chair-design-225x300.jpg";s:5:"width";i:225;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:5395;}s:9:"thumbnail";a:5:{s:4:"file";s:37:"ipsum-modern-chair-design-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:2775;}}s:10:"image_meta";a:13:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}s:3:"alt";s:0:"";}}]]></wp:meta_value>
 		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
+		<wp:meta_value><![CDATA[The curved black back of a modern chair against a white background.]]></wp:meta_value>
+		</wp:postmeta>
 							</item>
 					<item>
 		<title><![CDATA[ipsum-modern-control-panel]]></title>
@@ -1223,6 +1235,10 @@ audio/mpeg
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
 		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:720;s:6:"height";i:956;s:4:"file";s:38:"2026/09/ipsum-modern-control-panel.jpg";s:8:"filesize";i:49249;s:5:"sizes";a:2:{s:6:"medium";a:5:{s:4:"file";s:38:"ipsum-modern-control-panel-226x300.jpg";s:5:"width";i:226;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:7522;}s:9:"thumbnail";a:5:{s:4:"file";s:38:"ipsum-modern-control-panel-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:3980;}}s:10:"image_meta";a:13:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}s:3:"alt";s:0:"";}}]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
+		<wp:meta_value><![CDATA[A pale grey control panel with round brushed metal dials and a small slider.]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
 					<item>
@@ -1257,6 +1273,10 @@ audio/mpeg
 		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
 		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:720;s:6:"height";i:960;s:4:"file";s:39:"2026/09/ipsum-staircase-silhouettes.jpg";s:8:"filesize";i:127584;s:5:"sizes";a:2:{s:6:"medium";a:5:{s:4:"file";s:39:"ipsum-staircase-silhouettes-225x300.jpg";s:5:"width";i:225;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:9986;}s:9:"thumbnail";a:5:{s:4:"file";s:39:"ipsum-staircase-silhouettes-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:4050;}}s:10:"image_meta";a:13:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}s:3:"alt";s:0:"";}}]]></wp:meta_value>
 		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
+		<wp:meta_value><![CDATA[Blurred silhouettes of people climbing a stone staircase beside a pale wall, in black and white.]]></wp:meta_value>
+		</wp:postmeta>
 							</item>
 					<item>
 		<title><![CDATA[ipsum-minimalist-interior-with-armchair]]></title>
@@ -1289,6 +1309,10 @@ audio/mpeg
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
 		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:720;s:6:"height";i:960;s:4:"file";s:51:"2026/09/ipsum-minimalist-interior-with-armchair.jpg";s:8:"filesize";i:153777;s:5:"sizes";a:2:{s:6:"medium";a:5:{s:4:"file";s:51:"ipsum-minimalist-interior-with-armchair-225x300.jpg";s:5:"width";i:225;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:7977;}s:9:"thumbnail";a:5:{s:4:"file";s:51:"ipsum-minimalist-interior-with-armchair-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:3446;}}s:10:"image_meta";a:13:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}s:3:"alt";s:0:"";}}]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
+		<wp:meta_value><![CDATA[A dark, minimal room with a long low counter and a single armchair in front of a glowing white wall.]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
 					<item>

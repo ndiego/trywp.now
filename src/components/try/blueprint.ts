@@ -1,4 +1,4 @@
-import type { Blueprint, StepDefinition } from "@wp-playground/client";
+import type { Blueprint, StepDefinition, SupportedPHPVersion } from "@wp-playground/client";
 import { previewTabsStep } from "./preview-tabs";
 
 /**
@@ -9,6 +9,11 @@ import { previewTabsStep } from "./preview-tabs";
 export type TryBlueprint = {
   id: string;
   label: string;
+  /**
+   * The oldest WordPress release its theme supports ("7.1"). Visitors asking for an
+   * older version (`?wp=`) get plain WordPress instead: its default theme and content.
+   */
+  requiresWp: string;
   /** Steps that build this site, run between the shared setup and cleanup. `demo` resolves a file in public/demo/<id>/. */
   steps: (demo: (file: string) => string) => StepDefinition[];
 };
@@ -21,6 +26,8 @@ export type TryBlueprint = {
 const ipsum: TryBlueprint = {
   id: "ipsum",
   label: "Blog",
+  // Ipsum's "Requires at least".
+  requiresWp: "7.1",
   steps: (demo) => [
     {
       step: "setSiteOptions",
@@ -77,28 +84,64 @@ $trashed = get_posts(['post_type' => get_post_types(), 'post_status' => 'trash',
 foreach ($trashed as $id) wp_delete_post($id, true);`,
 };
 
+/** The WordPress and PHP versions a site runs. */
+export type TryVersions = { wp: string; php: SupportedPHPVersion };
+
+export const DEFAULT_VERSIONS: TryVersions = { wp: "latest", php: "8.3" };
+
+/** Playground's PHP versions (checked against its SupportedPHPVersion type). */
+const PHP_VERSIONS: readonly SupportedPHPVersion[] = ["8.5", "8.4", "8.3", "8.2", "8.1", "8.0", "7.4"];
+
+/**
+ * The versions to run, from the page's query, as on playground.wordpress.net:
+ * `?wp=` takes a release ("6.8"), "beta", or "nightly"; `?php=` a PHP version ("8.2").
+ * Anything else falls back to the defaults.
+ */
+export function getRequestedVersions(search: string): TryVersions {
+  const params = new URLSearchParams(search);
+  const wp = params.get("wp")?.trim().toLowerCase();
+  const php = PHP_VERSIONS.find((v) => v === params.get("php")?.trim());
+  return {
+    wp: wp && /^(latest|beta|trunk|nightly|\d+\.\d+)$/.test(wp) ? wp : DEFAULT_VERSIONS.wp,
+    php: php ?? DEFAULT_VERSIONS.php,
+  };
+}
+
+/** Whether a requested WordPress version is a release older than `min`; latest, beta, and nightly never are. */
+function isOlderThan(wp: string, min: string) {
+  if (!/^\d+\.\d+$/.test(wp)) return false;
+  const [major, minor] = wp.split(".").map(Number);
+  const [minMajor, minMinor] = min.split(".").map(Number);
+  return major < minMajor || (major === minMajor && minor < minMinor);
+}
+
 /**
  * The full Playground blueprint for one of `tryBlueprints`: shared setup (removing
- * default content, naming the account), the blueprint's own steps, then emptying the trash and
- * installing the plugin that keeps new tabs on trywp.now (see preview-tabs.ts).
+ * default content, naming the account), the blueprint's own steps, then emptying the
+ * trash and installing the plugin that keeps new tabs on trywp.now (see preview-tabs.ts).
+ * For a WordPress version older than the blueprint supports, it's plain WordPress with
+ * just the account name and the new-tab plugin.
  *
  * Reference: https://wordpress.github.io/wordpress-playground/blueprints
  */
-export function getTryBlueprint(id: string, origin: string): Blueprint {
+export function getTryBlueprint(id: string, origin: string, versions = DEFAULT_VERSIONS): Blueprint {
   const blueprint = tryBlueprints.find((b) => b.id === id);
   if (!blueprint) throw new Error(`Unknown blueprint "${id}"`);
+  const plain = isOlderThan(versions.wp, blueprint.requiresWp);
   return {
     landingPage: "/",
-    preferredVersions: { php: "8.3", wp: "latest" },
+    preferredVersions: versions,
     features: { networking: true },
     login: true,
-    steps: [
-      removeDefaultContentStep,
-      nameAccountStep,
-      ...blueprint.steps((file) => `${origin}/demo/${blueprint.id}/${file}`),
-      emptyTrashStep,
-      previewTabsStep(origin),
-    ],
+    steps: plain
+      ? [nameAccountStep, previewTabsStep(origin)]
+      : [
+          removeDefaultContentStep,
+          nameAccountStep,
+          ...blueprint.steps((file) => `${origin}/demo/${blueprint.id}/${file}`),
+          emptyTrashStep,
+          previewTabsStep(origin),
+        ],
   };
 }
 
