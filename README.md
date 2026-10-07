@@ -24,6 +24,18 @@ npm run lint
 - **Previews that work**: pages WordPress opens in a new tab, like the editor's Preview, open on
   trywp.now and show the visitor's live site.
 
+## Choosing versions
+
+Like playground.wordpress.net, the page takes the versions to run from its URL:
+
+- `?wp=` a WordPress release (`6.8`), `beta`, or `nightly`. Defaults to the latest release.
+- `?php=` a PHP version from 7.4 to 8.5 (`8.2`). Defaults to 8.3.
+
+For example, https://trywp.now/?wp=7.0&php=8.2. Releases older than the demo theme supports (Ipsum
+needs 7.1) get plain WordPress instead: that version's default theme and sample content. Values in
+the wrong format fall back to the defaults; a release number Playground can't run (`?wp=9.9`) shows an
+error with a button to use the latest version instead. Reset keeps the same versions.
+
 ## How it's put together
 
 Everything lives in `src/components/try/`; `src/app/page.tsx` renders `TryWordPress`.
@@ -45,7 +57,8 @@ Everything lives in `src/components/try/`; `src/app/page.tsx` renders `TryWordPr
 
 What the visitor lands in is one of the blueprints in `blueprint.ts` (`tryBlueprints`; the first is the
 default). Each adds its own steps between shared setup (removing WordPress's default content, naming the
-account) and cleanup (emptying the trash, installing the new-tab plugin). Today there's one: the
+account) and cleanup (emptying the trash, installing the new-tab plugin), and declares the oldest
+WordPress release it supports (`requiresWp`). Today there's one: the
 [Ipsum](https://github.com/WordPress/ipsum) theme and its demo content.
 
 A blueprint's theme and content are served from `public/demo/<id>/`, with a `SOURCE` file recording the

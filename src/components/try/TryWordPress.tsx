@@ -2,7 +2,7 @@
 
 import { useCallback, useState } from "react";
 import type { PlaygroundClient } from "@wp-playground/client";
-import { DEFAULT_BLUEPRINT_ID } from "./blueprint";
+import { DEFAULT_BLUEPRINT_ID, DEFAULT_VERSIONS, getRequestedVersions } from "./blueprint";
 import { FloatingDock } from "./controls/FloatingDock";
 import { getActivePath, type TryControls } from "./destinations";
 import { PlaygroundFrame, type BootStatus } from "./PlaygroundFrame";
@@ -22,7 +22,8 @@ export function TryWordPress() {
   const [client, setClient] = useState<PlaygroundClient | null>(null);
   const [status, setStatus] = useState<BootStatus>({ progress: 0, caption: "Starting WordPress" });
   const [path, setPath] = useState("");
-  const [error, setError] = useState<string | null>(null);
+  // Why the boot failed, and the WordPress version asked for with ?wp= (null for the default).
+  const [error, setError] = useState<{ message: string; wp: string | null } | null>(null);
   const [welcome, setWelcome] = useState<"pending" | "open" | "seen">("pending");
   const [confirmingReset, setConfirmingReset] = useState(false);
   const [wpVersion, setWpVersion] = useState<string | null>(null);
@@ -36,6 +37,13 @@ export function TryWordPress() {
     setRun((r) => ({ blueprintId: blueprintId ?? r.blueprintId, session: r.session + 1 }));
   }, []);
   const reset = useCallback(() => boot(), [boot]);
+  /** Drops ?wp= from the URL and boots the latest release instead. */
+  const bootLatest = useCallback(() => {
+    const url = new URL(window.location.href);
+    url.searchParams.delete("wp");
+    window.history.replaceState(null, "", url);
+    boot();
+  }, [boot]);
 
   const onReady = useCallback((c: PlaygroundClient) => {
     // Read the version the welcome shows (a quick file read) before marking the site
@@ -51,7 +59,13 @@ export function TryWordPress() {
 
   const onError = useCallback((e: unknown) => {
     console.error(e);
-    setError("WordPress couldn't start in this browser.");
+    // ?wp= accepts any release number, so a version that doesn't exist fails here.
+    const { wp } = getRequestedVersions(window.location.search);
+    setError(
+      wp === DEFAULT_VERSIONS.wp
+        ? { message: "WordPress couldn't start in this browser.", wp: null }
+        : { message: `WordPress ${wp} couldn't start. It may not be a version Playground can run.`, wp },
+    );
   }, []);
 
   const closeWelcome = useCallback(() => setWelcome("seen"), []);
@@ -88,11 +102,20 @@ export function TryWordPress() {
           <div className="try-loader" role="status" aria-live="polite">
             {error ? (
               <>
-                <p className="try-loader__title">{error}</p>
-                <div className="wp-block-button">
-                  <button type="button" className="wp-block-button__link wp-element-button" onClick={reset}>
-                    Try again
-                  </button>
+                <p className="try-loader__title">{error.message}</p>
+                <div className="wp-block-buttons">
+                  {error.wp && (
+                    <div className="wp-block-button">
+                      <button type="button" className="wp-block-button__link wp-element-button" onClick={bootLatest}>
+                        Use the latest version
+                      </button>
+                    </div>
+                  )}
+                  <div className={`wp-block-button${error.wp ? " is-style-outline" : ""}`}>
+                    <button type="button" className="wp-block-button__link wp-element-button" onClick={reset}>
+                      Try again
+                    </button>
+                  </div>
                 </div>
               </>
             ) : (

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import type { PlaygroundClient, StartPlaygroundWebOptions } from "@wp-playground/client";
-import { PLAYGROUND_REMOTE_URL, getTryBlueprint } from "./blueprint";
+import { PLAYGROUND_REMOTE_URL, getRequestedVersions, getTryBlueprint } from "./blueprint";
 
 export type BootStatus = { progress: number; caption: string };
 
@@ -49,7 +49,11 @@ export function PlaygroundFrame({ blueprintId, onProgress, onReady, onNavigate, 
       const client = await startPlaygroundWeb({
         iframe,
         remoteUrl: PLAYGROUND_REMOTE_URL,
-        blueprint: getTryBlueprint(blueprintId, window.location.origin),
+        blueprint: getTryBlueprint(
+          blueprintId,
+          window.location.origin,
+          getRequestedVersions(window.location.search),
+        ),
         // Same class, but a separately bundled copy, so the nominal types differ.
         progressTracker: tracker as unknown as StartPlaygroundWebOptions["progressTracker"],
         disableProgressBar: true,
