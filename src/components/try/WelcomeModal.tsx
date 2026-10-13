@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { WP_DOWNLOAD_URL, WP_HOSTING_URL } from "@/lib/wordpress";
 import { getReleaseArt } from "./release-art";
 import { TryModal } from "./TryModal";
 
@@ -30,26 +29,13 @@ export function WelcomeModal({ open, onClose, version }: Props) {
         <h2 id="try-welcome-title" className="try-heading try-heading--lg">
           Howdy! Your site is <em>ready</em>
         </h2>
-        <p className="try-subhead">A real WordPress site, right in your browser.</p>
         <p className="try-body">
-          You&apos;re logged in as the administrator. Change anything you like; nothing is saved, and nothing can
-          break.
+          This is a WordPress playground, and you&apos;re logged in as the administrator. Look around, change
+          anything you like, and experiment freely.
         </p>
         <button type="button" className="try-btn try-welcome__start" onClick={onClose}>
           Start exploring
         </button>
-        {/* New tabs, so the visitor's site keeps running. */}
-        <p className="try-modal__aside">
-          Ready for the real thing?{" "}
-          <a href={WP_DOWNLOAD_URL} target="_blank" rel="noopener">
-            Download WordPress
-          </a>{" "}
-          or{" "}
-          <a href={WP_HOSTING_URL} target="_blank" rel="noopener">
-            find a host
-          </a>
-          .
-        </p>
       </div>
     </TryModal>
   );

@@ -438,8 +438,8 @@
 /* ---- Dialogs (see TryModal.tsx) ----
  *
  * After the WordPress 7.1 release page: light, tightly tracked Inter headings with
- * a larger EB Garamond italic accent in blueberry, a bold one-line subhead, 16/30
- * body copy, 16px-radius cards, square buttons, and blue/green block artwork.
+ * a larger EB Garamond italic accent in blueberry, 16/30 body copy, 16px-radius
+ * cards, square buttons, and blue/green block artwork.
  */
 
 .try-modal {
@@ -507,13 +507,6 @@
 	color: var(--try-blue);
 }
 
-.try-subhead {
-	margin: 12px 0 0;
-	font-size: 16px;
-	font-weight: 600;
-	line-height: 1.5;
-}
-
 .try-body {
 	margin: 20px 0 0;
 	font-size: 16px;
@@ -526,16 +519,6 @@
 	justify-content: flex-end;
 	gap: 12px;
 	margin-top: 32px;
-}
-
-.try-modal__aside {
-	margin: 0;
-	font-size: 14px;
-	color: var(--wp--preset--color--charcoal-4);
-}
-
-.try-modal__aside a {
-	color: var(--try-blue);
 }
 
 /* Square buttons, like the release page's "Get WordPress 7.1". */
@@ -600,19 +583,19 @@
 	object-fit: cover;
 }
 
-/* A column, so the aside sits at the bottom when the artwork makes the dialog taller. */
+/* A column, so the start button sits at the bottom when the artwork makes the dialog taller. */
 .try-welcome__content {
 	display: flex;
 	flex-direction: column;
 	padding: 48px;
 }
 
-.try-welcome__start {
-	align-self: flex-start;
-	margin: 32px 0 16px;
+.try-welcome__content .try-body {
+	margin: 32px 0;
 }
 
-.try-welcome__content .try-modal__aside {
+.try-welcome__start {
+	align-self: flex-start;
 	margin-top: auto;
 }
 
