@@ -14,6 +14,18 @@
 	--try-edge: 16px;
 	/* Height of the WordPress admin bar inside the site (46px on screens up to 782px wide). */
 	--try-admin-bar: 32px;
+	/*
+	 * The dock's glide into its spot, from Next.js's dev tools indicator: a spring that
+	 * arrives by 42% and settles over the rest, with a barely-there overshoot.
+	 */
+	--try-timing-bounce: linear(
+		0 0%, 0.022 2%, 0.078 4%, 0.154 6%, 0.242 8%, 0.334 10%, 0.425 12%, 0.511 14%, 0.591 16%,
+		0.662 18%, 0.726 20%, 0.78 22%, 0.827 24%, 0.867 26%, 0.899 28%, 0.926 30%, 0.947 32%,
+		0.964 34%, 0.977 36%, 0.987 38%, 0.994 40%, 1 42%, 1.0034 44%, 1.0058 46%, 1.0072 48%,
+		1.0078 50%, 1.0079 52%, 1.0077 54%, 1.0072 56%, 1.0066 58%, 1.0059 60%, 1.0051 62%,
+		1.0044 64%, 1.0037 66%, 1.0031 68%, 1.0026 70%, 1.0021 72%, 1.0017 74%, 1.0013 76%,
+		1.001 78%, 1.0008 80%, 1.0006 82%, 1.0004 84%, 1.0003 86%, 1.0002 88%, 1.0001 90%, 1 100%
+	);
 
 	position: fixed;
 	inset: 0;
@@ -155,14 +167,70 @@
 	translate: -50% 0;
 }
 
-/* While the dock is pressed, the pointer passes over the Playground iframe to this page. */
+/*
+ * While the dock is pressed, the Playground site stops taking the pointer, so a drag
+ * over it stays with this page. Pointer capture already sees to that (see
+ * useDockPosition.ts); this covers browsers that route by what's under the pointer.
+ * The cover sits over the site only, beneath the dock, so the dock's buttons still
+ * get their clicks.
+ */
+.try-dock-pressed .try-stage::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+}
+
 .try-dock-pressed iframe {
 	pointer-events: none;
+}
+
+/*
+ * Picked up: the dock lifts a little toward the pointer. Its blur of the site behind
+ * goes (the glass is nearly opaque anyway), since re-blurring a live site on every
+ * frame of a drag is what makes it stutter.
+ */
+.try-dock.try-dock--dragging,
+.try-dock-collapsed.try-dock--dragging {
+	scale: 1.02;
+	background: var(--try-dark-bg);
+	-webkit-backdrop-filter: none;
+	backdrop-filter: none;
+	box-shadow:
+		inset 0 0 0 1px rgb(255 255 255 / 0.2),
+		0 2px 4px rgb(0 0 0 / 0.24),
+		0 18px 44px rgb(0 0 0 / 0.42);
+	will-change: transform;
+}
+
+.try-dock-collapsed.try-dock--dragging {
+	scale: 1.06;
 }
 
 .try-dock--dragging,
 .try-dock--dragging * {
 	cursor: grabbing !important;
+}
+
+/*
+ * Where the dock will land if let go now: an outline of it in that spot, placed by
+ * the same rules as the dock. Light and dark rings, so it shows on any site.
+ */
+.try-dock-ghost {
+	position: fixed;
+	z-index: 49;
+	border-radius: 999px;
+	background: rgb(30 30 30 / 0.14);
+	box-shadow:
+		inset 0 0 0 1px rgb(255 255 255 / 0.6),
+		0 0 0 1px rgb(30 30 30 / 0.3);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.15s ease-out;
+}
+
+.try-dock-ghost--shown {
+	opacity: 1;
 }
 
 .try-dock {
@@ -174,7 +242,10 @@
 	max-width: calc(100vw - 2 * var(--try-edge));
 	padding: 6px;
 	border-radius: 999px;
-	transition: width 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+	transition:
+		width 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+		scale 0.15s ease-out,
+		box-shadow 0.15s ease-out;
 }
 
 .try-dock__item {
@@ -266,9 +337,14 @@
 @media (prefers-reduced-motion: reduce) {
 	.try-dock,
 	.try-dock-collapsed,
-	.try-dock-collapsed svg {
+	.try-dock-collapsed svg,
+	.try-dock-ghost {
 		animation: none;
 		transition: none;
+	}
+	.try-dock.try-dock--dragging,
+	.try-dock-collapsed.try-dock--dragging {
+		scale: none;
 	}
 }
 
