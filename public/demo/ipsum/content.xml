@@ -124,13 +124,6 @@
 		<wp:term_name><![CDATA[Essays]]></wp:term_name>
 	</wp:term>
 		<wp:term>
-		<wp:term_id>14</wp:term_id>
-		<wp:term_taxonomy><![CDATA[wp_template_part_area]]></wp:term_taxonomy>
-		<wp:term_slug><![CDATA[header]]></wp:term_slug>
-		<wp:term_parent><![CDATA[]]></wp:term_parent>
-		<wp:term_name><![CDATA[header]]></wp:term_name>
-	</wp:term>
-		<wp:term>
 		<wp:term_id>12</wp:term_id>
 		<wp:term_taxonomy><![CDATA[post_tag]]></wp:term_taxonomy>
 		<wp:term_slug><![CDATA[images]]></wp:term_slug>
@@ -138,25 +131,11 @@
 		<wp:term_name><![CDATA[images]]></wp:term_name>
 	</wp:term>
 		<wp:term>
-		<wp:term_id>2</wp:term_id>
-		<wp:term_taxonomy><![CDATA[wp_theme]]></wp:term_taxonomy>
-		<wp:term_slug><![CDATA[ipsum]]></wp:term_slug>
-		<wp:term_parent><![CDATA[]]></wp:term_parent>
-		<wp:term_name><![CDATA[ipsum]]></wp:term_name>
-	</wp:term>
-		<wp:term>
 		<wp:term_id>11</wp:term_id>
 		<wp:term_taxonomy><![CDATA[post_tag]]></wp:term_taxonomy>
 		<wp:term_slug><![CDATA[ipsum]]></wp:term_slug>
 		<wp:term_parent><![CDATA[]]></wp:term_parent>
 		<wp:term_name><![CDATA[ipsum]]></wp:term_name>
-	</wp:term>
-		<wp:term>
-		<wp:term_id>15</wp:term_id>
-		<wp:term_taxonomy><![CDATA[wp_template_part_area]]></wp:term_taxonomy>
-		<wp:term_slug><![CDATA[navigation-overlay]]></wp:term_slug>
-		<wp:term_parent><![CDATA[]]></wp:term_parent>
-		<wp:term_name><![CDATA[navigation-overlay]]></wp:term_name>
 	</wp:term>
 		<wp:term>
 		<wp:term_id>3</wp:term_id>
@@ -218,184 +197,6 @@
 	<height>32</height>
 </image> 
 
-		<item>
-		<title><![CDATA[Sample Page]]></title>
-		<link>https://ipsum.mystagingwebsite.com/?page_id=2</link>
-		<pubDate>Mon, 14 Sep 2026 10:31:03 +0000</pubDate>
-		<dc:creator><![CDATA[ipsum]]></dc:creator>
-		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/?page_id=2</guid>
-		<description></description>
-		<content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:quote -->
-<blockquote class="wp-block-quote">
-<!-- wp:paragraph -->
-<p>Hi there! I'm a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin' caught in the rain.)</p>
-<!-- /wp:paragraph -->
-</blockquote>
-<!-- /wp:quote -->
-
-<!-- wp:paragraph -->
-<p>...or something like this:</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:quote -->
-<blockquote class="wp-block-quote">
-<!-- wp:paragraph -->
-<p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p>
-<!-- /wp:paragraph -->
-</blockquote>
-<!-- /wp:quote -->
-
-<!-- wp:paragraph -->
-<p>As a new WordPress user, you should go to <a href="https://ipsum.mystagingwebsite.com/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>
-<!-- /wp:paragraph -->]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>2</wp:post_id>
-		<wp:post_date><![CDATA[2026-09-14 10:31:03]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-09-14 10:31:03]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-09-14 10:36:38]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-09-14 10:36:38]]></wp:post_modified_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[sample-page__trashed]]></wp:post_name>
-		<wp:status><![CDATA[trash]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[page]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-														<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-		<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
-		<wp:meta_value><![CDATA[publish]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1789382198]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
-		<wp:meta_value><![CDATA[sample-page]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
-					<item>
-		<title><![CDATA[Privacy Policy]]></title>
-		<link>https://ipsum.mystagingwebsite.com/?page_id=3</link>
-		<pubDate>Mon, 14 Sep 2026 10:31:03 +0000</pubDate>
-		<dc:creator><![CDATA[ipsum]]></dc:creator>
-		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/?page_id=3</guid>
-		<description></description>
-		<content:encoded><![CDATA[<!-- wp:heading -->
-<h2 class="wp-block-heading">Who we are</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p><strong class="privacy-policy-tutorial">Suggested text: </strong>Our website address is: https://ipsum.mystagingwebsite.com.</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Comments</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p><strong class="privacy-policy-tutorial">Suggested text: </strong>When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor&#8217;s IP address and browser user agent string to help spam detection.</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Media</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p><strong class="privacy-policy-tutorial">Suggested text: </strong>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Cookies</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p><strong class="privacy-policy-tutorial">Suggested text: </strong>If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select &quot;Remember Me&quot;, your login will persist for two weeks. If you log out of your account, the login cookies will be removed.</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Embedded content from other websites</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p><strong class="privacy-policy-tutorial">Suggested text: </strong>Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Who we share your data with</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p><strong class="privacy-policy-tutorial">Suggested text: </strong>If you request a password reset, your IP address will be included in the reset email.</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="wp-block-heading">How long we retain your data</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p><strong class="privacy-policy-tutorial">Suggested text: </strong>If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="wp-block-heading">What rights you have over your data</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p><strong class="privacy-policy-tutorial">Suggested text: </strong>If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Where your data is sent</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p><strong class="privacy-policy-tutorial">Suggested text: </strong>Visitor comments may be checked through an automated spam detection service.</p>
-<!-- /wp:paragraph -->
-]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>3</wp:post_id>
-		<wp:post_date><![CDATA[2026-09-14 10:31:03]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-09-14 10:31:03]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-09-14 10:36:40]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-09-14 10:36:40]]></wp:post_modified_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[privacy-policy__trashed]]></wp:post_name>
-		<wp:status><![CDATA[trash]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[page]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-														<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-		<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
-		<wp:meta_value><![CDATA[draft]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1789382200]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
-		<wp:meta_value><![CDATA[privacy-policy]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
 					<item>
 		<title><![CDATA[The weather, for the record]]></title>
 		<link>https://ipsum.mystagingwebsite.com/2026/08/24/the-weather-for-the-record/</link>
@@ -618,7 +419,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>This post exists for exactly that. It is here so you can watch a paragraph breathe: the measure comfortable, the links dotted and unhurried (make "links dotted and unhurried" a link to any post here), the margins minding their own business. If you are reading this on a phone, the column has already made its adjustments without mentioning them.</p>
+<p>This post exists for exactly that. It is here so you can watch a paragraph breathe: the measure comfortable, the <a href="/about/">links dotted and unhurried</a>, the margins minding their own business. If you are reading this on a phone, the column has already made its adjustments without mentioning them.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -654,6 +455,80 @@
 		<wp:meta_key><![CDATA[_wp_old_date]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2026-09-14]]></wp:meta_value>
 		</wp:postmeta>
+							<wp:comment>
+			<wp:comment_id>9</wp:comment_id>
+			<wp:comment_author><![CDATA[Mia]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[mail@server.com]]></wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP><![CDATA[]]></wp:comment_author_IP>
+			<wp:comment_date><![CDATA[2026-09-14 16:02:11]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-09-14 16:02:11]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[I came here for nothing in particular and found exactly that. Lovely.]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+							</wp:comment>
+					<wp:comment>
+			<wp:comment_id>10</wp:comment_id>
+			<wp:comment_author><![CDATA[Lorem]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[henrique.iamarino@a8c.com]]></wp:comment_author_email>
+			<wp:comment_author_url>https://ipsum.mystagingwebsite.com</wp:comment_author_url>
+			<wp:comment_author_IP><![CDATA[]]></wp:comment_author_IP>
+			<wp:comment_date><![CDATA[2026-09-14 16:05:40]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-09-14 16:05:40]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[That's the nicest thing anyone has said about a post with no subject.]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>9</wp:comment_parent>
+			<wp:comment_user_id>1</wp:comment_user_id>
+							</wp:comment>
+					<wp:comment>
+			<wp:comment_id>11</wp:comment_id>
+			<wp:comment_author><![CDATA[Mia]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[mail@server.com]]></wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP><![CDATA[]]></wp:comment_author_IP>
+			<wp:comment_date><![CDATA[2026-09-14 16:09:03]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-09-14 16:09:03]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Don't let it go to your head. Or do. It has plenty of room.]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>10</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+							</wp:comment>
+					<wp:comment>
+			<wp:comment_id>12</wp:comment_id>
+			<wp:comment_author><![CDATA[John]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[mail@server.com]]></wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP><![CDATA[]]></wp:comment_author_IP>
+			<wp:comment_date><![CDATA[2026-09-14 16:15:27]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-09-14 16:15:27]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Four comments deep and still on topic, which is to say no topic at all.]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>11</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+							</wp:comment>
+					<wp:comment>
+			<wp:comment_id>13</wp:comment_id>
+			<wp:comment_author><![CDATA[Ana]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[ana@example.com]]></wp:comment_author_email>
+			<wp:comment_author_url>https://example.com</wp:comment_author_url>
+			<wp:comment_author_IP><![CDATA[]]></wp:comment_author_IP>
+			<wp:comment_date><![CDATA[2026-09-14 16:21:52]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-09-14 16:21:52]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Two things.
+
+First, the column really does make its adjustments on a phone. I checked, standing in a queue.
+
+Second, I would happily read four hundred more words about nothing. Take your time.]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+							</wp:comment>
 							</item>
 					<item>
 		<title><![CDATA[Something to hear while you type]]></title>
@@ -767,11 +642,11 @@ audio/mpeg
 
 <!-- wp:gallery {"linkTo":"none","align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"blockGap":{"left":"var:preset|spacing|30"}}}} -->
 <figure class="wp-block-gallery alignwide has-nested-images columns-default is-cropped" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--60)"><!-- wp:image {"id":65,"sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|duotone-1"}}} -->
-<figure class="wp-block-image size-large"><img src="https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-staircase-silhouettes.jpg" alt="Blurred silhouettes of people climbing a stone staircase beside a pale wall, in black and white." class="wp-image-65"/></figure>
+<figure class="wp-block-image size-large"><img src="https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-staircase.webp" alt="A black staircase climbing a pale grey wall, in black and white." class="wp-image-65"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"id":68,"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-minimalist-interior-with-armchair.jpg" alt="A dark, minimal room with a long low counter and a single armchair in front of a glowing white wall." class="wp-image-68"/></figure>
+<figure class="wp-block-image size-large"><img src="https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-pendant-lamp.webp" alt="A pendant lamp glowing over a dark room washed in warm orange light." class="wp-image-68"/></figure>
 <!-- /wp:image --></figure>
 <!-- /wp:gallery -->
 
@@ -973,44 +848,6 @@ audio/mpeg
 			</wp:commentmeta>
 							</wp:comment>
 					<wp:comment>
-			<wp:comment_id>3</wp:comment_id>
-			<wp:comment_author><![CDATA[ipsum]]></wp:comment_author>
-			<wp:comment_author_email><![CDATA[henrique.iamarino@a8c.com]]></wp:comment_author_email>
-			<wp:comment_author_url>https://ipsum.mystagingwebsite.com</wp:comment_author_url>
-			<wp:comment_author_IP><![CDATA[93.66.82.56]]></wp:comment_author_IP>
-			<wp:comment_date><![CDATA[2026-09-14 13:37:28]]></wp:comment_date>
-			<wp:comment_date_gmt><![CDATA[2026-09-14 13:37:28]]></wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Came for the table, stayed for the dotted underlines.]]></wp:comment_content>
-			<wp:comment_approved><![CDATA[trash]]></wp:comment_approved>
-			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
-			<wp:comment_parent>2</wp:comment_parent>
-			<wp:comment_user_id>1</wp:comment_user_id>
-						<wp:commentmeta>
-	<wp:meta_key><![CDATA[akismet_result]]></wp:meta_key>
-			<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-						<wp:commentmeta>
-	<wp:meta_key><![CDATA[akismet_guid]]></wp:meta_key>
-			<wp:meta_value><![CDATA[f23f8539fa4af85fa3117639e1a060e9]]></wp:meta_value>
-			</wp:commentmeta>
-						<wp:commentmeta>
-	<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:3:{s:4:"time";d:1789393048.687603;s:5:"event";s:9:"check-ham";s:4:"user";s:5:"ipsum";}]]></wp:meta_value>
-			</wp:commentmeta>
-						<wp:commentmeta>
-	<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:3:{s:4:"time";d:1789393155.199233;s:5:"event";s:12:"status-trash";s:4:"user";s:5:"ipsum";}]]></wp:meta_value>
-			</wp:commentmeta>
-						<wp:commentmeta>
-	<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-			</wp:commentmeta>
-						<wp:commentmeta>
-	<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1789393155]]></wp:meta_value>
-			</wp:commentmeta>
-							</wp:comment>
-					<wp:comment>
 			<wp:comment_id>4</wp:comment_id>
 			<wp:comment_author><![CDATA[ipsum]]></wp:comment_author>
 			<wp:comment_author_email><![CDATA[henrique.iamarino@a8c.com]]></wp:comment_author_email>
@@ -1094,11 +931,11 @@ audio/mpeg
 		<wp:is_sticky>0</wp:is_sticky>
 														</item>
 					<item>
-		<title><![CDATA[ipsum-blurred-figure-orange]]></title>
-		<link>https://ipsum.mystagingwebsite.com/ipsum-blurred-figure-orange/</link>
+		<title><![CDATA[ipsum-facade]]></title>
+		<link>https://ipsum.mystagingwebsite.com/ipsum-facade/</link>
 		<pubDate>Mon, 14 Sep 2026 14:42:18 +0000</pubDate>
 		<dc:creator><![CDATA[ipsum]]></dc:creator>
-		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-blurred-figure-orange.jpg</guid>
+		<guid isPermaLink="false">https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-facade.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1109,21 +946,17 @@ audio/mpeg
 		<wp:post_modified_gmt><![CDATA[2026-09-14 14:42:18]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[ipsum-blurred-figure-orange]]></wp:post_name>
+		<wp:post_name><![CDATA[ipsum-facade]]></wp:post_name>
 		<wp:status><![CDATA[inherit]]></wp:status>
 		<wp:post_parent>0</wp:post_parent>
 		<wp:menu_order>0</wp:menu_order>
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-blurred-figure-orange.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-facade.webp]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
-		<wp:meta_value><![CDATA[2026/09/ipsum-blurred-figure-orange.jpg]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
-		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:720;s:6:"height";i:960;s:4:"file";s:39:"2026/09/ipsum-blurred-figure-orange.jpg";s:8:"filesize";i:72170;s:5:"sizes";a:2:{s:6:"medium";a:5:{s:4:"file";s:39:"ipsum-blurred-figure-orange-225x300.jpg";s:5:"width";i:225;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:8816;}s:9:"thumbnail";a:5:{s:4:"file";s:39:"ipsum-blurred-figure-orange-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:4085;}}s:10:"image_meta";a:13:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}s:3:"alt";s:0:"";}}]]></wp:meta_value>
+		<wp:meta_value><![CDATA[2026/09/ipsum-facade.webp]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
@@ -1131,11 +964,11 @@ audio/mpeg
 		</wp:postmeta>
 							</item>
 					<item>
-		<title><![CDATA[ipsum-glowing-letter-A]]></title>
-		<link>https://ipsum.mystagingwebsite.com/ipsum-glowing-letter-a/</link>
+		<title><![CDATA[ipsum-capital]]></title>
+		<link>https://ipsum.mystagingwebsite.com/ipsum-capital/</link>
 		<pubDate>Mon, 14 Sep 2026 14:42:19 +0000</pubDate>
 		<dc:creator><![CDATA[ipsum]]></dc:creator>
-		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-glowing-letter-A.jpg</guid>
+		<guid isPermaLink="false">https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-capital.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1146,21 +979,17 @@ audio/mpeg
 		<wp:post_modified_gmt><![CDATA[2026-09-14 14:42:19]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[ipsum-glowing-letter-a]]></wp:post_name>
+		<wp:post_name><![CDATA[ipsum-capital]]></wp:post_name>
 		<wp:status><![CDATA[inherit]]></wp:status>
 		<wp:post_parent>0</wp:post_parent>
 		<wp:menu_order>0</wp:menu_order>
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-glowing-letter-A.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-capital.webp]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
-		<wp:meta_value><![CDATA[2026/09/ipsum-glowing-letter-A.jpg]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
-		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:720;s:6:"height";i:959;s:4:"file";s:34:"2026/09/ipsum-glowing-letter-A.jpg";s:8:"filesize";i:165249;s:5:"sizes";a:2:{s:6:"medium";a:5:{s:4:"file";s:34:"ipsum-glowing-letter-A-225x300.jpg";s:5:"width";i:225;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:9893;}s:9:"thumbnail";a:5:{s:4:"file";s:34:"ipsum-glowing-letter-A-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:3610;}}s:10:"image_meta";a:13:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}s:3:"alt";s:0:"";}}]]></wp:meta_value>
+		<wp:meta_value><![CDATA[2026/09/ipsum-capital.webp]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
@@ -1168,11 +997,11 @@ audio/mpeg
 		</wp:postmeta>
 							</item>
 					<item>
-		<title><![CDATA[ipsum-modern-chair-design]]></title>
-		<link>https://ipsum.mystagingwebsite.com/ipsum-modern-chair-design/</link>
+		<title><![CDATA[ipsum-sculpture]]></title>
+		<link>https://ipsum.mystagingwebsite.com/ipsum-sculpture/</link>
 		<pubDate>Mon, 14 Sep 2026 14:42:19 +0000</pubDate>
 		<dc:creator><![CDATA[ipsum]]></dc:creator>
-		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-modern-chair-design.jpg</guid>
+		<guid isPermaLink="false">https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-sculpture.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1183,33 +1012,29 @@ audio/mpeg
 		<wp:post_modified_gmt><![CDATA[2026-09-14 14:42:19]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[ipsum-modern-chair-design]]></wp:post_name>
+		<wp:post_name><![CDATA[ipsum-sculpture]]></wp:post_name>
 		<wp:status><![CDATA[inherit]]></wp:status>
 		<wp:post_parent>0</wp:post_parent>
 		<wp:menu_order>0</wp:menu_order>
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-modern-chair-design.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-sculpture.webp]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
-		<wp:meta_value><![CDATA[2026/09/ipsum-modern-chair-design.jpg]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
-		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:720;s:6:"height";i:960;s:4:"file";s:37:"2026/09/ipsum-modern-chair-design.jpg";s:8:"filesize";i:43610;s:5:"sizes";a:2:{s:6:"medium";a:5:{s:4:"file";s:37:"ipsum-modern-chair-design-225x300.jpg";s:5:"width";i:225;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:5395;}s:9:"thumbnail";a:5:{s:4:"file";s:37:"ipsum-modern-chair-design-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:2775;}}s:10:"image_meta";a:13:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}s:3:"alt";s:0:"";}}]]></wp:meta_value>
+		<wp:meta_value><![CDATA[2026/09/ipsum-sculpture.webp]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
-		<wp:meta_value><![CDATA[The curved black back of a modern chair against a white background.]]></wp:meta_value>
+		<wp:meta_value><![CDATA[A smooth black curve, like a bent ribbon, standing on a pale grey surface.]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
 					<item>
-		<title><![CDATA[ipsum-modern-control-panel]]></title>
-		<link>https://ipsum.mystagingwebsite.com/ipsum-modern-control-panel/</link>
+		<title><![CDATA[ipsum-studio-closeup]]></title>
+		<link>https://ipsum.mystagingwebsite.com/ipsum-studio-closeup/</link>
 		<pubDate>Mon, 14 Sep 2026 14:42:20 +0000</pubDate>
 		<dc:creator><![CDATA[ipsum]]></dc:creator>
-		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-modern-control-panel.jpg</guid>
+		<guid isPermaLink="false">https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-studio-closeup.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1220,33 +1045,29 @@ audio/mpeg
 		<wp:post_modified_gmt><![CDATA[2026-09-14 14:42:20]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[ipsum-modern-control-panel]]></wp:post_name>
+		<wp:post_name><![CDATA[ipsum-studio-closeup]]></wp:post_name>
 		<wp:status><![CDATA[inherit]]></wp:status>
 		<wp:post_parent>0</wp:post_parent>
 		<wp:menu_order>0</wp:menu_order>
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-modern-control-panel.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-studio-closeup.webp]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
-		<wp:meta_value><![CDATA[2026/09/ipsum-modern-control-panel.jpg]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
-		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:720;s:6:"height";i:956;s:4:"file";s:38:"2026/09/ipsum-modern-control-panel.jpg";s:8:"filesize";i:49249;s:5:"sizes";a:2:{s:6:"medium";a:5:{s:4:"file";s:38:"ipsum-modern-control-panel-226x300.jpg";s:5:"width";i:226;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:7522;}s:9:"thumbnail";a:5:{s:4:"file";s:38:"ipsum-modern-control-panel-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:3980;}}s:10:"image_meta";a:13:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}s:3:"alt";s:0:"";}}]]></wp:meta_value>
+		<wp:meta_value><![CDATA[2026/09/ipsum-studio-closeup.webp]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
-		<wp:meta_value><![CDATA[A pale grey control panel with round brushed metal dials and a small slider.]]></wp:meta_value>
+		<wp:meta_value><![CDATA[A pale grey control panel with round brushed metal dials.]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
 					<item>
-		<title><![CDATA[ipsum-staircase-silhouettes]]></title>
-		<link>https://ipsum.mystagingwebsite.com/ipsum-staircase-silhouettes/</link>
+		<title><![CDATA[ipsum-staircase]]></title>
+		<link>https://ipsum.mystagingwebsite.com/ipsum-staircase/</link>
 		<pubDate>Mon, 14 Sep 2026 14:42:20 +0000</pubDate>
 		<dc:creator><![CDATA[ipsum]]></dc:creator>
-		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-staircase-silhouettes.jpg</guid>
+		<guid isPermaLink="false">https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-staircase.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1257,33 +1078,29 @@ audio/mpeg
 		<wp:post_modified_gmt><![CDATA[2026-09-14 14:42:20]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[ipsum-staircase-silhouettes]]></wp:post_name>
+		<wp:post_name><![CDATA[ipsum-staircase]]></wp:post_name>
 		<wp:status><![CDATA[inherit]]></wp:status>
 		<wp:post_parent>0</wp:post_parent>
 		<wp:menu_order>0</wp:menu_order>
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-staircase-silhouettes.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-staircase.webp]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
-		<wp:meta_value><![CDATA[2026/09/ipsum-staircase-silhouettes.jpg]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
-		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:720;s:6:"height";i:960;s:4:"file";s:39:"2026/09/ipsum-staircase-silhouettes.jpg";s:8:"filesize";i:127584;s:5:"sizes";a:2:{s:6:"medium";a:5:{s:4:"file";s:39:"ipsum-staircase-silhouettes-225x300.jpg";s:5:"width";i:225;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:9986;}s:9:"thumbnail";a:5:{s:4:"file";s:39:"ipsum-staircase-silhouettes-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:4050;}}s:10:"image_meta";a:13:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}s:3:"alt";s:0:"";}}]]></wp:meta_value>
+		<wp:meta_value><![CDATA[2026/09/ipsum-staircase.webp]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
-		<wp:meta_value><![CDATA[Blurred silhouettes of people climbing a stone staircase beside a pale wall, in black and white.]]></wp:meta_value>
+		<wp:meta_value><![CDATA[A black staircase climbing a pale grey wall, in black and white.]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
 					<item>
-		<title><![CDATA[ipsum-minimalist-interior-with-armchair]]></title>
-		<link>https://ipsum.mystagingwebsite.com/2026/09/08/pictures-until-the-pictures-arrive/ipsum-minimalist-interior-with-armchair/</link>
+		<title><![CDATA[ipsum-pendant-lamp]]></title>
+		<link>https://ipsum.mystagingwebsite.com/2026/09/08/pictures-until-the-pictures-arrive/ipsum-pendant-lamp/</link>
 		<pubDate>Mon, 14 Sep 2026 15:10:20 +0000</pubDate>
 		<dc:creator><![CDATA[ipsum]]></dc:creator>
-		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-minimalist-interior-with-armchair.jpg</guid>
+		<guid isPermaLink="false">https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-pendant-lamp.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1294,58 +1111,21 @@ audio/mpeg
 		<wp:post_modified_gmt><![CDATA[2026-09-14 15:10:20]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[ipsum-minimalist-interior-with-armchair]]></wp:post_name>
+		<wp:post_name><![CDATA[ipsum-pendant-lamp]]></wp:post_name>
 		<wp:status><![CDATA[inherit]]></wp:status>
 		<wp:post_parent>26</wp:post_parent>
 		<wp:menu_order>0</wp:menu_order>
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-minimalist-interior-with-armchair.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-pendant-lamp.webp]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
-		<wp:meta_value><![CDATA[2026/09/ipsum-minimalist-interior-with-armchair.jpg]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
-		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:720;s:6:"height";i:960;s:4:"file";s:51:"2026/09/ipsum-minimalist-interior-with-armchair.jpg";s:8:"filesize";i:153777;s:5:"sizes";a:2:{s:6:"medium";a:5:{s:4:"file";s:51:"ipsum-minimalist-interior-with-armchair-225x300.jpg";s:5:"width";i:225;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:7977;}s:9:"thumbnail";a:5:{s:4:"file";s:51:"ipsum-minimalist-interior-with-armchair-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:3446;}}s:10:"image_meta";a:13:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}s:3:"alt";s:0:"";}}]]></wp:meta_value>
+		<wp:meta_value><![CDATA[2026/09/ipsum-pendant-lamp.webp]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
-		<wp:meta_value><![CDATA[A dark, minimal room with a long low counter and a single armchair in front of a glowing white wall.]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
-					<item>
-		<title><![CDATA[ipsum-site-logo]]></title>
-		<link>https://ipsum.mystagingwebsite.com/ipsum-site-logo/</link>
-		<pubDate>Mon, 14 Sep 2026 16:13:39 +0000</pubDate>
-		<dc:creator><![CDATA[ipsum]]></dc:creator>
-		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-site-logo.png</guid>
-		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>74</wp:post_id>
-		<wp:post_date><![CDATA[2026-09-14 16:13:39]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-09-14 16:13:39]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-09-14 16:13:39]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-09-14 16:13:39]]></wp:post_modified_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[ipsum-site-logo]]></wp:post_name>
-		<wp:status><![CDATA[inherit]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[attachment]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/ipsum-site-logo.png]]></wp:attachment_url>
-											<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
-		<wp:meta_value><![CDATA[2026/09/ipsum-site-logo.png]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
-		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:512;s:6:"height";i:512;s:4:"file";s:27:"2026/09/ipsum-site-logo.png";s:8:"filesize";i:163016;s:5:"sizes";a:2:{s:6:"medium";a:5:{s:4:"file";s:27:"ipsum-site-logo-300x300.png";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:9:"image/png";s:8:"filesize";i:71351;}s:9:"thumbnail";a:5:{s:4:"file";s:27:"ipsum-site-logo-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";s:8:"filesize";i:24165;}}s:10:"image_meta";a:13:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}s:3:"alt";s:0:"";}}]]></wp:meta_value>
+		<wp:meta_value><![CDATA[A pendant lamp glowing over a dark room washed in warm orange light.]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
 					<item>
@@ -1382,72 +1162,19 @@ audio/mpeg
 		</wp:postmeta>
 							</item>
 					<item>
-		<title><![CDATA[Hello world!]]></title>
-		<link>https://ipsum.mystagingwebsite.com/?p=1</link>
-		<pubDate>Mon, 14 Sep 2026 10:31:03 +0000</pubDate>
-		<dc:creator><![CDATA[ipsum]]></dc:creator>
-		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/?p=1</guid>
-		<description></description>
-		<content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>
-<!-- /wp:paragraph -->]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>1</wp:post_id>
-		<wp:post_date><![CDATA[2026-09-14 10:31:03]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-09-14 10:31:03]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-09-14 10:36:35]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-09-14 10:36:35]]></wp:post_modified_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[hello-world__trashed]]></wp:post_name>
-		<wp:status><![CDATA[trash]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
-						<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
-		<wp:meta_value><![CDATA[publish]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1789382195]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
-		<wp:meta_value><![CDATA[hello-world]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_comments_status]]></wp:meta_key>
-		<wp:meta_value><![CDATA[a:1:{i:1;s:1:"1";}]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:comment>
-			<wp:comment_id>1</wp:comment_id>
-			<wp:comment_author><![CDATA[A WordPress Commenter]]></wp:comment_author>
-			<wp:comment_author_email><![CDATA[wapuu@wordpress.example]]></wp:comment_author_email>
-			<wp:comment_author_url>https://wordpress.org/</wp:comment_author_url>
-			<wp:comment_author_IP><![CDATA[]]></wp:comment_author_IP>
-			<wp:comment_date><![CDATA[2026-09-14 10:31:03]]></wp:comment_date>
-			<wp:comment_date_gmt><![CDATA[2026-09-14 10:31:03]]></wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Hi, this is a comment.
-To get started with moderating, editing, and deleting comments, please visit the Comments screen in the dashboard.
-Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp:comment_content>
-			<wp:comment_approved><![CDATA[post-trashed]]></wp:comment_approved>
-			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-							</wp:comment>
-					</item>
-					<item>
 		<title><![CDATA[Navigation]]></title>
 		<link>https://ipsum.mystagingwebsite.com/2026/09/14/navigation/</link>
 		<pubDate>Mon, 14 Sep 2026 10:33:02 +0000</pubDate>
 		<dc:creator><![CDATA[]]></dc:creator>
 		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/2026/09/14/navigation/</guid>
 		<description></description>
-		<content:encoded><![CDATA[<!-- wp:navigation-link {"label":"About","type":"page","id":41,"url":"https://ipsum.mystagingwebsite.com/about/","kind":"post-type","metadata":{"bindings":{"url":{"source":"core/post-data","args":{"field":"link"}}}}} /-->
+		<content:encoded><![CDATA[<!-- wp:navigation-submenu {"label":"About","type":"page","id":41,"url":"https://ipsum.mystagingwebsite.com/about/","kind":"post-type","metadata":{"bindings":{"url":{"source":"core/post-data","args":{"field":"link"}}}}} -->
+<!-- wp:navigation-link {"label":"Colophon","type":"page","id":106,"url":"https://ipsum.mystagingwebsite.com/colophon/","kind":"post-type","metadata":{"bindings":{"url":{"source":"core/post-data","args":{"field":"link"}}}}} /-->
+
+<!-- wp:navigation-link {"label":"Patterns","type":"page","id":101,"url":"https://ipsum.mystagingwebsite.com/patterns/","kind":"post-type","metadata":{"bindings":{"url":{"source":"core/post-data","args":{"field":"link"}}}}} /-->
+
+<!-- wp:navigation-link {"label":"Block styles","type":"page","id":105,"url":"https://ipsum.mystagingwebsite.com/block-styles/","kind":"post-type","metadata":{"bindings":{"url":{"source":"core/post-data","args":{"field":"link"}}}}} /-->
+<!-- /wp:navigation-submenu -->
 
 <!-- wp:navigation-link {"label":"Essays","type":"page","url":"/category/essays/","kind":"post-type"} /-->
 
@@ -1470,31 +1197,6 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
 														</item>
-					<item>
-		<title><![CDATA[Custom Styles]]></title>
-		<link>https://ipsum.mystagingwebsite.com/2026/09/14/wp-global-styles-ipsum/</link>
-		<pubDate>Mon, 14 Sep 2026 10:38:29 +0000</pubDate>
-		<dc:creator><![CDATA[ipsum]]></dc:creator>
-		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/2026/09/14/wp-global-styles-ipsum/</guid>
-		<description></description>
-		<content:encoded><![CDATA[{"styles":[],"settings":[],"isGlobalStylesUserThemeJSON":true,"version":3}]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>11</wp:post_id>
-		<wp:post_date><![CDATA[2026-09-14 10:38:29]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-09-14 10:38:29]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-09-15 12:24:31]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-09-15 12:24:31]]></wp:post_modified_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[wp-global-styles-ipsum]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[wp_global_styles]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="wp_theme" nicename="ipsum"><![CDATA[ipsum]]></category>
-						</item>
 					<item>
 		<title><![CDATA[This is a post without a featured image, and a title that takes two or three lines]]></title>
 		<link>https://ipsum.mystagingwebsite.com/2026/09/12/this-is-a-post-without-a-featured-image-and-a-title-that-takes-two-or-three-lines/</link>
@@ -1630,6 +1332,905 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
 		<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
+							</item>
+					<item>
+		<title><![CDATA[Patterns]]></title>
+		<link>https://ipsum.mystagingwebsite.com/patterns/</link>
+		<pubDate>Tue, 15 Sep 2026 09:10:00 +0000</pubDate>
+		<dc:creator><![CDATA[ipsum]]></dc:creator>
+		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/?page_id=101</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Patterns are the theme's ready-made arrangements: insert one, then make it yours. Every pattern below is pulled live from the theme's own files through a Pattern block, so this page always shows them as they are today. Open it in the editor and each one turns back into ordinary blocks—save it from there and it stops following the files.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">About</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/about-row</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/about-row"} /-->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Banners</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Openers for the top of a page. Both also work as a header.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/hero-colophon</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/hero-colophon"} /-->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/hero-epigraph</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/hero-epigraph"} /-->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Call to action</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/cta-membership</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/cta-membership"} /-->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/cta-search</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/cta-search"} /-->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Contact</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/contact-say-hi</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/contact-say-hi"} /-->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Gallery</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The same pictures, three widths and two arrangements.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/gallery-grid</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/gallery-grid"} /-->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/gallery-grid-wide</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/gallery-grid-wide"} /-->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/gallery-grid-full</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/gallery-grid-full"} /-->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/gallery-offset</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/gallery-offset"} /-->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/gallery-offset-full</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/gallery-offset-full"} /-->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Posts</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A section lead with the latest posts, and two post bodies for links and recordings. The posts “Elsewhere: where lorem ipsum comes from” and “Dreamland, on repeat” are built from those two.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/archive-lead</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/archive-lead"} /-->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/format-link</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/format-link"} /-->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/format-audio</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/format-audio"} /-->
+
+<!-- wp:paragraph -->
+<p>The other post lists (<code>ipsum/archive-columns</code>, <code>ipsum/archive-compact</code>, <code>ipsum/archive-full</code>, <code>ipsum/archive-minimal</code>, <code>ipsum/archive-photographic</code>, <code>ipsum/archive-simple</code> and <code>ipsum/archive-standard</code>) follow whatever list the template hands them. On a page that list is the page itself, so they live in templates instead. The <a href="/category/essays/">category</a> and tag pages use <code>ipsum/archive-compact</code>, and the home page shows the latest posts in full. To try another one, select the post list in a template in the Site Editor and choose a different design for it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Testimonials</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/kind-words</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/kind-words"} /-->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Text</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/events-list</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/events-list"} /-->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/text-alternating</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/text-alternating"} /-->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/text-faqs</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/text-faqs"} /-->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/text-statement</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/text-statement"} /-->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>ipsum/text-statement-wide</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pattern {"slug":"ipsum/text-statement-wide"} /-->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Pages</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Whole-page layouts, offered when you start a new page. They want a page to themselves, so each one has its own, on the Pages No Title template: <a href="/patterns/bio/">Bio</a> (<code>ipsum/page-bio</code>), <a href="/patterns/coming-soon/">Coming soon</a> (<code>ipsum/page-soon</code>) and <a href="/patterns/blog-home/">Blog home</a> (<code>ipsum/page-blog-home</code>).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Headers, footers and menus</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>These are made for template parts, not for pages: inside a page they would add a second site title and menu, the sticky ones would follow you down the screen, and the menu overlays only close from inside a menu. So you'll find them around the content instead. Every page here wears <code>ipsum/header-default</code> and <code>ipsum/footer</code>, and the menu button on a small screen opens <code>ipsum/navigation-overlay</code>. The sidebar templates, on the <a href="/colophon/">Colophon</a> page for one, close with <code>ipsum/footer-wide</code>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The rest are a swap away in the Site Editor: replace the header with <code>ipsum/header-collapsed</code>, <code>ipsum/header-sticky</code> or <code>ipsum/header-vertical</code>, the footer with <code>ipsum/footer-centered</code>, <code>ipsum/footer-social</code> or <code>ipsum/footer-subscribe</code>, and the menu overlay with <code>ipsum/overlay-contents</code> or <code>ipsum/overlay-profile</code>.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>101</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-15 09:10:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-09-15 09:10:00]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-09-15 09:10:00]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-09-15 09:10:00]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[patterns]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+							</item>
+					<item>
+		<title><![CDATA[Bio]]></title>
+		<link>https://ipsum.mystagingwebsite.com/patterns/bio/</link>
+		<pubDate>Tue, 15 Sep 2026 09:20:00 +0000</pubDate>
+		<dc:creator><![CDATA[ipsum]]></dc:creator>
+		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/?page_id=102</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:pattern {"slug":"ipsum/page-bio"} /-->]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>102</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-15 09:20:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-09-15 09:20:00]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-09-15 09:20:00]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-09-15 09:20:00]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[bio]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>101</wp:post_parent>
+		<wp:menu_order>1</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+		<wp:meta_value><![CDATA[page-no-title]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title><![CDATA[Coming soon]]></title>
+		<link>https://ipsum.mystagingwebsite.com/patterns/coming-soon/</link>
+		<pubDate>Tue, 15 Sep 2026 09:25:00 +0000</pubDate>
+		<dc:creator><![CDATA[ipsum]]></dc:creator>
+		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/?page_id=103</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:pattern {"slug":"ipsum/page-soon"} /-->]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>103</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-15 09:25:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-09-15 09:25:00]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-09-15 09:25:00]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-09-15 09:25:00]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[coming-soon]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>101</wp:post_parent>
+		<wp:menu_order>2</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+		<wp:meta_value><![CDATA[page-no-title]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title><![CDATA[Blog home]]></title>
+		<link>https://ipsum.mystagingwebsite.com/patterns/blog-home/</link>
+		<pubDate>Tue, 15 Sep 2026 09:30:00 +0000</pubDate>
+		<dc:creator><![CDATA[ipsum]]></dc:creator>
+		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/?page_id=104</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:pattern {"slug":"ipsum/page-blog-home"} /-->]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>104</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-15 09:30:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-09-15 09:30:00]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-09-15 09:30:00]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-09-15 09:30:00]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[blog-home]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>101</wp:post_parent>
+		<wp:menu_order>3</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+		<wp:meta_value><![CDATA[page-no-title]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title><![CDATA[Block styles]]></title>
+		<link>https://ipsum.mystagingwebsite.com/block-styles/</link>
+		<pubDate>Tue, 15 Sep 2026 09:40:00 +0000</pubDate>
+		<dc:creator><![CDATA[ipsum]]></dc:creator>
+		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/?page_id=105</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>A block style is a second outfit for a block: same content, different clothes. Select a block and pick one from its Styles panel. Here is every style Ipsum offers, each worn by a few plain words, with the class name it adds underneath.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Headings and paragraphs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Three styles, shared by both. The first is for saying one thing loudly.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"className":"is-style-text-display"} -->
+<h2 class="wp-block-heading is-style-text-display">A heading in Display</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"is-style-text-display"} -->
+<p class="is-style-text-display">And a paragraph that thinks it is one.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">Display · <code>is-style-text-display</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The second hangs a quotation mark over a line worth repeating.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"is-style-text-quote-mark","fontSize":"x-large"} -->
+<p class="is-style-text-quote-mark has-x-large-font-size">Write the sentence first. The page can wait.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">Quote Mark · <code>is-style-text-quote-mark</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The third is the same mark for a card in a strong color: it takes the color of the text instead of a faint line.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"radius":{"topLeft":"10px","topRight":"10px","bottomLeft":"10px","bottomRight":"10px"}}},"backgroundColor":"accent-3","textColor":"base","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-base-color has-accent-3-background-color has-text-color has-background" style="border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)"><!-- wp:heading {"className":"is-style-text-quote-mark-on-color"} -->
+<h2 class="wp-block-heading is-style-text-quote-mark-on-color">The page can wait. It always has.</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">Quote Mark on Color · <code>is-style-text-quote-mark-on-color</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Display also fits the Site Title, the Post Title and, on archive pages, the Query Title. Here are the first two, showing this site's name and this page's:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:site-title {"level":0,"className":"is-style-text-display"} /-->
+
+<!-- wp:post-title {"className":"is-style-text-display"} /-->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Group</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Crop Contents trims whatever spills past the edges of a group, so a word can run off the card on purpose.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"is-style-crop-contents","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"radius":{"topLeft":"10px","topRight":"10px","bottomLeft":"10px","bottomRight":"10px"}}},"backgroundColor":"accent-5","layout":{"type":"constrained"}} -->
+<div class="wp-block-group is-style-crop-contents has-accent-5-background-color has-background" style="border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:paragraph {"style":{"typography":{"lineHeight":"1"},"spacing":{"margin":{"top":"-5rem"}}},"fitText":true} -->
+<p class="has-fit-text" style="margin-top:-5rem;line-height:1">Ipsum</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The word above is cut off by the card, not by accident.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">Crop Contents · <code>is-style-crop-contents</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Code</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Evening keeps code on a dark slab, whatever the style variation. Fittingly, this is the whole of Crop Contents:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code {"className":"is-style-evening"} -->
+<pre class="wp-block-code is-style-evening"><code>.is-style-crop-contents {
+  overflow: clip;
+}</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">Evening · <code>is-style-evening</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Buttons</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Fill for the thing you hope people click, Outline for the thing they might click instead.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/category/essays/">Read the essays</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/category/pictures/">See the pictures</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">Fill (default) · <code>is-style-fill</code> and Outline · <code>is-style-outline</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quotes</h2>
+<!-- /wp:heading -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>The default quote sits on a soft card of its own.</p>
+<!-- /wp:paragraph --><cite>Default</cite></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:quote {"className":"is-style-plain"} -->
+<blockquote class="wp-block-quote is-style-plain"><!-- wp:paragraph -->
+<p>Plain lets go of the card and keeps the words.</p>
+<!-- /wp:paragraph --><cite>Plain · <code>is-style-plain</code></cite></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Images</h2>
+<!-- /wp:heading -->
+
+<!-- wp:image {"id":61,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-facade.webp" alt="A blurred figure in a long dark coat walks past a bright orange window on a pale grey wall." class="wp-image-61"/><figcaption class="wp-element-caption">Default: the corners the theme gives every image.</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":65,"sizeSlug":"large","linkDestination":"none","className":"is-style-rounded"} -->
+<figure class="wp-block-image size-large is-style-rounded"><img src="https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-staircase.webp" alt="A black staircase climbing a pale grey wall, in black and white." class="wp-image-65"/><figcaption class="wp-element-caption">Rounded · <code>is-style-rounded</code></figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Separators</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Default, a line at reading width:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:paragraph -->
+<p>Wide, the same line at the wide width:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:paragraph -->
+<p>Dots, for a pause rather than a break:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator {"className":"is-style-dots"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-dots"/>
+<!-- /wp:separator -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><code>is-style-default</code>, <code>is-style-wide</code> and <code>is-style-dots</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Tables</h2>
+<!-- /wp:heading -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Style</th><th>Class</th><th>Best for</th></tr></thead><tbody><tr><td>Default</td><td><code>is-style-regular</code></td><td>Short tables</td></tr><tr><td>Stripes</td><td><code>is-style-stripes</code></td><td>Long rows</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table class="has-fixed-layout"><thead><tr><th>Draft</th><th>Words</th><th>Verdict</th></tr></thead><tbody><tr><td>First</td><td>1,200</td><td>Too long</td></tr><tr><td>Second</td><td>300</td><td>Too short</td></tr><tr><td>Third</td><td>650</td><td>Fine, actually</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Social icons</h2>
+<!-- /wp:heading -->
+
+<!-- wp:social-links -->
+<ul class="wp-block-social-links"><!-- wp:social-link {"url":"https://wordpress.org/","service":"wordpress"} /-->
+
+<!-- wp:social-link {"url":"/feed/","service":"feed"} /--></ul>
+<!-- /wp:social-links -->
+
+<!-- wp:social-links {"className":"is-style-logos-only"} -->
+<ul class="wp-block-social-links is-style-logos-only"><!-- wp:social-link {"url":"https://wordpress.org/","service":"wordpress"} /-->
+
+<!-- wp:social-link {"url":"/feed/","service":"feed"} /--></ul>
+<!-- /wp:social-links -->
+
+<!-- wp:social-links {"className":"is-style-pill-shape"} -->
+<ul class="wp-block-social-links is-style-pill-shape"><!-- wp:social-link {"url":"https://wordpress.org/","service":"wordpress"} /-->
+
+<!-- wp:social-link {"url":"/feed/","service":"feed"} /--></ul>
+<!-- /wp:social-links -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">Default, Logos Only · <code>is-style-logos-only</code> and Pill Shape · <code>is-style-pill-shape</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Site logo</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Default softens the corners a little, Rounded makes a circle, Sharp keeps every corner.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"}} -->
+<div class="wp-block-group"><!-- wp:site-logo {"width":64,"isLink":false} /-->
+
+<!-- wp:site-logo {"width":64,"isLink":false,"className":"is-style-rounded"} /-->
+
+<!-- wp:site-logo {"width":64,"isLink":false,"className":"is-style-sharp"} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">Default, Rounded · <code>is-style-rounded</code> and Sharp · <code>is-style-sharp</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Tag cloud</h2>
+<!-- /wp:heading -->
+
+<!-- wp:tag-cloud /-->
+
+<!-- wp:tag-cloud {"className":"is-style-outline"} /-->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">Default and Outline · <code>is-style-outline</code></p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>105</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-15 09:40:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-09-15 09:40:00]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-09-15 09:40:00]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-09-15 09:40:00]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[block-styles]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+							</item>
+					<item>
+		<title><![CDATA[Colophon]]></title>
+		<link>https://ipsum.mystagingwebsite.com/colophon/</link>
+		<pubDate>Tue, 15 Sep 2026 09:50:00 +0000</pubDate>
+		<dc:creator><![CDATA[ipsum]]></dc:creator>
+		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/?page_id=106</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>This site runs on Ipsum, a theme named after the placeholder text that fills a page until the real words arrive. Everything here is there to show what it can do, which is mostly to stay out of the way of the writing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Type</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The reading text is Inter. Dates, categories and other small print are Manrope, a little bolder, and code is JetBrains Mono. The typography presets in the Styles panel trade them for other families in one click.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Color</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Six colors do all the work: a background, the text, an accent, a faint line, a faint surface and the strongest text. Each style variation redefines all six at once, so the whole site changes together, pictures included.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">This page</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This page uses the Pages Sidebar template, so it shares the screen with the categories and the most recent posts. Posts have a sidebar template too: “The weather, for the record” and “Something to hear while you type” wear it. For pages made entirely of patterns there is Pages No Title, which the pages under <a href="/patterns/">Patterns</a> use.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Where to look</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><a href="/patterns/">Patterns</a> shows every pattern the theme offers, grouped the way the inserter groups them.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/block-styles/">Block styles</a> shows every block style, from Display headings to Sharp logos.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>“The elements of a post” and “The rest of the furniture” lay out the blocks a post is made of.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>The <a href="/category/essays/">Essays</a>, <a href="/category/pictures/">Pictures</a> and <a href="/category/sounds/">Sounds</a> categories show the archive template, and the search bar at the bottom of the screen shows the search one.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>106</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-15 09:50:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-09-15 09:50:00]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-09-15 09:50:00]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-09-15 09:50:00]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[colophon]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+		<wp:meta_value><![CDATA[page-sidebar]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+		<wp:meta_value><![CDATA[62]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title><![CDATA[]]></title>
+		<link>https://ipsum.mystagingwebsite.com/2026/08/31/111/</link>
+		<pubDate>Mon, 31 Aug 2026 18:40:00 +0000</pubDate>
+		<dc:creator><![CDATA[ipsum]]></dc:creator>
+		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/?p=111</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>No title today. The date can do the introductions.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>111</wp:post_id>
+		<wp:post_date><![CDATA[2026-08-31 18:40:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-08-31 18:40:00]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-08-31 18:40:00]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-08-31 18:40:00]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[111]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+										<category domain="category" nicename="notes"><![CDATA[Notes]]></category>
+							</item>
+					<item>
+		<title><![CDATA[Elsewhere: where lorem ipsum comes from]]></title>
+		<link>https://ipsum.mystagingwebsite.com/2026/09/02/elsewhere-where-lorem-ipsum-comes-from/</link>
+		<pubDate>Wed, 02 Sep 2026 09:30:00 +0000</pubDate>
+		<dc:creator><![CDATA[ipsum]]></dc:creator>
+		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/?p=112</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:group {"metadata":{"name":"Format Link"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:group {"metadata":{"name":"Format Link"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"var:preset|spacing|40"},"border":{"radius":{"topLeft":"10px","topRight":"10px","bottomLeft":"10px","bottomRight":"10px"}}},"backgroundColor":"accent-5","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-accent-5-background-color has-background" style="border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"fontSize":"medium"} -->
+<p class="has-medium-font-size" style="font-style:normal;font-weight:700">Elsewhere: the story of lorem ipsum, from a passage of Cicero cut off mid-word to the first draft of nearly every website.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"metadata":{"name":"Link Line"},"style":{"spacing":{"padding":{"right":"var:preset|spacing|20","left":"var:preset|spacing|20"}},"border":{"left":{"width":"1px","style":"dotted"}}},"fontSize":"medium","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+<div class="wp-block-group has-medium-font-size" style="border-left-style:dotted;border-left-width:1px;padding-right:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)"><!-- wp:paragraph {"metadata":{"name":"Link"},"style":{"typography":{"lineHeight":"1"}},"fontSize":"small"} -->
+<p class="has-small-font-size" style="line-height:1"><a href="https://en.wikipedia.org/wiki/Lorem_ipsum">en.wikipedia.org/wiki/Lorem_ipsum</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[A link worth following, set off on a card of its own.]]></excerpt:encoded>
+		<wp:post_id>112</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-02 09:30:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-09-02 09:30:00]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-09-02 09:30:00]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-09-02 09:30:00]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[elsewhere-where-lorem-ipsum-comes-from]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+										<category domain="category" nicename="notes"><![CDATA[Notes]]></category>
+							</item>
+					<item>
+		<title><![CDATA[Dreamland, on repeat]]></title>
+		<link>https://ipsum.mystagingwebsite.com/2026/09/09/dreamland-on-repeat/</link>
+		<pubDate>Wed, 09 Sep 2026 20:15:00 +0000</pubDate>
+		<dc:creator><![CDATA[ipsum]]></dc:creator>
+		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/?p=113</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:group {"metadata":{"name":"Format Audio"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:group {"metadata":{"name":"Format Audio Wrapper"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"radius":{"topLeft":"10px","topRight":"10px","bottomLeft":"10px","bottomRight":"10px"}}},"backgroundColor":"accent-5","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-accent-5-background-color has-background" style="border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"id":63,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-sculpture.webp" alt="A smooth black curve, like a bent ribbon, standing on a pale grey surface." class="wp-image-63" style="aspect-ratio:1;object-fit:cover"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:group {"metadata":{"name":"Title and Description"},"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|20"}}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
+<div class="wp-block-group"><!-- wp:heading {"fontSize":"large"} -->
+<h2 class="wp-block-heading has-large-font-size">Dreamland</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Thirty-five seconds to hum along to while the cursor blinks. Press play, then go back to the draft.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:audio {"id":23} -->
+<figure class="wp-block-audio"><audio controls src="https://ipsum.mystagingwebsite.com/wp-content/uploads/2026/09/Dreamland.mp3"></audio></figure>
+<!-- /wp:audio --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[A recording on a card of its own: cover, title, a line about it, and the player.]]></excerpt:encoded>
+		<wp:post_id>113</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-09 20:15:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-09-09 20:15:00]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-09-09 20:15:00]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-09-09 20:15:00]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[dreamland-on-repeat]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+										<category domain="category" nicename="sounds"><![CDATA[Sounds]]></category>
+							</item>
+					<item>
+		<title><![CDATA[The rest of the furniture]]></title>
+		<link>https://ipsum.mystagingwebsite.com/2026/09/11/the-rest-of-the-furniture/</link>
+		<pubDate>Fri, 11 Sep 2026 10:20:00 +0000</pubDate>
+		<dc:creator><![CDATA[ipsum]]></dc:creator>
+		<guid isPermaLink="false">https://ipsum.mystagingwebsite.com/?p=114</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>“The elements of a post” laid out the everyday furniture. These are the pieces that come out on special occasions.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Said twice, on purpose</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A pullquote repeats something the page has already said, only louder, for the reader who skims.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pullquote -->
+<figure class="wp-block-pullquote"><blockquote><p>A pullquote is the page reading itself aloud.</p><cite>The layout desk</cite></blockquote></figure>
+<!-- /wp:pullquote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lines that keep their breaks</h2>
+<!-- /wp:heading -->
+
+<!-- wp:verse -->
+<pre class="wp-block-verse">Lorem ipsum, said the page,
+to no one in particular.
+Dolor sit amet, it went on,
+and waited for the words.</pre>
+<!-- /wp:verse -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Spaces, kept</h2>
+<!-- /wp:heading -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">Draft one     too long
+Draft two     too short
+Draft three   fine, actually</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Tucked away</h2>
+<!-- /wp:heading -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary>Where does lorem ipsum come from?</summary><!-- wp:paragraph -->
+<p>From Cicero, more or less. It is a scrambled passage of his writing on pleasure and pain, cut off mid-word: <em>dolorem ipsum</em> lost its first syllable and became <em>lorem ipsum</em>.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary>Does anyone read the rest of it?</summary><!-- wp:paragraph -->
+<p>Almost nobody, which is rather the point.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">One thing at a time</h2>
+<!-- /wp:heading -->
+
+<!-- wp:tabs -->
+<div class="wp-block-tabs"><!-- wp:tab-list -->
+<div role="tablist" class="wp-block-tab-list"><button type="button" role="tab">Morning</button><button type="button" role="tab">Afternoon</button><button type="button" role="tab">Evening</button></div>
+<!-- /wp:tab-list -->
+
+<!-- wp:tab-panels -->
+<div class="wp-block-tab-panels"><!-- wp:tab-panel {"label":"Morning"} -->
+<section role="tabpanel" tabindex="0" class="wp-block-tab-panel"><!-- wp:paragraph -->
+<p>Coffee, a blank page, and the optimism of someone who hasn't started yet.</p>
+<!-- /wp:paragraph --></section>
+<!-- /wp:tab-panel -->
+
+<!-- wp:tab-panel {"label":"Afternoon"} -->
+<section role="tabpanel" tabindex="0" class="wp-block-tab-panel"><!-- wp:paragraph -->
+<p>Second paragraphs, second coffee, and a sudden interest in tidying the desk.</p>
+<!-- /wp:paragraph --></section>
+<!-- /wp:tab-panel -->
+
+<!-- wp:tab-panel {"label":"Evening"} -->
+<section role="tabpanel" tabindex="0" class="wp-block-tab-panel"><!-- wp:paragraph -->
+<p>The draft is finished, or at least it has stopped arguing.</p>
+<!-- /wp:paragraph --></section>
+<!-- /wp:tab-panel --></div>
+<!-- /wp:tab-panels --></div>
+<!-- /wp:tabs -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Wider than the words</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The column stays narrow for reading, but a picture can step out to the wide width when it has something to show.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":68,"sizeSlug":"large","linkDestination":"none","align":"wide"} -->
+<figure class="wp-block-image alignwide size-large"><img src="https://raw.githubusercontent.com/WordPress/ipsum/trunk/assets/images/ipsum-pendant-lamp.webp" alt="A pendant lamp glowing over a dark room washed in warm orange light." class="wp-image-68"/><figcaption class="wp-element-caption">A lamp, left on for whoever is still writing.</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Things that usually live in a sidebar</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The latest posts, the latest comments, the categories and a calendar. They are just as happy in the middle of a post.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:latest-posts {"postsToShow":3,"displayPostDate":true} /-->
+
+<!-- wp:latest-comments {"commentsToShow":3} /-->
+
+<!-- wp:categories {"showPostCounts":true} /-->
+
+<!-- wp:calendar {"month":9,"year":2026} /-->
+
+<!-- wp:paragraph -->
+<p><strong>That's the rest of the set.</strong> The room is fully furnished; now it needs someone to sit down and write.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Pullquotes, verse, tabs, a drawer or two and the things that usually live in a sidebar—the rest of the furniture set.]]></excerpt:encoded>
+		<wp:post_id>114</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-11 10:20:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-09-11 10:20:00]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-09-11 10:20:00]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-09-11 10:20:00]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[the-rest-of-the-furniture]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+										<category domain="post_tag" nicename="details"><![CDATA[details]]></category>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="post_tag" nicename="typography"><![CDATA[typography]]></category>
 							</item>
 				</channel>
 </rss>

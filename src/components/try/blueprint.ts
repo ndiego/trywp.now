@@ -27,11 +27,12 @@ const ipsum: TryBlueprint = {
   id: "ipsum",
   label: "Blog",
   // Ipsum's "Requires at least".
-  requiresWp: "7.1",
+  requiresWp: "7.2",
   steps: (demo) => [
     {
       step: "setSiteOptions",
-      options: { blogname: "Ipsum", blogdescription: "Until real words arrive" },
+      // The logo is an image in the demo content, set by its ID there, as in Ipsum's own blueprint.
+      options: { blogname: "Ipsum", blogdescription: "Until real words arrive", site_logo: 78 },
     },
     {
       step: "installTheme",
@@ -87,7 +88,11 @@ foreach ($trashed as $id) wp_delete_post($id, true);`,
 /** The WordPress and PHP versions a site runs. */
 export type TryVersions = { wp: string; php: SupportedPHPVersion };
 
-export const DEFAULT_VERSIONS: TryVersions = { wp: "latest", php: "8.3" };
+/**
+ * WordPress is the 7.2 beta for now, since Ipsum needs 7.2 and won't install on 7.1.
+ * Once 7.2 is released, set this back to "latest".
+ */
+export const DEFAULT_VERSIONS: TryVersions = { wp: "beta", php: "8.3" };
 
 /** Playground's PHP versions (checked against its SupportedPHPVersion type). */
 const PHP_VERSIONS: readonly SupportedPHPVersion[] = ["8.5", "8.4", "8.3", "8.2", "8.1", "8.0", "7.4"];
