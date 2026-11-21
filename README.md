@@ -78,11 +78,17 @@ with its dimensions.
 
 ### New tabs and previews
 
-Playground serves the site from `playground.wordpress.net/scope:…/` through a service worker. Browsers
-partition service workers by the site embedding them, so a top-level tab on that URL gets a different
-service worker that knows nothing about the visitor's site, and 404s. A must-use plugin the blueprint
-installs (`preview-tabs.ts`) opens those tabs on trywp.now's `/preview` page instead, which embeds the
-URL and so reaches the WordPress still running in the visitor's original tab.
+Playground serves the site from its sandbox origin, `wpsandbox.wordpress.net/scope:…/`, through a
+service worker. Browsers partition service workers by the site embedding them, so a top-level tab on
+that URL gets a different service worker that knows nothing about the visitor's site, and can't show it.
+A must-use plugin the blueprint installs (`preview-tabs.ts`) opens those tabs on trywp.now's `/preview`
+page instead, which embeds the URL and so reaches the WordPress still running in the visitor's original
+tab. That covers tabs WordPress opens (`window.open()`, links with a `target`) and links the visitor
+opens in a new tab with a middle-click or Cmd/Ctrl/Shift-click. The browser's own "Open link in new tab"
+menu item can't be rerouted.
+
+`/preview` only embeds URLs on the hosts listed in `PLAYGROUND_SITE_HOSTS`. If Playground changes where
+it serves sites from, previews show "This preview isn't available" until the new host is added there.
 
 ### Look and feel
 
