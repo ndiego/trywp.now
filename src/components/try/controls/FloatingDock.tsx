@@ -40,7 +40,7 @@ export function FloatingDock(controls: TryControls) {
  * to any of six spots along the top and bottom edges. Collapses into a small
  * WordPress button: toward its center when centered, or into its corner.
  */
-function BarDock({ ready, activePath, goTo, reset }: TryControls) {
+function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
   const [phase, setPhase] = useState<Phase>("open");
   // One ref for whichever is showing: the pill, or the button it collapses into.
   const { position, ref: dockRef, handlers } = useDockPosition();
@@ -126,6 +126,16 @@ function BarDock({ ready, activePath, goTo, reset }: TryControls) {
 
       <span className="try-divider" aria-hidden="true" />
 
+      <button
+        type="button"
+        className="try-icon-button"
+        aria-label="Try another site"
+        title="Try another site"
+        disabled={!ready}
+        onClick={switchSite}
+      >
+        <ControlIcon icon="grid" dashicon="screenoptions" size={24} />
+      </button>
       <button
         type="button"
         className="try-icon-button"

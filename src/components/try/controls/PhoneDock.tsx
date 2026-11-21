@@ -11,7 +11,7 @@ import { useDockPosition, type DockPosition } from "./useDockPosition";
  * the bar's options. The button drags between the same six spots as the bar, and
  * the menu opens toward the middle of the screen from wherever it sits.
  */
-export function PhoneDock({ ready, activePath, goTo, reset }: TryControls) {
+export function PhoneDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
   const { position, ref, handlers } = useDockPosition();
   const placement = { "data-dock-x": position.x, "data-dock-y": position.y };
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -64,6 +64,10 @@ export function PhoneDock({ ready, activePath, goTo, reset }: TryControls) {
                 </button>
               ))}
             <span className="try-menu__divider" aria-hidden="true" />
+            <button type="button" className="try-menu__item" disabled={!ready} onClick={choose(switchSite)}>
+              <ControlIcon icon="grid" dashicon="screenoptions" size={24} />
+              Try Another Site
+            </button>
             <button type="button" className="try-menu__item" disabled={!ready} onClick={choose(reset)}>
               <ControlIcon icon="rotateRight" dashicon="update" size={24} />
               Reset Site

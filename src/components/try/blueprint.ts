@@ -3,19 +3,26 @@ import { previewTabsStep } from "./preview-tabs";
 
 /**
  * A site the visitor can land in. Its theme and demo content are served from
- * public/demo/<id>/ — package them with `scripts/build-demo-content.sh <id>`.
+ * public/demo/<theme>/ — package them with `scripts/build-demo-content.sh <theme>`.
  * Our page downloads `url` resources itself, so same-origin files need no CORS setup.
  */
 export type TryBlueprint = {
+  /** Names the site in `?site=`. */
   id: string;
-  label: string;
+  /** The theme's name, and what kind of site this is: the theme's purpose, or one of its designs. */
+  theme: string;
+  design: string;
+  /** One line for the site switcher. */
+  description: string;
+  /** The switcher's picture of the site, a path in public/. */
+  preview: string;
   /**
    * The oldest WordPress release its theme supports ("7.1"). Visitors asking for an
    * older version (`?wp=`) get plain WordPress instead: its default theme and content.
    */
   requiresWp: string;
-  /** Steps that build this site, run between the shared setup and cleanup. `demo` resolves a file in public/demo/<id>/. */
-  steps: (demo: (file: string) => string) => StepDefinition[];
+  /** Steps that build this site, run between the shared setup and cleanup. `origin` is ours, for files in public/. */
+  steps: (origin: string) => StepDefinition[];
 };
 
 /**
@@ -25,10 +32,13 @@ export type TryBlueprint = {
  */
 const ipsum: TryBlueprint = {
   id: "ipsum",
-  label: "Blog",
+  theme: "Ipsum",
+  design: "Blog",
+  description: "The new default theme: a blank canvas for a blog.",
+  preview: "/demo/ipsum/preview.jpg",
   // Ipsum's "Requires at least".
   requiresWp: "7.2",
-  steps: (demo) => [
+  steps: (origin) => [
     {
       step: "setSiteOptions",
       // The logo is an image in the demo content, set by its ID there, as in Ipsum's own blueprint.
@@ -36,17 +46,97 @@ const ipsum: TryBlueprint = {
     },
     {
       step: "installTheme",
-      themeData: { resource: "url", url: demo("ipsum.zip") },
+      themeData: { resource: "url", url: `${origin}/demo/ipsum/ipsum.zip` },
       options: { activate: true },
     },
-    { step: "importWxr", file: { resource: "url", url: demo("content.xml") } },
+    { step: "importWxr", file: { resource: "url", url: `${origin}/demo/ipsum/content.xml` } },
   ],
 };
 
+/**
+ * One of the starter sites of the Mētis theme (https://github.com/WordPress/metis):
+ * page templates that each design a whole site. All of them share the theme and its
+ * demo posts, whose images WordPress fetches from metisdemo.mystagingwebsite.com
+ * during the import; `starter` names the template that becomes the front page.
+ */
+function metis(starter: string, site: { name: string; tagline: string; description: string }): TryBlueprint {
+  return {
+    id: `metis-${starter}`,
+    theme: "Mētis",
+    design: starter[0].toUpperCase() + starter.slice(1),
+    description: site.description,
+    preview: `/demo/metis/preview-${starter}.jpg`,
+    // Mētis's "Requires at least".
+    requiresWp: "7.1",
+    steps: (origin) => [
+      { step: "setSiteOptions", options: { blogname: site.name, blogdescription: site.tagline } },
+      {
+        step: "installTheme",
+        themeData: { resource: "url", url: `${origin}/demo/metis/metis.zip` },
+        options: { activate: true },
+      },
+      { step: "importWxr", file: { resource: "url", url: `${origin}/demo/metis/content.xml` } },
+      {
+        // The theme's own front page introduces Mētis itself. Replace it with the starter
+        // site, the way a visitor would in the Site Editor: as a customized Front Page template.
+        step: "runPHP",
+        code: `<?php
+require '/wordpress/wp-load.php';
+$template = wp_insert_post([
+  'post_type' => 'wp_template',
+  'post_status' => 'publish',
+  'post_name' => 'front-page',
+  'post_title' => 'Front Page',
+  'post_content' => '<!-- wp:pattern {"slug":"metis/${starter}"} /-->',
+]);
+wp_set_object_terms($template, 'metis', 'wp_theme');`,
+      },
+    ],
+  };
+}
+
 /** Every site the visitor can land in. The first is the default. */
-export const tryBlueprints: TryBlueprint[] = [ipsum];
+export const tryBlueprints: TryBlueprint[] = [
+  ipsum,
+  metis("business", {
+    name: "Landmark",
+    tagline: "A studio for brands in motion",
+    description: "A studio's site: services, clients, team and pricing.",
+  }),
+  metis("news", {
+    name: "Parallel",
+    tagline: "The news, side by side",
+    description: "A newspaper's front page, led by a featured story.",
+  }),
+  metis("magazine", {
+    name: "Almanac",
+    tagline: "A magazine of slow attention",
+    description: "A magazine: the current issue, its makers and the archive.",
+  }),
+  metis("portfolio", {
+    name: "Cora Vale",
+    tagline: "Selected work",
+    description: "A designer's portfolio, with awards and a playlist.",
+  }),
+  metis("writer", {
+    name: "Iris Calder",
+    tagline: "Books, writings and talks",
+    description: "An author's home: a new book, its reviews and writings.",
+  }),
+  metis("personal", {
+    name: "Ada Fenn",
+    tagline: "Builds and notes",
+    description: "A personal site with selected builds and the latest posts.",
+  }),
+];
 
 export const DEFAULT_BLUEPRINT_ID = tryBlueprints[0].id;
+
+/** The site asked for with `?site=` ("metis-news"), or the default. */
+export function getRequestedBlueprintId(search: string): string {
+  const id = new URLSearchParams(search).get("site")?.trim().toLowerCase();
+  return tryBlueprints.find((b) => b.id === id)?.id ?? DEFAULT_BLUEPRINT_ID;
+}
 
 /**
  * Remove WordPress's default content (Hello world, Sample Page, the draft Privacy
@@ -143,7 +233,7 @@ export function getTryBlueprint(id: string, origin: string, versions = DEFAULT_V
       : [
           removeDefaultContentStep,
           nameAccountStep,
-          ...blueprint.steps((file) => `${origin}/demo/${blueprint.id}/${file}`),
+          ...blueprint.steps(origin),
           emptyTrashStep,
           previewTabsStep(origin),
         ],

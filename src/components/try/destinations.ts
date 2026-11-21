@@ -43,5 +43,7 @@ export type TryControls = {
   activePath?: string;
   goTo: (path: string) => void;
   reset: () => void;
+  /** Opens the list of sites to switch to. */
+  switchSite: () => void;
   showWelcome: () => void;
 };

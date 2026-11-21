@@ -18,8 +18,10 @@ npm run lint
 - **A real WordPress site** running in their browser, logged in as "Administrator", with a demo theme
   and content.
 - **A welcome dialog** naming the WordPress version they're running, with that release's artwork.
-- **A floating control bar**: Get WordPress, Homepage, Dashboard, Edit Site, Reset (which asks first),
-  and hide. It can be dragged to any of six spots along the top and bottom edges, and remembers its spot.
+- **A choice of sites**: the Ipsum blog, or one of the six starter sites of the Mētis theme, picked from
+  a gallery in the control bar.
+- **A floating control bar**: Get WordPress, Homepage, Dashboard, Edit Site, Try another site, Reset
+  (which asks first), and hide. It can be dragged to any of six spots along the top and bottom edges, and remembers its spot.
   On phones it's a round WordPress button that opens a menu of the same options, and drags the same way.
 - **Previews that work**: pages WordPress opens in a new tab, like the editor's Preview, open on
   trywp.now and show the visitor's live site.
@@ -31,6 +33,8 @@ Like playground.wordpress.net, the page takes the versions to run from its URL:
 - `?wp=` a WordPress release (`6.8`), `latest`, `beta`, or `nightly`. Defaults to the 7.2 beta
   until 7.2 is released, since Ipsum needs it.
 - `?php=` a PHP version from 7.4 to 8.5 (`8.2`). Defaults to 8.3.
+- `?site=` the site to start in: `ipsum` (the default) or `metis-business`, `metis-news`,
+  `metis-magazine`, `metis-portfolio`, `metis-writer`, `metis-personal`. The site switcher sets it too.
 
 For example, https://trywp.now/?wp=7.0&php=8.2. Releases older than the demo theme supports (Ipsum
 needs 7.2) get plain WordPress instead: that version's default theme and sample content. Values in
@@ -49,7 +53,7 @@ Everything lives in `src/components/try/`; `src/app/page.tsx` renders `TryWordPr
 | `controls/FloatingDock.tsx` | The control bar and its collapse animation; destinations are in `destinations.ts`. |
 | `controls/PhoneDock.tsx` | The phone version of the controls: a button that opens a menu. |
 | `controls/useDockPosition.ts` | Dragging the bar between its six spots, and remembering the spot. |
-| `TryModal.tsx` | The dialog shell, used by `WelcomeModal.tsx` and `ResetModal.tsx`. |
+| `TryModal.tsx` | The dialog shell, used by `WelcomeModal.tsx`, `ResetModal.tsx` and `SitesModal.tsx`. |
 | `release-art.ts` | Which artwork the welcome shows for each WordPress release (see below). |
 | `preview-tabs.ts` | Keeps WordPress's new tabs on trywp.now (see below). |
 | `try.css` | All of the above's styles. |
@@ -57,15 +61,25 @@ Everything lives in `src/components/try/`; `src/app/page.tsx` renders `TryWordPr
 ### Blueprints
 
 What the visitor lands in is one of the blueprints in `blueprint.ts` (`tryBlueprints`; the first is the
-default). Each adds its own steps between shared setup (removing WordPress's default content, naming the
-account) and cleanup (emptying the trash, installing the new-tab plugin), and declares the oldest
-WordPress release it supports (`requiresWp`). Today there's one: the
-[Ipsum](https://github.com/WordPress/ipsum) theme and its demo content.
+default), and `SitesModal.tsx` is the gallery that switches between them. Each adds its own steps between
+shared setup (removing WordPress's default content, naming the account) and cleanup (emptying the trash,
+installing the new-tab plugin), and declares the oldest WordPress release it supports (`requiresWp`).
+Today there are seven:
 
-A blueprint's theme and content are served from `public/demo/<id>/`, with a `SOURCE` file recording the
-commit they came from. Refresh them with `scripts/build-demo-content.sh [blueprint] [git-ref]`
-(defaults: `ipsum`, `trunk`). To add a blueprint, add its source to that script, run it, and add its
-definition to `tryBlueprints`.
+- The [Ipsum](https://github.com/WordPress/ipsum) theme and its demo content.
+- The six starter sites of the [Mētis](https://github.com/WordPress/metis) theme (Business, News,
+  Magazine, Portfolio, Writer, Personal). They share one theme and one set of posts; each sets its
+  starter site's design as the Front Page template.
+
+A theme's files are served from `public/demo/<theme>/`: the theme zip, `content.xml`, the pictures the
+gallery shows, and a `SOURCE` file recording the commit they came from. Refresh them with
+`scripts/build-demo-content.sh [theme] [git-ref]` (defaults: `ipsum`, `trunk`). To add a site, add its
+theme to that script, run it, and add its definition to `tryBlueprints`.
+
+Mētis doesn't publish demo content yet, so `scripts/build-metis-content.py` rebuilds it from the
+theme's [public demo site](https://metisdemo.mystagingwebsite.com/): its posts (converted back to
+blocks), their images, categories, tags and comments. It leaves out that site's showcase pages, which
+can't be converted. Swap it for the theme's own export once there is one.
 
 ### Release artwork
 
@@ -115,5 +129,6 @@ at Spacefast, and `www` redirects to the apex.
 
 ## License
 
-GPL-2.0-or-later (see `LICENSE`). WordPress, the Ipsum theme, and the vendored wordpress.org CSS are GPL.
+GPL-2.0-or-later (see `LICENSE`). WordPress, the Ipsum and Mētis themes, and the vendored wordpress.org CSS
+are GPL. The Mētis demo posts and pictures come from the theme's public demo site.
 The release artwork in `public/release-art/` comes from wordpress.org's release pages.

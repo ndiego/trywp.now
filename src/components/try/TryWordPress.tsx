@@ -2,10 +2,11 @@
 
 import { useCallback, useState } from "react";
 import type { PlaygroundClient } from "@wp-playground/client";
-import { DEFAULT_BLUEPRINT_ID, DEFAULT_VERSIONS, getRequestedVersions } from "./blueprint";
+import { DEFAULT_BLUEPRINT_ID, DEFAULT_VERSIONS, getRequestedBlueprintId, getRequestedVersions } from "./blueprint";
 import { FloatingDock } from "./controls/FloatingDock";
 import { getActivePath, type TryControls } from "./destinations";
 import { PlaygroundFrame, type BootStatus } from "./PlaygroundFrame";
+import { SitesModal } from "./SitesModal";
 import { ResetModal } from "./ResetModal";
 import { WelcomeModal } from "./WelcomeModal";
 
@@ -18,7 +19,11 @@ async function getWordPressVersion(client: PlaygroundClient): Promise<string | n
 /** Full-screen "Try WordPress" experience: a live Playground with floating controls on top. */
 export function TryWordPress() {
   // Which blueprint is running, and a counter that remounts Playground for a fresh boot.
-  const [run, setRun] = useState({ blueprintId: DEFAULT_BLUEPRINT_ID, session: 0 });
+  const [run, setRun] = useState(() => ({
+    // The site asked for with ?site=. Nothing rendered on the server depends on it.
+    blueprintId: typeof window === "undefined" ? DEFAULT_BLUEPRINT_ID : getRequestedBlueprintId(window.location.search),
+    session: 0,
+  }));
   const [client, setClient] = useState<PlaygroundClient | null>(null);
   const [status, setStatus] = useState<BootStatus>({ progress: 0, caption: "Starting WordPress" });
   const [path, setPath] = useState("");
@@ -26,6 +31,7 @@ export function TryWordPress() {
   const [error, setError] = useState<{ message: string; wp: string | null } | null>(null);
   const [welcome, setWelcome] = useState<"pending" | "open" | "seen">("pending");
   const [confirmingReset, setConfirmingReset] = useState(false);
+  const [choosingSite, setChoosingSite] = useState(false);
   const [wpVersion, setWpVersion] = useState<string | null>(null);
 
   /** Boots a fresh site from `blueprintId`, or from the current blueprint when omitted. */
@@ -74,6 +80,19 @@ export function TryWordPress() {
     setConfirmingReset(false);
     reset();
   }, [reset]);
+  const cancelSwitch = useCallback(() => setChoosingSite(false), []);
+  /** Boots another site, and keeps it in the URL (as ?site=) so a reload or a shared link lands in it. */
+  const switchSite = useCallback(
+    (blueprintId: string) => {
+      setChoosingSite(false);
+      const url = new URL(window.location.href);
+      if (blueprintId === DEFAULT_BLUEPRINT_ID) url.searchParams.delete("site");
+      else url.searchParams.set("site", blueprintId);
+      window.history.replaceState(null, "", url);
+      boot(blueprintId);
+    },
+    [boot],
+  );
   const goTo = useCallback((p: string) => void client?.goTo(p), [client]);
 
   const controls: TryControls = {
@@ -82,6 +101,7 @@ export function TryWordPress() {
     goTo,
     // The dock asks first; "Try again" after a failed boot resets straight away.
     reset: () => setConfirmingReset(true),
+    switchSite: () => setChoosingSite(true),
     showWelcome: () => setWelcome("open"),
   };
 
@@ -138,6 +158,7 @@ export function TryWordPress() {
       </div>
 
       <WelcomeModal open={welcome === "open" && !!client} onClose={closeWelcome} version={wpVersion} />
+      <SitesModal open={choosingSite} currentId={run.blueprintId} onCancel={cancelSwitch} onSwitch={switchSite} />
       <ResetModal open={confirmingReset} onCancel={cancelReset} onConfirm={confirmReset} />
     </div>
   );

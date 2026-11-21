@@ -1,0 +1,1910 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Mētis demo content, built from https://metisdemo.mystagingwebsite.com by scripts/build-metis-content.py. -->
+<rss version="2.0"
+	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:wp="http://wordpress.org/export/1.2/"
+>
+<channel>
+	<title>Mētis</title>
+	<link>https://metisdemo.mystagingwebsite.com</link>
+	<language>en-US</language>
+	<wp:wxr_version>1.2</wp:wxr_version>
+	<wp:base_site_url>https://metisdemo.mystagingwebsite.com</wp:base_site_url>
+	<wp:base_blog_url>https://metisdemo.mystagingwebsite.com</wp:base_blog_url>
+	<wp:author><wp:author_id>2</wp:author_id><wp:author_login><![CDATA[iris-calder]]></wp:author_login><wp:author_email><![CDATA[iris-calder@example.com]]></wp:author_email><wp:author_display_name><![CDATA[Iris Calder]]></wp:author_display_name></wp:author>
+	<wp:category><wp:term_id>2</wp:term_id><wp:category_nicename><![CDATA[attention]]></wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[Attention]]></wp:cat_name></wp:category>
+	<wp:category><wp:term_id>3</wp:term_id><wp:category_nicename><![CDATA[craft]]></wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[Craft]]></wp:cat_name></wp:category>
+	<wp:category><wp:term_id>4</wp:term_id><wp:category_nicename><![CDATA[essays]]></wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[Essays]]></wp:cat_name></wp:category>
+	<wp:category><wp:term_id>5</wp:term_id><wp:category_nicename><![CDATA[language]]></wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[Language]]></wp:cat_name></wp:category>
+	<wp:category><wp:term_id>8</wp:term_id><wp:category_nicename><![CDATA[technology]]></wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[Technology]]></wp:cat_name></wp:category>
+	<wp:category><wp:term_id>9</wp:term_id><wp:category_nicename><![CDATA[wayfinding]]></wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[Wayfinding]]></wp:cat_name></wp:category>
+	<wp:tag><wp:term_id>10</wp:term_id><wp:tag_slug><![CDATA[adaptation]]></wp:tag_slug><wp:tag_name><![CDATA[adaptation]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>11</wp:term_id><wp:tag_slug><![CDATA[attention]]></wp:tag_slug><wp:tag_name><![CDATA[attention]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>13</wp:term_id><wp:tag_slug><![CDATA[change]]></wp:tag_slug><wp:tag_name><![CDATA[change]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>14</wp:term_id><wp:tag_slug><![CDATA[cities]]></wp:tag_slug><wp:tag_name><![CDATA[cities]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>15</wp:term_id><wp:tag_slug><![CDATA[confidence]]></wp:tag_slug><wp:tag_name><![CDATA[confidence]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>16</wp:term_id><wp:tag_slug><![CDATA[constraint]]></wp:tag_slug><wp:tag_name><![CDATA[constraint]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>18</wp:term_id><wp:tag_slug><![CDATA[craft]]></wp:tag_slug><wp:tag_name><![CDATA[craft]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>19</wp:term_id><wp:tag_slug><![CDATA[cunning]]></wp:tag_slug><wp:tag_name><![CDATA[cunning]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>21</wp:term_id><wp:tag_slug><![CDATA[design]]></wp:tag_slug><wp:tag_name><![CDATA[design]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>22</wp:term_id><wp:tag_slug><![CDATA[desire-paths]]></wp:tag_slug><wp:tag_name><![CDATA[desire paths]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>23</wp:term_id><wp:tag_slug><![CDATA[dry-stone-walling]]></wp:tag_slug><wp:tag_name><![CDATA[dry stone walling]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>24</wp:term_id><wp:tag_slug><![CDATA[expertise]]></wp:tag_slug><wp:tag_name><![CDATA[expertise]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>25</wp:term_id><wp:tag_slug><![CDATA[folklore]]></wp:tag_slug><wp:tag_name><![CDATA[folklore]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>26</wp:term_id><wp:tag_slug><![CDATA[improvisation]]></wp:tag_slug><wp:tag_name><![CDATA[improvisation]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>27</wp:term_id><wp:tag_slug><![CDATA[intelligence]]></wp:tag_slug><wp:tag_name><![CDATA[intelligence]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>28</wp:term_id><wp:tag_slug><![CDATA[jazz]]></wp:tag_slug><wp:tag_name><![CDATA[jazz]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>29</wp:term_id><wp:tag_slug><![CDATA[judgment]]></wp:tag_slug><wp:tag_name><![CDATA[judgment]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>30</wp:term_id><wp:tag_slug><![CDATA[knowledge]]></wp:tag_slug><wp:tag_name><![CDATA[knowledge]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>31</wp:term_id><wp:tag_slug><![CDATA[language]]></wp:tag_slug><wp:tag_name><![CDATA[language]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>32</wp:term_id><wp:tag_slug><![CDATA[learning]]></wp:tag_slug><wp:tag_name><![CDATA[learning]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>33</wp:term_id><wp:tag_slug><![CDATA[listening]]></wp:tag_slug><wp:tag_name><![CDATA[listening]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>34</wp:term_id><wp:tag_slug><![CDATA[machines]]></wp:tag_slug><wp:tag_name><![CDATA[machines]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>35</wp:term_id><wp:tag_slug><![CDATA[making-do]]></wp:tag_slug><wp:tag_name><![CDATA[making-do]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>36</wp:term_id><wp:tag_slug><![CDATA[maps]]></wp:tag_slug><wp:tag_name><![CDATA[maps]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>37</wp:term_id><wp:tag_slug><![CDATA[meaning]]></wp:tag_slug><wp:tag_name><![CDATA[meaning]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>38</wp:term_id><wp:tag_slug><![CDATA[metis]]></wp:tag_slug><wp:tag_name><![CDATA[mētis]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>39</wp:term_id><wp:tag_slug><![CDATA[music]]></wp:tag_slug><wp:tag_name><![CDATA[music]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>40</wp:term_id><wp:tag_slug><![CDATA[navigation]]></wp:tag_slug><wp:tag_name><![CDATA[navigation]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>41</wp:term_id><wp:tag_slug><![CDATA[odyssey]]></wp:tag_slug><wp:tag_name><![CDATA[Odyssey]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>42</wp:term_id><wp:tag_slug><![CDATA[oral-tradition]]></wp:tag_slug><wp:tag_name><![CDATA[oral tradition]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>43</wp:term_id><wp:tag_slug><![CDATA[repair]]></wp:tag_slug><wp:tag_name><![CDATA[repair]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>44</wp:term_id><wp:tag_slug><![CDATA[representation]]></wp:tag_slug><wp:tag_name><![CDATA[representation]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>45</wp:term_id><wp:tag_slug><![CDATA[skill]]></wp:tag_slug><wp:tag_name><![CDATA[skill]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>46</wp:term_id><wp:tag_slug><![CDATA[storytelling]]></wp:tag_slug><wp:tag_name><![CDATA[storytelling]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>47</wp:term_id><wp:tag_slug><![CDATA[survival]]></wp:tag_slug><wp:tag_name><![CDATA[survival]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>48</wp:term_id><wp:tag_slug><![CDATA[tacit-knowledge]]></wp:tag_slug><wp:tag_name><![CDATA[tacit knowledge]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>49</wp:term_id><wp:tag_slug><![CDATA[tradition]]></wp:tag_slug><wp:tag_name><![CDATA[tradition]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>50</wp:term_id><wp:tag_slug><![CDATA[translation]]></wp:tag_slug><wp:tag_name><![CDATA[translation]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>51</wp:term_id><wp:tag_slug><![CDATA[untranslatable]]></wp:tag_slug><wp:tag_name><![CDATA[untranslatable]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>52</wp:term_id><wp:tag_slug><![CDATA[wayfinding]]></wp:tag_slug><wp:tag_name><![CDATA[wayfinding]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>56</wp:term_id><wp:tag_slug><![CDATA[magazine]]></wp:tag_slug><wp:tag_name><![CDATA[magazine]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>57</wp:term_id><wp:tag_slug><![CDATA[news]]></wp:tag_slug><wp:tag_name><![CDATA[news]]></wp:tag_name></wp:tag>
+
+	<item>
+		<title><![CDATA[metis-artifact-post–a-beat-early]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>1122</wp:post_id>
+		<wp:post_date><![CDATA[2026-10-29 11:19:40]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-10-29 11:19:40]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[metis-artifact-post-a-beat-early]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[https://metisdemo.mystagingwebsite.com/wp-content/uploads/2026/10/metis-artifact-post-a-beat-early.jpg]]></wp:attachment_url>
+	</item>
+	<item>
+		<title><![CDATA[metis-artifact-post–below-the-reach]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>1123</wp:post_id>
+		<wp:post_date><![CDATA[2026-10-29 11:19:42]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-10-29 11:19:42]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[metis-artifact-post-below-the-reach]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[https://metisdemo.mystagingwebsite.com/wp-content/uploads/2026/10/metis-artifact-post-below-the-reach.jpg]]></wp:attachment_url>
+	</item>
+	<item>
+		<title><![CDATA[metis-artifact-post–certain-of-a-false]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>1124</wp:post_id>
+		<wp:post_date><![CDATA[2026-10-29 11:19:43]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-10-29 11:19:43]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[metis-artifact-post-certain-of-a-false]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[https://metisdemo.mystagingwebsite.com/wp-content/uploads/2026/10/metis-artifact-post-certain-of-a-false.jpg]]></wp:attachment_url>
+	</item>
+	<item>
+		<title><![CDATA[metis-artifact-post–moving-a-word]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>1125</wp:post_id>
+		<wp:post_date><![CDATA[2026-10-29 11:19:45]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-10-29 11:19:45]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[metis-artifact-post-moving-a-word]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[https://metisdemo.mystagingwebsite.com/wp-content/uploads/2026/10/metis-artifact-post-moving-a-word.jpg]]></wp:attachment_url>
+	</item>
+	<item>
+		<title><![CDATA[metis-artifact-post–some-were-found]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>1127</wp:post_id>
+		<wp:post_date><![CDATA[2026-10-29 11:19:50]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-10-29 11:19:50]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[metis-artifact-post-some-were-found]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[https://metisdemo.mystagingwebsite.com/wp-content/uploads/2026/10/metis-artifact-post-some-were-found.jpg]]></wp:attachment_url>
+	</item>
+	<item>
+		<title><![CDATA[metis-artifact-post–stronger-at-the-mend]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>1128</wp:post_id>
+		<wp:post_date><![CDATA[2026-10-29 11:19:51]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-10-29 11:19:51]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[metis-artifact-post-stronger-at-the-mend]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[https://metisdemo.mystagingwebsite.com/wp-content/uploads/2026/10/metis-artifact-post-stronger-at-the-mend.jpg]]></wp:attachment_url>
+	</item>
+	<item>
+		<title><![CDATA[metis-artifact-post–they-left-the-chart]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>1129</wp:post_id>
+		<wp:post_date><![CDATA[2026-10-29 11:19:54]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-10-29 11:19:54]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[metis-artifact-post-they-left-the-chart]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[https://metisdemo.mystagingwebsite.com/wp-content/uploads/2026/10/metis-artifact-post-they-left-the-chart.jpg]]></wp:attachment_url>
+	</item>
+	<item>
+		<title><![CDATA[metis-artifact-post–where-the-feet]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>1130</wp:post_id>
+		<wp:post_date><![CDATA[2026-10-29 11:19:55]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-10-29 11:19:55]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[metis-artifact-post-where-the-feet]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[https://metisdemo.mystagingwebsite.com/wp-content/uploads/2026/10/metis-artifact-post-where-the-feet.jpg]]></wp:attachment_url>
+	</item>
+	<item>
+		<title><![CDATA[metis-artifact-post–a-story-that-survives]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>1141</wp:post_id>
+		<wp:post_date><![CDATA[2026-10-29 11:25:44]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-10-29 11:25:44]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[metis-artifact-post-a-story-that-survives]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[https://metisdemo.mystagingwebsite.com/wp-content/uploads/2026/01/metis-artifact-post-a-story-that-survives.jpg]]></wp:attachment_url>
+	</item>
+	<item>
+		<title><![CDATA[metis-artifact-post–ofmany-wiles]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>1159</wp:post_id>
+		<wp:post_date><![CDATA[2026-10-30 10:44:27]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-10-30 10:44:27]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[metis-artifact-post-ofmany-wiles]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[https://metisdemo.mystagingwebsite.com/wp-content/uploads/2025/01/metis-artifact-post-ofmany-wiles.jpg]]></wp:attachment_url>
+	</item>
+	<item>
+		<title><![CDATA[Some were found, and some were shaped]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>I watched a waller rebuild a collapsed section of a field wall last autumn, and what surprised me was how little time was spent actually building. She would crouch over the scattered pile of stone, lift one, turn it in her hands, set it down, and reach for another—and only when a shape satisfied her would she carry it to the wall and seat it, with a slight nudge of the wrist, into the gap that had been waiting for it. The hammer at her belt stayed there for long stretches. From the outside, most of the craft looked like looking.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A wall holds by being loose</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A dry-stone wall depends on friction and weight. Many such walls endure for centuries despite severe weather. Their durability comes from the loose arrangement, allowing them to settle with frost and avoid cracking. When stones are properly fitted, they lock together across joints and evenly distribute the load. One stone forced where it does not fit, and the fault travels.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>So searching is not fussiness. It is the heart of the work. The waller reads the pile against the gap, holding the shape of the absence in mind and seeking the stone that the absence describes. There is a craftsman’s law, half joke, half discipline, that you should never pick up a stone twice—a good eye reaches for the right one first, because every wasted lift is a small failure of attention.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>The pile is not raw material waiting to be cut to plan. It is a set of answers, and the skill is recognizing which question each one fits.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The hammer comes out</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>And yet the romantic version of this craft—the one I half-believed before I saw it done—is false. The waller does cut. When the search comes up empty, and the wall needs a shape the pile does not hold, the hammer comes out of the belt: a blow to knock the proud corner from a stone, a trimmed edge so it will seat, a face dressed flat to take the course above. Near the top, stones are deliberately set on edge, shaped and combed into a finish no natural fall of rock would give. A purist who would never strike a stone would simply never finish the wall.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What the waller has, then, is not a rule but a judgment, and that judgment runs in both directions. Cut too eagerly, and you waste the stone and weaken the fit. Search too long, and the wall stands unbuilt as the light goes. Somewhere between the two lies the right move for this stone, this gap, this afternoon. And it cannot be written down, only developed in the hands and the eye, over years of being slightly wrong. The manual can tell you to cross your joints, pack your heart, and batter your faces. It cannot tell you when to stop looking and reach for the hammer. That part only begins where the manual ends.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What someone knew to leave alone</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We are too quick, in most things, to admire the clean principle: the method never deviated from, the line never crossed, the stone never cut. It makes a better story than practice. Wisdom was never in choosing a side and holding it against all weather. It was in knowing which one the moment in front of you was asking for. The people who keep things standing—walls, institutions, bodies of work—are usually the ones who hold their principles loosely enough to recognize the exceptions, who can tell, without quite being able to say how, when the rule still serves the work and when the work has moved past it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The wall she finished that afternoon will likely outlast her, and most who pass it will read it, if they read it at all, as a thing made of stones that happened to fit. They did not happen to fit. Some were found, and some were shaped, and the difference between them is now invisible, sealed into a line that runs along the field and holds. What lasts is rarely the purest version of the thing. It is the one someone knew when to leave alone.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[A dry-stone wall holds without mortar, free to shift and settle where a rigid structure would crack. Its strength is its looseness. Some stones were found whole; others were shaped to fit—and knowing which is which is the whole craft.]]></excerpt:encoded>
+		<wp:post_id>1019</wp:post_id>
+		<wp:post_date><![CDATA[2026-03-14 10:03:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-03-14 10:03:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[some-were-found-and-some-were-shaped]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="craft"><![CDATA[Craft]]></category>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="post_tag" nicename="attention"><![CDATA[attention]]></category>
+		<category domain="post_tag" nicename="craft"><![CDATA[craft]]></category>
+		<category domain="post_tag" nicename="dry-stone-walling"><![CDATA[dry stone walling]]></category>
+		<category domain="post_tag" nicename="judgment"><![CDATA[judgment]]></category>
+		<category domain="post_tag" nicename="tradition"><![CDATA[tradition]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1127]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Where the feet went first]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>There is a path across the small park near my flat that no one designed. It runs diagonally across the grass, cutting the square corner that the paved walkway takes the long way around. It is worn down to bare earth now, a brown line as wide as a single person. No sign points to it. No plan accounts for it. Yet in the months I have walked there, I have almost never seen anyone take the paved route when the diagonal was dry. The ground itself seems to have made a decision, and everyone honors it without thinking.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A line drawn by everyone and no one</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>These worn tracks have a name—desire paths—and what holds my attention is that they have no author. Each person who crossed the grass simply took the route that made sense in the moment, and the sum of those small, independent choices traces a line very close to the one a careful engineer with a ruler would have drawn but never did. The path is a piece of reasoning the crowd worked out with its feet, with no committee behind it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>No one chose the route. Everyone did. The grass simply kept the record.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Two answers to a worn line</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A planner who finds such a path has two ways to respond, each showing a different attitude toward the world. The first is correction: a sign stating &#8216;keep off the grass&#8217; is posted, or the worn trail is reseeded and roped off. This almost never works for long, as the path reappears within weeks. The reason is that the underlying logic hasn&#8217;t changed—people still need to travel from one point to another, and the diagonal remains the most sensible route. You can address the symptom, but the fundamental reason walks straight through it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The second approach is rarer and wiser. A story tells of architects who built a university campus without defined paths in the first year. They allowed students to walk freely for two semesters of normal activity, and only then paved paths along the routes students had already created. This design strategy prioritized walking patterns rather than imposing them. What initially seems like indolence is actually a sign of respect: recognizing that the users of a space may understand its true form better than an outsider looking down from above.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Letting the world draw the map</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We tend to build the other way around. We decide in advance how people ought to move through a space, a form, or an institution, and then we read the worn diagonal across the lawn as a small act of disobedience—a failure of the public to follow the plan. But the path is not disobedience. It is information, freely given, about the gap between how we imagined people would behave and how they actually do. The humility required to pave it is harder to summon than it sounds, because paving means conceding that the drawing was wrong and the walking was right. The best arrangements are often the ones that were discovered rather than imposed: the rule that grew around a practice, the route that formed before anyone named it, the structure that followed life rather than preceding it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The strange thing is what happens once the desire path is paved. It ceases to be a transgression and simply becomes the way—the route on the map, the line everyone takes, no longer a shortcut because there is nothing left to cut across. The grass closes over the path that planning first preferred, and within a year no one remembers it was ever there. What lasts, in the end, is rarely the line that was drawn. It is the one that was walked.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Across any worn lawn runs a path no one designed—the diagonal footpaths chosen over the paving. Planners can fence it off or pave it. The wiser ones follow, conceding that the people crossing a place may know its true shape best.]]></excerpt:encoded>
+		<wp:post_id>1017</wp:post_id>
+		<wp:post_date><![CDATA[2026-03-08 09:50:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-03-08 09:50:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[where-the-feet-went-first]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="category" nicename="wayfinding"><![CDATA[Wayfinding]]></category>
+		<category domain="post_tag" nicename="attention"><![CDATA[attention]]></category>
+		<category domain="post_tag" nicename="cities"><![CDATA[cities]]></category>
+		<category domain="post_tag" nicename="design"><![CDATA[design]]></category>
+		<category domain="post_tag" nicename="desire-paths"><![CDATA[desire paths]]></category>
+		<category domain="post_tag" nicename="wayfinding"><![CDATA[wayfinding]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1130]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:comment>
+			<wp:comment_id>8</wp:comment_id>
+			<wp:comment_author><![CDATA[Mētis]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[]]></wp:comment_author_email>
+			<wp:comment_date><![CDATA[2026-11-05 11:27:18]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-11-05 11:27:18]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[I wonder how a comment will be displayed on this theme design 🤔]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>9</wp:comment_id>
+			<wp:comment_author><![CDATA[Mētis]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[]]></wp:comment_author_email>
+			<wp:comment_date><![CDATA[2026-11-05 11:27:42]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-11-05 11:27:42]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[What about a reply to the comment?]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>8</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>10</wp:comment_id>
+			<wp:comment_author><![CDATA[Commenter]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[]]></wp:comment_author_email>
+			<wp:comment_date><![CDATA[2026-11-05 11:28:12]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-11-05 11:28:12]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[These comments look great 🎯]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>11</wp:comment_id>
+			<wp:comment_author><![CDATA[Spokesperson]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[]]></wp:comment_author_email>
+			<wp:comment_date><![CDATA[2026-11-05 11:28:36]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-11-05 11:28:36]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Yep, I agree. All good here, moving on…]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+		</wp:comment>
+	</item>
+	<item>
+		<title><![CDATA[Stronger at the mend]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>There is a particular kind of object you find in old houses and long-used workshops: the thing whose repair has outlasted the thing itself. A wooden chair with a broken joint braced with scrap—now the strongest part you’d trust if it fell. A wall that fails everywhere except where someone has hastily patched it with a substitute stone. We often see repairs as scars, yet they can be the room’s most resilient parts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A repair knows something the design never could</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The reason is not sentiment. It is information. When a thing is first made, its maker works from a plan and a general idea—a reasonable guess, made in advance, about a future that has not yet happened. The maker cannot know where this particular object will fail, because it has not failed; the weak point is still hypothetical, distributed evenly across a hundred possible points of failure. The mender works from the opposite position. The repair is aimed at a known failure rather than a guessed one, and an answer to a real question is almost always better than a precaution against an imagined one.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Building with what the moment hands you</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>There is a second intelligence layered over the first, the discipline of working with what is actually on hand. The original could be made from the right material, ordered, and waited for. The repair often has to be made now, with whatever is within reach. This sounds like a limitation, and it is, but constraint has a way of producing solutions that abundance never bothers to find. Forced to use the wrong thing well, the mender discovers properties the right thing would have let them ignore, and now and then arrives at something better than the catalog would have supplied.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is worth holding onto in any moment when the tools available are powerful yet unfinished, handed to us half-formed and rarely shaped for the exact thing we intend to do with them. The instinct is to wait for the proper instrument, the version built for the purpose. But the work tends to belong to whoever is willing to take what is at hand and bend it to service—to treat the imperfect tool not as an excuse but as the material, and to build the mend the situation actually requires rather than the one a manual would recommend.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What the broken thing becomes</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The repaired object never returns to its original state. It openly acknowledges the break, with a different material at the joint where two histories intersect. Sometimes, it endures longer than its unbroken counterparts because the repaired area has been strengthened, while the untouched parts remain uncertain in strength.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Maybe that is the quiet argument every old repair makes: that the most durable version of a thing is rarely the pristine one, fresh, untested, and whole. It is the one that broke in a specific way, was understood at the point of its failure, and was remade by someone resourceful enough to answer the break with whatever they had. What lasts is not the thing that was never damaged. It is the thing that was mended well.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[We read repairs as scars, evidence of damage. Often, they are the opposite: the most resilient part of the room. A design guesses where strength will be needed; a repair answers a break that has already happened—and an answer beats a precaution.]]></excerpt:encoded>
+		<wp:post_id>1015</wp:post_id>
+		<wp:post_date><![CDATA[2026-03-02 09:50:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-03-02 09:50:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[stronger-at-the-mend]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="craft"><![CDATA[Craft]]></category>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="post_tag" nicename="constraint"><![CDATA[constraint]]></category>
+		<category domain="post_tag" nicename="craft"><![CDATA[craft]]></category>
+		<category domain="post_tag" nicename="design"><![CDATA[design]]></category>
+		<category domain="post_tag" nicename="making-do"><![CDATA[making-do]]></category>
+		<category domain="post_tag" nicename="repair"><![CDATA[repair]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1128]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Moving a word that will not move]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Every language keeps a few words that will not leave home. Portuguese, for example, has <em>saudade</em>—a unique longing for something or someone absent, a sensation made of absence, yearning, and tenderness, with a bittersweet pleasure packed into two syllables. While you can translate it into English, such a translation is just a description, like a photograph standing in for a meal instead of the actual dinner. Italian and Japanese each have their own untranslatable words, as do all languages. These words are too complex for a dictionary to fully capture because they embody not just a meaning but an entire emotional experience that one culture recognizes, which others may never need to express.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Some words refuse to cross</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The interesting problem is not that such words exist. It is what happens when someone has to move one. A translator handed a sentence built around <em>saudade</em> cannot simply swap in an English equivalent, because there is none; the slot is empty, and every near-miss—longing, nostalgia, yearning, missing—lands a little wide, dropping some part of what the original held and adding some shade it never had. The honest options all look like failures. Translate it directly, and you get a word that means something slightly different. Leave it untranslated, and you ask the reader to feel something they have no name for. Some words sit at the border, and there is no legal way to bring them through.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Smuggling, not transferring</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>So the good translator stops trying to transfer the word and starts doing something sneakier. The meaning gets carried across by every route except the direct one—built up out of context, implied by an image swapped in for another image that produces the same ache in the reader. It is less a transfer than a smuggling operation: the word stays behind at the checkpoint, and its meaning crosses anyway, hidden in the freight of everything around it. This is the real art of translation—the reading of what a word does rather than what it says, and the cunning to reproduce that doing by other means.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>Translation, at its best, is not transfer. It is smuggling.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:paragraph -->
+<p>You can see the size of this skill most clearly in what happens without it. The systems that now move text between languages in an instant are very good at the legal crossing—the word-for-word swap, the dictionary equivalent—and it is exactly there that the untranslatable word defeats them. Such a system returns filled slots, but the feeling is gone. It has performed the transfer and missed the meaning, because the meaning was never in the word alone.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lost and gained in the crossing</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Even when smuggled across, the word arrives changed. Something of the original always stays behind—the exact weight it had at home, the centuries of use that made it feel inevitable to the people who grew up inside it. And something new arrives that was not there before, because the borrowed word picks up a slightly different life in its new language.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Maybe that is simply how meaning travels, not a flaw in the transmission. Nothing crosses a border and arrives untouched—not words, not people, not ideas. What survives the crossing is never the original, held perfectly intact. It is whatever was carried cleverly enough to arrive at all, a little foreign on both sides now, belonging fully to neither, and somehow richer for the passage.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Every language keeps certain words that won’t leave home. A translator can’t simply replace them because no equivalent exists. Instead, the meaning is conveyed through indirect methods, hidden within the surrounding context, using various routes rather than a direct one.]]></excerpt:encoded>
+		<wp:post_id>1013</wp:post_id>
+		<wp:post_date><![CDATA[2026-02-28 10:12:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-02-28 10:12:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[moving-a-word-that-will-not-move]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="category" nicename="language"><![CDATA[Language]]></category>
+		<category domain="post_tag" nicename="craft"><![CDATA[craft]]></category>
+		<category domain="post_tag" nicename="language"><![CDATA[language]]></category>
+		<category domain="post_tag" nicename="meaning"><![CDATA[meaning]]></category>
+		<category domain="post_tag" nicename="translation"><![CDATA[translation]]></category>
+		<category domain="post_tag" nicename="untranslatable"><![CDATA[untranslatable]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1125]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[They left the chart on the beach and sailed]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>There&#8217;s a thing in some museums labeled a sea chart, though it looks more like something lashed together from broom handles. Thin sticks, tied where they cross. A few shells wired at the joints. No coastline, no north, nothing a sailor from elsewhere would recognize as a reference point. And it never went to sea—that&#8217;s the part that throws people. The men who made these in the Marshall Islands kept them ashore, studied them like a score, then walked down to the water and left them on the sand.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What the sticks recorded were swells, not the positions of the islands but how the water moved around them. A swell from the open Pacific encounters an island, curves around it, and creates a weaker swell behind. When two such patterns intersect, they produce a distinctive chop, signaling that land is nearby hours before it becomes visible. A navigator learned to sense this. By lying flat in the canoe with eyes closed and feeling the sea, they read the waves. An old ethnographer described navigators who claimed their most sensitive instrument was their own body—that the best way to feel a swell was through the testicles. Take that as you will. This knowledge lived below language, in the skin, and it worked: men crossed vast stretches of water that all looked the same and put their canoes ashore on the island they meant to find.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Why none of it fit on the sticks</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The sticks couldn&#8217;t carry that knowledge, and the reason wasn&#8217;t that they were crude. A depth you can write down—forty fathoms, sand bottom—stays true, and a stranger can read it. But feeling a swell isn&#8217;t a fact you have. It&#8217;s something you do, alive only while you&#8217;re doing it, the way balance lasts exactly as long as you keep balancing and no longer.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>Put it on a page, and it dies on the page.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:paragraph -->
+<p>So the chart was never a record of the knowledge at all. It was a finger pointing at it. Something to memorize and then outgrow, like the working lines a teacher draws that you&#8217;re supposed to stop needing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Portable beats true</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Then the printed charts came, gridded and exact, and they won. Not on accuracy—the old navigators were uncanny that way—but on copies. One survey, a thousand identical sheets, and any stranger who learned the symbols could find the way. The other knowledge moved one body at a time, took half a lifetime to hand on, and died the moment a single link went missing. So the thing you can copy beats the thing that&#8217;s merely good. That&#8217;s most of the story of what each age keeps and what it lets go. And it&#8217;s hard not to feel it now, with so much of what we know being poured into the one shape a machine can hold, on the quiet hunch that whatever won&#8217;t pour was never worth much.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Left on the beach on purpose</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The recurring theme for me is leaving. They created the chart, learned all its lessons, and then set it in the sand before walking away without it, because they understood that what they held was a depiction of the sea, not the sea itself. We keep such images in our pockets and forget the distinction. The record captures what it represents, and the more polished it appears, the more we rely on it. The sticks behind museum glass are beautiful, and you could learn to read them in an afternoon. But the man in the dark with closed eyes, experiencing the entire ocean through a small boat&#8217;s hull—that is not behind the glass, and it will not return.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[A Marshall Islands chart made of lashed sticks and shells, never used at sea. The knowledge it taught lived in the body, felt rather than read. When printed charts appeared, they gained the advantage of being easily copied.]]></excerpt:encoded>
+		<wp:post_id>1011</wp:post_id>
+		<wp:post_date><![CDATA[2026-02-21 10:11:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-02-21 10:11:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[they-left-the-chart-on-the-beach-and-sailed]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="category" nicename="wayfinding"><![CDATA[Wayfinding]]></category>
+		<category domain="post_tag" nicename="knowledge"><![CDATA[knowledge]]></category>
+		<category domain="post_tag" nicename="maps"><![CDATA[maps]]></category>
+		<category domain="post_tag" nicename="navigation"><![CDATA[navigation]]></category>
+		<category domain="post_tag" nicename="representation"><![CDATA[representation]]></category>
+		<category domain="post_tag" nicename="wayfinding"><![CDATA[wayfinding]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1129]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:comment>
+			<wp:comment_id>2</wp:comment_id>
+			<wp:comment_author><![CDATA[Commenter]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[]]></wp:comment_author_email>
+			<wp:comment_date><![CDATA[2026-11-05 11:05:56]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-11-05 11:05:56]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Howdy! This is a comment 👋]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>3</wp:comment_id>
+			<wp:comment_author><![CDATA[Mētis]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[]]></wp:comment_author_email>
+			<wp:comment_date><![CDATA[2026-11-05 11:07:09]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-11-05 11:07:09]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Thank you 💯]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>2</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+		</wp:comment>
+	</item>
+	<item>
+		<title><![CDATA[A beat early, on a note that isn’t there yet]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Watching a piano player behind a soloist reveals something seemingly impossible. The horn player improvises a line on the spot, while the pianist improvises chords underneath. Occasionally, the chords land a half-beat before the horn hits its note. He&#8217;s supporting a melody that doesn&#8217;t exist yet. When asked how he knew where it was heading, he can&#8217;t give a clear answer because he didn&#8217;t know in the traditional sense. Instead, he was reading the music as it was being created, close enough to follow along and somehow just ahead.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Comping is derived from &#8216;accompany,&#8217; though &#8216;answer&#8217; might be a more accurate term. A musician’s comping involves the chord changes and overall structure of the tune, like a sailor following a coastline. Everything else is created spontaneously, reacting to what another musician is improvising in real time. Since it responds to what hasn’t yet happened, it can&#8217;t be prearranged. The key skill lies in the ability to respond appropriately.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Knowing when to play nothing</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Late in his career, Count Basie played sparingly, often just a single chord, carefully placed, then nothing for bars while the band roared around him. Sitting with his hands in his lap, he could be mistaken for lazy, but in reality, he was playing the silence. Creating that space requires confidence in the music’s direction, enough to do nothing and trust that silence is the right choice. Nervous players tend to fill every pause, but skilled musicians recognize when the gap is already complete and get out of the way.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">You can&#8217;t rehearse an answer</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The difficulty isn’t in playing itself but in the constantly shifting situation as you read it, with someone else moving it. The soloist might lean in a different direction than expected, giving you just a quarter-second to decide whether to follow, lean back, or stay still. That choice influences what he does next, which in turn changes what you do after that. Two people are collaboratively creating something in real time that neither controls nor could have pre-written, each responding to the other. You can master your scales over forty years, but you can’t rehearse this exact night, because it has never happened before and won’t happen again.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>The chord that hasn&#8217;t arrived yet is one a skilled player is already anticipating.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Made once, and not again</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Lately, we’re fascinated by the part that can be prepared in advance and delivered perfectly—the plan made beforehand, with the answer ready before the question. Comping, on the other hand, is about starting with almost nothing and reacting in real time to what’s in front of you. It involves reading what’s present rather than what you expected and responding accordingly. This kind of interaction doesn’t scale or store well; it happens once between people who pay close attention to each other. Once the moment ends, that unique exchange is gone, creating something nobody could have made alone.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[A pianist behind a soloist drops a chord half a beat before the horn reaches the note—supporting a melody that hasn’t yet taken shape. He isn’t following a plan but reading the line and responding as it forms.]]></excerpt:encoded>
+		<wp:post_id>1009</wp:post_id>
+		<wp:post_date><![CDATA[2026-02-02 10:11:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-02-02 10:11:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[a-beat-early-on-a-note-that-isnt-there-yet]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="attention"><![CDATA[Attention]]></category>
+		<category domain="category" nicename="craft"><![CDATA[Craft]]></category>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="post_tag" nicename="attention"><![CDATA[attention]]></category>
+		<category domain="post_tag" nicename="improvisation"><![CDATA[improvisation]]></category>
+		<category domain="post_tag" nicename="jazz"><![CDATA[jazz]]></category>
+		<category domain="post_tag" nicename="listening"><![CDATA[listening]]></category>
+		<category domain="post_tag" nicename="music"><![CDATA[music]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1122]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Certain of a false answer]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>A lawyer in New York filed a brief a couple of years ago, citing half a dozen cases that didn’t exist. He hadn’t invented them. His chatbot had—complete with docket numbers, quotations, judges’ names, the whole apparatus of something real—and he’d trusted it because it was fluent and certain and read exactly like law. When the court asked him to produce the cases, he went back and asked the chatbot whether they were real. It assured him they were. They weren’t. He was sanctioned, and the machine never broke stride.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Set aside the mistake for a moment and examine how it was made: with complete confidence, in perfect prose, in a tone indistinguishable from when it&#8217;s correct. That final detail is the new thing in the world.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Confidence used to mean something</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Since the beginning of humanity, confidence has served as a rough indicator of competence. Although not foolproof, it’s reliable enough that we instinctively interpret a firm voice as a sign of knowledge. It generally works because fluency and expertise often correlate: a surgeon explaining a procedure confidently has usually performed it many times, while one hesitant likely has a reason. We are finely tuned to this cue and naturally interpret it, often without realizing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The machine breaks the link. Its fluency is identical whether it&#8217;s correct or wrong—showing the same flat certainty in both cases—because that fluency never came from actual knowledge. Instead, it stems from a different source altogether. Therefore, the instrument we&#8217;ve relied on to trust an answer, the confidence readout, now signals something unrelated to the truth. We&#8217;re essentially holding a compass next to a magnet, leading us astray.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Worst where you know the least</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Here&#8217;s what should keep you alert: you can spot a machine&#8217;s mistake on topics you&#8217;re familiar with. When you give someone with twenty years of experience a subtle falsehood, they&#8217;ll sense the wrongness before explaining it—a date that&#8217;s off or an answer that smells unusually clean. That instinct is genuine and well-founded, built on repeated experiences of being wrong in similar ways, which helps us recognize the pattern.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>But you only get that feel after years of effort. In most situations, you’re relying on a single signal: confidence, which is often worthless. The machine is hardest to detect exactly where you need to catch it: in areas you approached because you lacked knowledge. The solution you can’t evaluate is the one you depend on most, yet it’s also the hardest to verify.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>Generating an answer got cheap. Determining whether it&#8217;s any good did not.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Earned the slow way</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>None of this argues against the machine, which is remarkable and here to stay. The key question is which of your skills has just changed in value. Finding a plausible answer used to be half the effort, but now the machine does it instantly and at low cost. The other half—stepping back, evaluating the answer in context, and spotting when a fluent but wrong response is given—is something only humans can do. That skill has always been more challenging. Previously, we could hide this by relying on confident delivery, but now it’s open and visible.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[A lawyer filed a brief built on cases his chatbot invented—docket numbers, quotations, all of it fluent, confident, and fake. He even went back to ask the machine whether they were real. It said yes. They weren’t.]]></excerpt:encoded>
+		<wp:post_id>1007</wp:post_id>
+		<wp:post_date><![CDATA[2026-01-20 10:11:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-01-20 10:11:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[certain-of-a-false-answer]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="attention"><![CDATA[Attention]]></category>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="category" nicename="technology"><![CDATA[Technology]]></category>
+		<category domain="post_tag" nicename="confidence"><![CDATA[confidence]]></category>
+		<category domain="post_tag" nicename="expertise"><![CDATA[expertise]]></category>
+		<category domain="post_tag" nicename="judgment"><![CDATA[judgment]]></category>
+		<category domain="post_tag" nicename="machines"><![CDATA[machines]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1124]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Below the reach of words]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Ask someone who has ridden a bike their entire life how they keep it upright. They&#8217;ll mention balance, tilt slightly side to side, and then stop, because they don&#8217;t really understand. Even more: ask which way they turn the handlebars when the bike sways left, and most will say they steer right to correct it. In reality, they steer left — into the fall. That’s what stabilizes the bike, and every skilled rider does this countless times per ride, unaware of their unconscious instinct.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This gap has a name, but simply put: we can do much more than we can express. The odd part isn&#8217;t that some knowledge is hard to articulate. It&#8217;s that this knowledge belongs to us—it’s part of our daily use, resides within us, and is undeniably ours. And yet it remains hidden from the part of us that communicates.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Smooth enough to disappear</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>You might assume that your strongest skills are the easiest to explain, but in reality, it&#8217;s often the opposite. The skills buried deepest, worn so smooth that you no longer notice them, are also the hardest to articulate. For instance, a touch typist can&#8217;t pinpoint where each letter is without miming the finger movements; this knowledge resides in the fingers, not in conscious thought. Similarly, you can recognize a friend&#8217;s face in a busy street almost instantaneously and effortlessly, yet struggle to describe that face precisely enough for someone else to identify them. Ask any police sketch artist—people recognize faces instinctively but can say very little factual about them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Shown, never told</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This explains why certain skills can&#8217;t be learned simply through facts. Even if you give someone all the written instructions about riding a bicycle, they&#8217;ll still fall the moment they try to ride.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>The words were never where the knowledge resided.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:paragraph -->
+<p>It must be cultivated within the body through wobbling, correction, and the unique discomfort of the first afternoon. The teacher cannot simply pass it on with explanations; at best, they can create the situation—holding the seat, moving alongside, saying not like that, but like this—and allow the learner&#8217;s body to discover what no instructions could teach. This kind of knowledge is passed through demonstration and action, the traditional way, because there is no alternative method to transfer it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">It works in the dark</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>You can use it, but you can’t fully explain it. When you try to express it, it seems to vanish. Essentially, you’re a stranger to your own ability and will continue to spend knowledge you’ll never be able to articulate.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[You can ride a bike, type without looking, recognize a face in an instant—and explain none of it. What we do best runs below the reach of words, leaving us, in the part that matters most, a little unknown to ourselves.]]></excerpt:encoded>
+		<wp:post_id>1005</wp:post_id>
+		<wp:post_date><![CDATA[2026-01-17 10:10:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-01-17 10:10:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[below-the-reach-of-words]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="attention"><![CDATA[Attention]]></category>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="post_tag" nicename="attention"><![CDATA[attention]]></category>
+		<category domain="post_tag" nicename="expertise"><![CDATA[expertise]]></category>
+		<category domain="post_tag" nicename="learning"><![CDATA[learning]]></category>
+		<category domain="post_tag" nicename="skill"><![CDATA[skill]]></category>
+		<category domain="post_tag" nicename="tacit-knowledge"><![CDATA[tacit knowledge]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1123]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[A story that survives by changing]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>In the version most of us grew up with, a woodsman arrives at the last minute, opens the wolf’s belly, and the girl in the red hood emerges alive. An older version has no woodsman; the wolf simply devours her, ending the story as a warning with no rescue. Even older, in the oral traditions before it was written down, the girl saves herself—no wolf’s belly or ax, just a child who senses danger and talks her way back out. Each version shares the same story but has completely different endings, each believed to be the true version.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The story is never the same twice. The first thing to realize about a tale that has lived in mouths instead of books: it has no original version or a definitive text kept in a vault. Instead, it exists as an ongoing chain of tellings, each slightly different from the previous one, shaped and reshaped as it moves from voice to voice.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">No original to be faithful to</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>It makes us uncomfortable because we&#8217;ve been conditioned to see a story as something fixed, created by an author—something you can be right or wrong about. But an oral tale isn&#8217;t like that. It was never formally written down, so there&#8217;s no original version to compare to; each storyteller takes what was handed down and retells it, dropping parts that don&#8217;t fit and adapting it to the audience and setting. The storyteller isn&#8217;t simply reciting; they&#8217;re reconstructing it from memory, instinct, and their sense of who is listening. A version isn&#8217;t just a lesser copy of some ideal original; it&#8217;s the story itself, vibrant and unique to that particular night.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bend, or be forgotten</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>All this drifting can erode a story, and often it does—many tales turn nonsensical and are abandoned. However, the stories that endure do so because they can adapt. When a story no longer resonates with its audience, it faces two choices: adapt or die. The girl in the red hood survived for three centuries by subtly changing her story to reflect each era&#8217;s fears—wolves, strangers, children&#8217;s safety—by quietly rewriting her ending. A story that remains unchanged in a fixed form cannot do that. It keeps repeating the same message in a room that no longer needs to hear it, eventually fading into obscurity. The adaptable always outlast the rigid.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>A story remains alive by repeatedly being a little wrong about itself until it becomes fitting.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A bone that doesn&#8217;t move</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Despite all the rewriting, one thing remains unchanged. The endings, details, and lessons may shift—from warnings to comfort and back—but the girl, the wolf, the grandmother, and the dark woods remain fixed, forming the central elements around which all variations revolve. The real trick is a stable, recognizable core beneath a mutable skin. Today, we often believe that fixing something in place makes it safe, but the old stories reveal the opposite. Those who traveled far were never stationary; they thrived because they were kept alive by minds willing to reshape them, and they still develop slightly differently in each telling.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[An oral tale has no definitive version locked in a vault. It survives by changing and rewriting its ending to align with the fears of each era. The stories that last are those flexible enough to be reshaped.]]></excerpt:encoded>
+		<wp:post_id>1003</wp:post_id>
+		<wp:post_date><![CDATA[2026-01-10 10:10:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-01-10 10:10:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[a-story-that-survives-by-changing]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="attention"><![CDATA[Attention]]></category>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="category" nicename="language"><![CDATA[Language]]></category>
+		<category domain="post_tag" nicename="change"><![CDATA[change]]></category>
+		<category domain="post_tag" nicename="folklore"><![CDATA[folklore]]></category>
+		<category domain="post_tag" nicename="oral-tradition"><![CDATA[oral tradition]]></category>
+		<category domain="post_tag" nicename="storytelling"><![CDATA[storytelling]]></category>
+		<category domain="post_tag" nicename="survival"><![CDATA[survival]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1141]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Of many wiles: the oldest wit, suddenly in demand]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>An octopus has no fixed shape. Poured into a jar, it adopts the shape of the jar; pressed against a rock, it mimics the rock’s mottled gray; when cornered, it can squeeze its boneless body through a gap as narrow as its eye and disappears, leaving behind a cloud of ink. It overpowers nothing. It reads the situation and transforms into what is necessary.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>You have met this intelligence before, though not with tentacles: In a hand searching through a pile for the perfect stone, in stories that persist for centuries by subtly altering their endings. The Greeks identified a shared intelligence behind such instances. They had a word for it—a term we have lost but can still rediscover. That word was <em>mētis</em>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A slipperier kind of knowing</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><em>Mētis</em> is difficult to translate, which is part of the point; it signifies a kind of knowing that defies exact definition. The closest terms are cunning, craft, and resourcefulness—a sense of being present in the moment. It reflects the wit of someone who tackles situations that rules cannot fully address. It’s like a helmsman reading the swell and sky to steer through unpredictable weather, or a doctor combining textbook knowledge with intuition for a particular patient. <em>Mētis</em> is about action: reading and adapting to each unique situation instead of relying solely on force or rigid procedures.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Greeks admired it and didn&#8217;t entirely trust it. It was Odysseus&#8217;s gift—the man Homer describes as polymētis, skilled in many deceptions—who endures ten years of hardship not through brute strength but by constantly having another trick, disguise, or lie that sounds truthful. There&#8217;s a slightly shady air about it, reflecting the cunning of the trickster who bends rules. However, they also saw it as essential intelligence for survival—whether sailing, healing, governing, or returning home. The straightforward, honest path is a luxury suited to calm conditions. <em>Mētis</em> is for everything else.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Swallowed by cunning itself</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A goddess connected to it has a notably unusual story. The original Mētis was an ancient sea goddess and considered the wisest among gods and mortals. Zeus married her as his first wife. Yet, a prophecy foretold that she would have a daughter and later a son, and that this son would eventually overthrow Zeus, just as Zeus had usurped his own father.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Zeus tricked Mētis into shrinking herself by flattering her. When she obeyed, he swallowed her whole—wisdom, cunning, and her unborn child. Yet her daughter was already emerging, born fully formed from the god’s skull: Athena, embodying strategic wisdom, carried her mother’s legacy into the new era. The myth holds that Mētis remained inside Zeus, advising him from within forever. Even after being consumed, her cunning persisted, working quietly beneath the surface, unseen and unnamed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>Mētis is a kind of intelligence that lacks a fixed form because the situations requiring it are constantly changing.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">An age of machines hands it back</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In the end, we have built the opposite kind of mind. The machine on the desk is a vast and tireless store of the other intelligence the Greeks named—the fixed, measurable, rule-based knowledge that can be written down, duplicated, and shared. It contains more of this structured knowledge than any person ever could and provides answers to almost any question almost instantly. However, what it lacks—and by its very nature cannot possess—is the elusive quality: the intuition for which answer a specific situation truly needs, and the improvisational wit that takes no fixed form because the world it operates in is constantly changing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For a long time, we ranked that kind of knowing below the others, but that perception is gradually shifting. As measurable knowledge becomes accessible to anyone at no cost, the more elusive kind of intelligence—the ancient, octopus-like form—reveals itself as the most authentic and valuable, and the part that has always belonged to you. We have allowed that word to fade over time, but maybe now is the moment to bring it back.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[There’s a kind of intelligence that reads a shifting situation and adapts to it, rather than relying on force or fixed rules. The Greeks called it mētis. As machines master the kind of knowledge that can be stated, this older, slipperier kind is the part worth having.]]></excerpt:encoded>
+		<wp:post_id>1001</wp:post_id>
+		<wp:post_date><![CDATA[2026-01-06 14:21:58]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-01-06 14:21:58]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[of-many-wiles-the-oldest-wit-suddenly-in-demand]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="attention"><![CDATA[Attention]]></category>
+		<category domain="category" nicename="technology"><![CDATA[Technology]]></category>
+		<category domain="post_tag" nicename="adaptation"><![CDATA[adaptation]]></category>
+		<category domain="post_tag" nicename="cunning"><![CDATA[cunning]]></category>
+		<category domain="post_tag" nicename="intelligence"><![CDATA[intelligence]]></category>
+		<category domain="post_tag" nicename="metis"><![CDATA[mētis]]></category>
+		<category domain="post_tag" nicename="odyssey"><![CDATA[Odyssey]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1159]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:comment>
+			<wp:comment_id>4</wp:comment_id>
+			<wp:comment_author><![CDATA[Mētis]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[]]></wp:comment_author_email>
+			<wp:comment_date><![CDATA[2026-11-05 11:15:25]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-11-05 11:15:25]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[I wonder how a comment will be displayed on this theme design 🤔]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>5</wp:comment_id>
+			<wp:comment_author><![CDATA[Mētis]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[]]></wp:comment_author_email>
+			<wp:comment_date><![CDATA[2026-11-05 11:16:07]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-11-05 11:16:07]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[What about a reply to the comment?]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>4</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>6</wp:comment_id>
+			<wp:comment_author><![CDATA[Commenter]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[]]></wp:comment_author_email>
+			<wp:comment_date><![CDATA[2026-11-05 11:17:18]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-11-05 11:17:18]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[These comments look great 🎯]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>7</wp:comment_id>
+			<wp:comment_author><![CDATA[Spokesperson]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[]]></wp:comment_author_email>
+			<wp:comment_date><![CDATA[2026-11-05 11:18:59]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2026-11-05 11:18:59]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Yep, I agree. All good here, moving on…]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>6</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+		</wp:comment>
+	</item>
+	<item>
+		<title><![CDATA[Half the Stones in a Dry-Stone Wall Were Found; the Rest Were Shaped to Fit]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>I watched a waller rebuild a collapsed section of a field wall last autumn, and what surprised me was how little time was spent actually building. She would crouch over the scattered pile of stone, lift one, turn it in her hands, set it down, and reach for another—and only when a shape satisfied her would she carry it to the wall and seat it, with a slight nudge of the wrist, into the gap that had been waiting for it. The hammer at her belt stayed there for long stretches. From the outside, most of the craft looked like looking.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A wall holds by being loose</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A dry-stone wall depends on friction and weight. Many such walls endure for centuries despite severe weather. Their durability comes from the loose arrangement, allowing them to settle with frost and avoid cracking. When stones are properly fitted, they lock together across joints and evenly distribute the load. One stone forced where it does not fit, and the fault travels.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>So searching is not fussiness. It is the heart of the work. The waller reads the pile against the gap, holding the shape of the absence in mind and seeking the stone that the absence describes. There is a craftsman’s law, half joke, half discipline, that you should never pick up a stone twice—a good eye reaches for the right one first, because every wasted lift is a small failure of attention.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>The pile is not raw material waiting to be cut to plan. It is a set of answers, and the skill is recognizing which question each one fits.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The hammer comes out</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>And yet the romantic version of this craft—the one I half-believed before I saw it done—is false. The waller does cut. When the search comes up empty, and the wall needs a shape the pile does not hold, the hammer comes out of the belt: a blow to knock the proud corner from a stone, a trimmed edge so it will seat, a face dressed flat to take the course above. Near the top, stones are deliberately set on edge, shaped and combed into a finish no natural fall of rock would give. A purist who would never strike a stone would simply never finish the wall.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What the waller has, then, is not a rule but a judgment, and that judgment runs in both directions. Cut too eagerly, and you waste the stone and weaken the fit. Search too long, and the wall stands unbuilt as the light goes. Somewhere between the two lies the right move for this stone, this gap, this afternoon. And it cannot be written down, only developed in the hands and the eye, over years of being slightly wrong. The manual can tell you to cross your joints, pack your heart, and batter your faces. It cannot tell you when to stop looking and reach for the hammer. That part only begins where the manual ends.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What someone knew to leave alone</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We are too quick, in most things, to admire the clean principle: the method never deviated from, the line never crossed, the stone never cut. It makes a better story than practice. Wisdom was never in choosing a side and holding it against all weather. It was in knowing which one the moment in front of you was asking for. The people who keep things standing—walls, institutions, bodies of work—are usually the ones who hold their principles loosely enough to recognize the exceptions, who can tell, without quite being able to say how, when the rule still serves the work and when the work has moved past it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The wall she finished that afternoon will likely outlast her, and most who pass it will read it, if they read it at all, as a thing made of stones that happened to fit. They did not happen to fit. Some were found, and some were shaped, and the difference between them is now invisible, sealed into a line that runs along the field and holds. What lasts is rarely the purest version of the thing. It is the one someone knew when to leave alone.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[A dry-stone wall holds without mortar, free to shift and settle where a rigid structure would crack. Its strength is its looseness. Some stones were found whole; others were shaped to fit—and knowing which is which is the whole craft.]]></excerpt:encoded>
+		<wp:post_id>1020</wp:post_id>
+		<wp:post_date><![CDATA[2025-03-14 10:03:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-03-14 10:03:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[half-the-stones-in-a-dry-stone-wall-were-found-the-rest-were-shaped-to-fit]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="craft"><![CDATA[Craft]]></category>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="post_tag" nicename="attention"><![CDATA[attention]]></category>
+		<category domain="post_tag" nicename="craft"><![CDATA[craft]]></category>
+		<category domain="post_tag" nicename="dry-stone-walling"><![CDATA[dry stone walling]]></category>
+		<category domain="post_tag" nicename="judgment"><![CDATA[judgment]]></category>
+		<category domain="post_tag" nicename="magazine"><![CDATA[magazine]]></category>
+		<category domain="post_tag" nicename="news"><![CDATA[news]]></category>
+		<category domain="post_tag" nicename="tradition"><![CDATA[tradition]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1127]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Where the Feet Went First: The Line People Walk Long Before Anyone Draws the Path]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>There is a path across the small park near my flat that no one designed. It runs diagonally across the grass, cutting the square corner that the paved walkway takes the long way around. It is worn down to bare earth now, a brown line as wide as a single person. No sign points to it. No plan accounts for it. Yet in the months I have walked there, I have almost never seen anyone take the paved route when the diagonal was dry. The ground itself seems to have made a decision, and everyone honors it without thinking.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A line drawn by everyone and no one</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>These worn tracks have a name—desire paths—and what holds my attention is that they have no author. Each person who crossed the grass simply took the route that made sense in the moment, and the sum of those small, independent choices traces a line very close to the one a careful engineer with a ruler would have drawn but never did. The path is a piece of reasoning the crowd worked out with its feet, with no committee behind it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>No one chose the route. Everyone did. The grass simply kept the record.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Two answers to a worn line</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A planner who finds such a path has two ways to respond, each showing a different attitude toward the world. The first is correction: a sign stating &#8216;keep off the grass&#8217; is posted, or the worn trail is reseeded and roped off. This almost never works for long, as the path reappears within weeks. The reason is that the underlying logic hasn&#8217;t changed—people still need to travel from one point to another, and the diagonal remains the most sensible route. You can address the symptom, but the fundamental reason walks straight through it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The second approach is rarer and wiser. A story tells of architects who built a university campus without defined paths in the first year. They allowed students to walk freely for two semesters of normal activity, and only then paved paths along the routes students had already created. This design strategy prioritized walking patterns rather than imposing them. What initially seems like indolence is actually a sign of respect: recognizing that the users of a space may understand its true form better than an outsider looking down from above.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Letting the world draw the map</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We tend to build the other way around. We decide in advance how people ought to move through a space, a form, or an institution, and then we read the worn diagonal across the lawn as a small act of disobedience—a failure of the public to follow the plan. But the path is not disobedience. It is information, freely given, about the gap between how we imagined people would behave and how they actually do. The humility required to pave it is harder to summon than it sounds, because paving means conceding that the drawing was wrong and the walking was right. The best arrangements are often the ones that were discovered rather than imposed: the rule that grew around a practice, the route that formed before anyone named it, the structure that followed life rather than preceding it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The strange thing is what happens once the desire path is paved. It ceases to be a transgression and simply becomes the way—the route on the map, the line everyone takes, no longer a shortcut because there is nothing left to cut across. The grass closes over the path that planning first preferred, and within a year no one remembers it was ever there. What lasts, in the end, is rarely the line that was drawn. It is the one that was walked.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Across any worn lawn runs a path no one designed—the diagonal footpaths chosen over the paving. Planners can fence it off or pave it. The wiser ones follow, conceding that the people crossing a place may know its true shape best.]]></excerpt:encoded>
+		<wp:post_id>1018</wp:post_id>
+		<wp:post_date><![CDATA[2025-03-08 09:50:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-03-08 09:50:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[where-the-feet-went-first-the-line-people-walk-long-before-anyone-draws-the-path]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="category" nicename="wayfinding"><![CDATA[Wayfinding]]></category>
+		<category domain="post_tag" nicename="attention"><![CDATA[attention]]></category>
+		<category domain="post_tag" nicename="cities"><![CDATA[cities]]></category>
+		<category domain="post_tag" nicename="design"><![CDATA[design]]></category>
+		<category domain="post_tag" nicename="desire-paths"><![CDATA[desire paths]]></category>
+		<category domain="post_tag" nicename="magazine"><![CDATA[magazine]]></category>
+		<category domain="post_tag" nicename="news"><![CDATA[news]]></category>
+		<category domain="post_tag" nicename="wayfinding"><![CDATA[wayfinding]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1130]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Stronger at the Mend: Why a Thing Repaired Well Can Outlast the One That Never Broke]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>There is a particular kind of object you find in old houses and long-used workshops: the thing whose repair has outlasted the thing itself. A wooden chair with a broken joint braced with scrap—now the strongest part you’d trust if it fell. A wall that fails everywhere except where someone has hastily patched it with a substitute stone. We often see repairs as scars, yet they can be the room’s most resilient parts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A repair knows something the design never could</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The reason is not sentiment. It is information. When a thing is first made, its maker works from a plan and a general idea—a reasonable guess, made in advance, about a future that has not yet happened. The maker cannot know where this particular object will fail, because it has not failed; the weak point is still hypothetical, distributed evenly across a hundred possible points of failure. The mender works from the opposite position. The repair is aimed at a known failure rather than a guessed one, and an answer to a real question is almost always better than a precaution against an imagined one.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Building with what the moment hands you</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>There is a second intelligence layered over the first, the discipline of working with what is actually on hand. The original could be made from the right material, ordered, and waited for. The repair often has to be made now, with whatever is within reach. This sounds like a limitation, and it is, but constraint has a way of producing solutions that abundance never bothers to find. Forced to use the wrong thing well, the mender discovers properties the right thing would have let them ignore, and now and then arrives at something better than the catalog would have supplied.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is worth holding onto in any moment when the tools available are powerful yet unfinished, handed to us half-formed and rarely shaped for the exact thing we intend to do with them. The instinct is to wait for the proper instrument, the version built for the purpose. But the work tends to belong to whoever is willing to take what is at hand and bend it to service—to treat the imperfect tool not as an excuse but as the material, and to build the mend the situation actually requires rather than the one a manual would recommend.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What the broken thing becomes</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The repaired object never returns to its original state. It openly acknowledges the break, with a different material at the joint where two histories intersect. Sometimes, it endures longer than its unbroken counterparts because the repaired area has been strengthened, while the untouched parts remain uncertain in strength.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Maybe that is the quiet argument every old repair makes: that the most durable version of a thing is rarely the pristine one, fresh, untested, and whole. It is the one that broke in a specific way, was understood at the point of its failure, and was remade by someone resourceful enough to answer the break with whatever they had. What lasts is not the thing that was never damaged. It is the thing that was mended well.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[We read repairs as scars, evidence of damage. Often, they are the opposite: the most resilient part of the room. A design guesses where strength will be needed; a repair answers a break that has already happened—and an answer beats a precaution.]]></excerpt:encoded>
+		<wp:post_id>1016</wp:post_id>
+		<wp:post_date><![CDATA[2025-03-02 09:50:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-03-02 09:50:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[stronger-at-the-mend-why-a-thing-repaired-well-can-outlast-the-one-that-never-broke]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="craft"><![CDATA[Craft]]></category>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="post_tag" nicename="constraint"><![CDATA[constraint]]></category>
+		<category domain="post_tag" nicename="craft"><![CDATA[craft]]></category>
+		<category domain="post_tag" nicename="design"><![CDATA[design]]></category>
+		<category domain="post_tag" nicename="magazine"><![CDATA[magazine]]></category>
+		<category domain="post_tag" nicename="making-do"><![CDATA[making-do]]></category>
+		<category domain="post_tag" nicename="news"><![CDATA[news]]></category>
+		<category domain="post_tag" nicename="repair"><![CDATA[repair]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1128]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Moving a Word That Will Not Move: On the Terms No Other Language Has Room For]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Every language keeps a few words that will not leave home. Portuguese, for example, has <em>saudade</em>—a unique longing for something or someone absent, a sensation made of absence, yearning, and tenderness, with a bittersweet pleasure packed into two syllables. While you can translate it into English, such a translation is just a description, like a photograph standing in for a meal instead of the actual dinner. Italian and Japanese each have their own untranslatable words, as do all languages. These words are too complex for a dictionary to fully capture because they embody not just a meaning but an entire emotional experience that one culture recognizes, which others may never need to express.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Some words refuse to cross</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The interesting problem is not that such words exist. It is what happens when someone has to move one. A translator handed a sentence built around <em>saudade</em> cannot simply swap in an English equivalent, because there is none; the slot is empty, and every near-miss—longing, nostalgia, yearning, missing—lands a little wide, dropping some part of what the original held and adding some shade it never had. The honest options all look like failures. Translate it directly, and you get a word that means something slightly different. Leave it untranslated, and you ask the reader to feel something they have no name for. Some words sit at the border, and there is no legal way to bring them through.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Smuggling, not transferring</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>So the good translator stops trying to transfer the word and starts doing something sneakier. The meaning gets carried across by every route except the direct one—built up out of context, implied by an image swapped in for another image that produces the same ache in the reader. It is less a transfer than a smuggling operation: the word stays behind at the checkpoint, and its meaning crosses anyway, hidden in the freight of everything around it. This is the real art of translation—the reading of what a word does rather than what it says, and the cunning to reproduce that doing by other means.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>Translation, at its best, is not transfer. It is smuggling.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:paragraph -->
+<p>You can see the size of this skill most clearly in what happens without it. The systems that now move text between languages in an instant are very good at the legal crossing—the word-for-word swap, the dictionary equivalent—and it is exactly there that the untranslatable word defeats them. Such a system returns filled slots, but the feeling is gone. It has performed the transfer and missed the meaning, because the meaning was never in the word alone.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lost and gained in the crossing</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Even when smuggled across, the word arrives changed. Something of the original always stays behind—the exact weight it had at home, the centuries of use that made it feel inevitable to the people who grew up inside it. And something new arrives that was not there before, because the borrowed word picks up a slightly different life in its new language.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Maybe that is simply how meaning travels, not a flaw in the transmission. Nothing crosses a border and arrives untouched—not words, not people, not ideas. What survives the crossing is never the original, held perfectly intact. It is whatever was carried cleverly enough to arrive at all, a little foreign on both sides now, belonging fully to neither, and somehow richer for the passage.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Every language keeps certain words that won’t leave home. A translator can’t simply replace them because no equivalent exists. Instead, the meaning is conveyed through indirect methods, hidden within the surrounding context, using various routes rather than a direct one.]]></excerpt:encoded>
+		<wp:post_id>1014</wp:post_id>
+		<wp:post_date><![CDATA[2025-02-28 10:12:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-02-28 10:12:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[moving-a-word-that-will-not-move-on-the-terms-no-other-language-has-room-for]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="category" nicename="language"><![CDATA[Language]]></category>
+		<category domain="post_tag" nicename="craft"><![CDATA[craft]]></category>
+		<category domain="post_tag" nicename="language"><![CDATA[language]]></category>
+		<category domain="post_tag" nicename="magazine"><![CDATA[magazine]]></category>
+		<category domain="post_tag" nicename="meaning"><![CDATA[meaning]]></category>
+		<category domain="post_tag" nicename="news"><![CDATA[news]]></category>
+		<category domain="post_tag" nicename="translation"><![CDATA[translation]]></category>
+		<category domain="post_tag" nicename="untranslatable"><![CDATA[untranslatable]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1125]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[They Left the Chart on the Beach and Sailed by Swell, by Star, and by Memory]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>There&#8217;s a thing in some museums labeled a sea chart, though it looks more like something lashed together from broom handles. Thin sticks, tied where they cross. A few shells wired at the joints. No coastline, no north, nothing a sailor from elsewhere would recognize as a reference point. And it never went to sea—that&#8217;s the part that throws people. The men who made these in the Marshall Islands kept them ashore, studied them like a score, then walked down to the water and left them on the sand.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What the sticks recorded were swells, not the positions of the islands but how the water moved around them. A swell from the open Pacific encounters an island, curves around it, and creates a weaker swell behind. When two such patterns intersect, they produce a distinctive chop, signaling that land is nearby hours before it becomes visible. A navigator learned to sense this. By lying flat in the canoe with eyes closed and feeling the sea, they read the waves. An old ethnographer described navigators who claimed their most sensitive instrument was their own body—that the best way to feel a swell was through the testicles. Take that as you will. This knowledge lived below language, in the skin, and it worked: men crossed vast stretches of water that all looked the same and put their canoes ashore on the island they meant to find.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Why none of it fit on the sticks</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The sticks couldn&#8217;t carry that knowledge, and the reason wasn&#8217;t that they were crude. A depth you can write down—forty fathoms, sand bottom—stays true, and a stranger can read it. But feeling a swell isn&#8217;t a fact you have. It&#8217;s something you do, alive only while you&#8217;re doing it, the way balance lasts exactly as long as you keep balancing and no longer.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>Put it on a page, and it dies on the page.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:paragraph -->
+<p>So the chart was never a record of the knowledge at all. It was a finger pointing at it. Something to memorize and then outgrow, like the working lines a teacher draws that you&#8217;re supposed to stop needing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Portable beats true</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Then the printed charts came, gridded and exact, and they won. Not on accuracy—the old navigators were uncanny that way—but on copies. One survey, a thousand identical sheets, and any stranger who learned the symbols could find the way. The other knowledge moved one body at a time, took half a lifetime to hand on, and died the moment a single link went missing. So the thing you can copy beats the thing that&#8217;s merely good. That&#8217;s most of the story of what each age keeps and what it lets go. And it&#8217;s hard not to feel it now, with so much of what we know being poured into the one shape a machine can hold, on the quiet hunch that whatever won&#8217;t pour was never worth much.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Left on the beach on purpose</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The recurring theme for me is leaving. They created the chart, learned all its lessons, and then set it in the sand before walking away without it, because they understood that what they held was a depiction of the sea, not the sea itself. We keep such images in our pockets and forget the distinction. The record captures what it represents, and the more polished it appears, the more we rely on it. The sticks behind museum glass are beautiful, and you could learn to read them in an afternoon. But the man in the dark with closed eyes, experiencing the entire ocean through a small boat&#8217;s hull—that is not behind the glass, and it will not return.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[A Marshall Islands chart made of lashed sticks and shells, never used at sea. The knowledge it taught lived in the body, felt rather than read. When printed charts appeared, they gained the advantage of being easily copied.]]></excerpt:encoded>
+		<wp:post_id>1012</wp:post_id>
+		<wp:post_date><![CDATA[2025-02-21 10:11:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-02-21 10:11:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[they-left-the-chart-on-the-beach-and-sailed-by-swell-by-star-and-by-memory]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="category" nicename="wayfinding"><![CDATA[Wayfinding]]></category>
+		<category domain="post_tag" nicename="knowledge"><![CDATA[knowledge]]></category>
+		<category domain="post_tag" nicename="magazine"><![CDATA[magazine]]></category>
+		<category domain="post_tag" nicename="maps"><![CDATA[maps]]></category>
+		<category domain="post_tag" nicename="navigation"><![CDATA[navigation]]></category>
+		<category domain="post_tag" nicename="news"><![CDATA[news]]></category>
+		<category domain="post_tag" nicename="representation"><![CDATA[representation]]></category>
+		<category domain="post_tag" nicename="wayfinding"><![CDATA[wayfinding]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1129]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[A Beat Early, on a Note That Isn’t There Yet: Playing Toward What Hasn’t Happened]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Watching a piano player behind a soloist reveals something seemingly impossible. The horn player improvises a line on the spot, while the pianist improvises chords underneath. Occasionally, the chords land a half-beat before the horn hits its note. He&#8217;s supporting a melody that doesn&#8217;t exist yet. When asked how he knew where it was heading, he can&#8217;t give a clear answer because he didn&#8217;t know in the traditional sense. Instead, he was reading the music as it was being created, close enough to follow along and somehow just ahead.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Comping is derived from &#8216;accompany,&#8217; though &#8216;answer&#8217; might be a more accurate term. A musician’s comping involves the chord changes and overall structure of the tune, like a sailor following a coastline. Everything else is created spontaneously, reacting to what another musician is improvising in real time. Since it responds to what hasn’t yet happened, it can&#8217;t be prearranged. The key skill lies in the ability to respond appropriately.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Knowing when to play nothing</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Late in his career, Count Basie played sparingly, often just a single chord, carefully placed, then nothing for bars while the band roared around him. Sitting with his hands in his lap, he could be mistaken for lazy, but in reality, he was playing the silence. Creating that space requires confidence in the music’s direction, enough to do nothing and trust that silence is the right choice. Nervous players tend to fill every pause, but skilled musicians recognize when the gap is already complete and get out of the way.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">You can&#8217;t rehearse an answer</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The difficulty isn’t in playing itself but in the constantly shifting situation as you read it, with someone else moving it. The soloist might lean in a different direction than expected, giving you just a quarter-second to decide whether to follow, lean back, or stay still. That choice influences what he does next, which in turn changes what you do after that. Two people are collaboratively creating something in real time that neither controls nor could have pre-written, each responding to the other. You can master your scales over forty years, but you can’t rehearse this exact night, because it has never happened before and won’t happen again.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>The chord that hasn&#8217;t arrived yet is one a skilled player is already anticipating.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Made once, and not again</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Lately, we’re fascinated by the part that can be prepared in advance and delivered perfectly—the plan made beforehand, with the answer ready before the question. Comping, on the other hand, is about starting with almost nothing and reacting in real time to what’s in front of you. It involves reading what’s present rather than what you expected and responding accordingly. This kind of interaction doesn’t scale or store well; it happens once between people who pay close attention to each other. Once the moment ends, that unique exchange is gone, creating something nobody could have made alone.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[A pianist behind a soloist drops a chord half a beat before the horn reaches the note—supporting a melody that hasn’t yet taken shape. He isn’t following a plan but reading the line and responding as it forms.]]></excerpt:encoded>
+		<wp:post_id>1010</wp:post_id>
+		<wp:post_date><![CDATA[2025-02-02 10:11:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-02-02 10:11:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[a-beat-early-on-a-note-that-isnt-there-yet-playing-toward-what-hasnt-happened]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="attention"><![CDATA[Attention]]></category>
+		<category domain="category" nicename="craft"><![CDATA[Craft]]></category>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="post_tag" nicename="attention"><![CDATA[attention]]></category>
+		<category domain="post_tag" nicename="improvisation"><![CDATA[improvisation]]></category>
+		<category domain="post_tag" nicename="jazz"><![CDATA[jazz]]></category>
+		<category domain="post_tag" nicename="listening"><![CDATA[listening]]></category>
+		<category domain="post_tag" nicename="magazine"><![CDATA[magazine]]></category>
+		<category domain="post_tag" nicename="music"><![CDATA[music]]></category>
+		<category domain="post_tag" nicename="news"><![CDATA[news]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1122]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Certain of a False Answer: What Machines That Never Doubt Are Teaching Us to Distrust]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>A lawyer in New York filed a brief a couple of years ago, citing half a dozen cases that didn’t exist. He hadn’t invented them. His chatbot had—complete with docket numbers, quotations, judges’ names, the whole apparatus of something real—and he’d trusted it because it was fluent and certain and read exactly like law. When the court asked him to produce the cases, he went back and asked the chatbot whether they were real. It assured him they were. They weren’t. He was sanctioned, and the machine never broke stride.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Set aside the mistake for a moment and examine how it was made: with complete confidence, in perfect prose, in a tone indistinguishable from when it&#8217;s correct. That final detail is the new thing in the world.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Confidence used to mean something</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Since the beginning of humanity, confidence has served as a rough indicator of competence. Although not foolproof, it’s reliable enough that we instinctively interpret a firm voice as a sign of knowledge. It generally works because fluency and expertise often correlate: a surgeon explaining a procedure confidently has usually performed it many times, while one hesitant likely has a reason. We are finely tuned to this cue and naturally interpret it, often without realizing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The machine breaks the link. Its fluency is identical whether it&#8217;s correct or wrong—showing the same flat certainty in both cases—because that fluency never came from actual knowledge. Instead, it stems from a different source altogether. Therefore, the instrument we&#8217;ve relied on to trust an answer, the confidence readout, now signals something unrelated to the truth. We&#8217;re essentially holding a compass next to a magnet, leading us astray.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Worst where you know the least</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Here&#8217;s what should keep you alert: you can spot a machine&#8217;s mistake on topics you&#8217;re familiar with. When you give someone with twenty years of experience a subtle falsehood, they&#8217;ll sense the wrongness before explaining it—a date that&#8217;s off or an answer that smells unusually clean. That instinct is genuine and well-founded, built on repeated experiences of being wrong in similar ways, which helps us recognize the pattern.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>But you only get that feel after years of effort. In most situations, you’re relying on a single signal: confidence, which is often worthless. The machine is hardest to detect exactly where you need to catch it: in areas you approached because you lacked knowledge. The solution you can’t evaluate is the one you depend on most, yet it’s also the hardest to verify.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>Generating an answer got cheap. Determining whether it&#8217;s any good did not.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Earned the slow way</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>None of this argues against the machine, which is remarkable and here to stay. The key question is which of your skills has just changed in value. Finding a plausible answer used to be half the effort, but now the machine does it instantly and at low cost. The other half—stepping back, evaluating the answer in context, and spotting when a fluent but wrong response is given—is something only humans can do. That skill has always been more challenging. Previously, we could hide this by relying on confident delivery, but now it’s open and visible.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[A lawyer filed a brief built on cases his chatbot invented—docket numbers, quotations, all of it fluent, confident, and fake. He even went back to ask the machine whether they were real. It said yes. They weren’t.]]></excerpt:encoded>
+		<wp:post_id>1008</wp:post_id>
+		<wp:post_date><![CDATA[2025-01-20 10:11:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-01-20 10:11:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[certain-of-a-false-answer-what-machines-that-never-doubt-are-teaching-us-to-distrust]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="attention"><![CDATA[Attention]]></category>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="category" nicename="technology"><![CDATA[Technology]]></category>
+		<category domain="post_tag" nicename="confidence"><![CDATA[confidence]]></category>
+		<category domain="post_tag" nicename="expertise"><![CDATA[expertise]]></category>
+		<category domain="post_tag" nicename="judgment"><![CDATA[judgment]]></category>
+		<category domain="post_tag" nicename="machines"><![CDATA[machines]]></category>
+		<category domain="post_tag" nicename="magazine"><![CDATA[magazine]]></category>
+		<category domain="post_tag" nicename="news"><![CDATA[news]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1124]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Below the Reach of Words: The Knowledge That Lives in the Hands and Resists Explaining]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Ask someone who has ridden a bike their entire life how they keep it upright. They&#8217;ll mention balance, tilt slightly side to side, and then stop, because they don&#8217;t really understand. Even more: ask which way they turn the handlebars when the bike sways left, and most will say they steer right to correct it. In reality, they steer left — into the fall. That’s what stabilizes the bike, and every skilled rider does this countless times per ride, unaware of their unconscious instinct.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This gap has a name, but simply put: we can do much more than we can express. The odd part isn&#8217;t that some knowledge is hard to articulate. It&#8217;s that this knowledge belongs to us—it’s part of our daily use, resides within us, and is undeniably ours. And yet it remains hidden from the part of us that communicates.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Smooth enough to disappear</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>You might assume that your strongest skills are the easiest to explain, but in reality, it&#8217;s often the opposite. The skills buried deepest, worn so smooth that you no longer notice them, are also the hardest to articulate. For instance, a touch typist can&#8217;t pinpoint where each letter is without miming the finger movements; this knowledge resides in the fingers, not in conscious thought. Similarly, you can recognize a friend&#8217;s face in a busy street almost instantaneously and effortlessly, yet struggle to describe that face precisely enough for someone else to identify them. Ask any police sketch artist—people recognize faces instinctively but can say very little factual about them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Shown, never told</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This explains why certain skills can&#8217;t be learned simply through facts. Even if you give someone all the written instructions about riding a bicycle, they&#8217;ll still fall the moment they try to ride.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>The words were never where the knowledge resided.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:paragraph -->
+<p>It must be cultivated within the body through wobbling, correction, and the unique discomfort of the first afternoon. The teacher cannot simply pass it on with explanations; at best, they can create the situation—holding the seat, moving alongside, saying not like that, but like this—and allow the learner&#8217;s body to discover what no instructions could teach. This kind of knowledge is passed through demonstration and action, the traditional way, because there is no alternative method to transfer it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">It works in the dark</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>You can use it, but you can’t fully explain it. When you try to express it, it seems to vanish. Essentially, you’re a stranger to your own ability and will continue to spend knowledge you’ll never be able to articulate.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[You can ride a bike, type without looking, recognize a face in an instant—and explain none of it. What we do best runs below the reach of words, leaving us, in the part that matters most, a little unknown to ourselves.]]></excerpt:encoded>
+		<wp:post_id>1006</wp:post_id>
+		<wp:post_date><![CDATA[2025-01-17 10:10:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-01-17 10:10:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[below-the-reach-of-words-the-knowledge-that-lives-in-the-hands-and-resists-explaining]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="attention"><![CDATA[Attention]]></category>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="post_tag" nicename="attention"><![CDATA[attention]]></category>
+		<category domain="post_tag" nicename="expertise"><![CDATA[expertise]]></category>
+		<category domain="post_tag" nicename="learning"><![CDATA[learning]]></category>
+		<category domain="post_tag" nicename="magazine"><![CDATA[magazine]]></category>
+		<category domain="post_tag" nicename="news"><![CDATA[news]]></category>
+		<category domain="post_tag" nicename="skill"><![CDATA[skill]]></category>
+		<category domain="post_tag" nicename="tacit-knowledge"><![CDATA[tacit knowledge]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1123]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[A Story That Survives by Changing a Little in Every Mouth It Passes Through]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>In the version most of us grew up with, a woodsman arrives at the last minute, opens the wolf’s belly, and the girl in the red hood emerges alive. An older version has no woodsman; the wolf simply devours her, ending the story as a warning with no rescue. Even older, in the oral traditions before it was written down, the girl saves herself—no wolf’s belly or ax, just a child who senses danger and talks her way back out. Each version shares the same story but has completely different endings, each believed to be the true version.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The story is never the same twice. The first thing to realize about a tale that has lived in mouths instead of books: it has no original version or a definitive text kept in a vault. Instead, it exists as an ongoing chain of tellings, each slightly different from the previous one, shaped and reshaped as it moves from voice to voice.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">No original to be faithful to</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>It makes us uncomfortable because we&#8217;ve been conditioned to see a story as something fixed, created by an author—something you can be right or wrong about. But an oral tale isn&#8217;t like that. It was never formally written down, so there&#8217;s no original version to compare to; each storyteller takes what was handed down and retells it, dropping parts that don&#8217;t fit and adapting it to the audience and setting. The storyteller isn&#8217;t simply reciting; they&#8217;re reconstructing it from memory, instinct, and their sense of who is listening. A version isn&#8217;t just a lesser copy of some ideal original; it&#8217;s the story itself, vibrant and unique to that particular night.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bend, or be forgotten</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>All this drifting can erode a story, and often it does—many tales turn nonsensical and are abandoned. However, the stories that endure do so because they can adapt. When a story no longer resonates with its audience, it faces two choices: adapt or die. The girl in the red hood survived for three centuries by subtly changing her story to reflect each era&#8217;s fears—wolves, strangers, children&#8217;s safety—by quietly rewriting her ending. A story that remains unchanged in a fixed form cannot do that. It keeps repeating the same message in a room that no longer needs to hear it, eventually fading into obscurity. The adaptable always outlast the rigid.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>A story remains alive by repeatedly being a little wrong about itself until it becomes fitting.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A bone that doesn&#8217;t move</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Despite all the rewriting, one thing remains unchanged. The endings, details, and lessons may shift—from warnings to comfort and back—but the girl, the wolf, the grandmother, and the dark woods remain fixed, forming the central elements around which all variations revolve. The real trick is a stable, recognizable core beneath a mutable skin. Today, we often believe that fixing something in place makes it safe, but the old stories reveal the opposite. Those who traveled far were never stationary; they thrived because they were kept alive by minds willing to reshape them, and they still develop slightly differently in each telling.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[An oral tale has no definitive version locked in a vault. It survives by changing and rewriting its ending to align with the fears of each era. The stories that last are those flexible enough to be reshaped.]]></excerpt:encoded>
+		<wp:post_id>1004</wp:post_id>
+		<wp:post_date><![CDATA[2025-01-10 10:10:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-01-10 10:10:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[a-story-that-survives-by-changing-a-little-in-every-mouth-it-passes-through]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="attention"><![CDATA[Attention]]></category>
+		<category domain="category" nicename="essays"><![CDATA[Essays]]></category>
+		<category domain="category" nicename="language"><![CDATA[Language]]></category>
+		<category domain="post_tag" nicename="change"><![CDATA[change]]></category>
+		<category domain="post_tag" nicename="folklore"><![CDATA[folklore]]></category>
+		<category domain="post_tag" nicename="magazine"><![CDATA[magazine]]></category>
+		<category domain="post_tag" nicename="news"><![CDATA[news]]></category>
+		<category domain="post_tag" nicename="oral-tradition"><![CDATA[oral tradition]]></category>
+		<category domain="post_tag" nicename="storytelling"><![CDATA[storytelling]]></category>
+		<category domain="post_tag" nicename="survival"><![CDATA[survival]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1141]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Of Many Wiles: The Oldest Kind of Cleverness, and Why It’s Suddenly in Demand]]></title>
+		<dc:creator><![CDATA[iris-calder]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>An octopus has no fixed shape. Poured into a jar, it adopts the shape of the jar; pressed against a rock, it mimics the rock’s mottled gray; when cornered, it can squeeze its boneless body through a gap as narrow as its eye and disappears, leaving behind a cloud of ink. It overpowers nothing. It reads the situation and transforms into what is necessary.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>You have met this intelligence before, though not with tentacles: In a hand searching through a pile for the perfect stone, in stories that persist for centuries by subtly altering their endings. The Greeks identified a shared intelligence behind such instances. They had a word for it—a term we have lost but can still rediscover. That word was <em>mētis</em>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A slipperier kind of knowing</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><em>Mētis</em> is difficult to translate, which is part of the point; it signifies a kind of knowing that defies exact definition. The closest terms are cunning, craft, and resourcefulness—a sense of being present in the moment. It reflects the wit of someone who tackles situations that rules cannot fully address. It’s like a helmsman reading the swell and sky to steer through unpredictable weather, or a doctor combining textbook knowledge with intuition for a particular patient. <em>Mētis</em> is about action: reading and adapting to each unique situation instead of relying solely on force or rigid procedures.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Greeks admired it and didn&#8217;t entirely trust it. It was Odysseus&#8217;s gift—the man Homer describes as polymētis, skilled in many deceptions—who endures ten years of hardship not through brute strength but by constantly having another trick, disguise, or lie that sounds truthful. There&#8217;s a slightly shady air about it, reflecting the cunning of the trickster who bends rules. However, they also saw it as essential intelligence for survival—whether sailing, healing, governing, or returning home. The straightforward, honest path is a luxury suited to calm conditions. <em>Mētis</em> is for everything else.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Swallowed by cunning itself</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A goddess connected to it has a notably unusual story. The original Mētis was an ancient sea goddess and considered the wisest among gods and mortals. Zeus married her as his first wife. Yet, a prophecy foretold that she would have a daughter and later a son, and that this son would eventually overthrow Zeus, just as Zeus had usurped his own father.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Zeus tricked Mētis into shrinking herself by flattering her. When she obeyed, he swallowed her whole—wisdom, cunning, and her unborn child. Yet her daughter was already emerging, born fully formed from the god’s skull: Athena, embodying strategic wisdom, carried her mother’s legacy into the new era. The myth holds that Mētis remained inside Zeus, advising him from within forever. Even after being consumed, her cunning persisted, working quietly beneath the surface, unseen and unnamed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>Mētis is a kind of intelligence that lacks a fixed form because the situations requiring it are constantly changing.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">An age of machines hands it back</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In the end, we have built the opposite kind of mind. The machine on the desk is a vast and tireless store of the other intelligence the Greeks named—the fixed, measurable, rule-based knowledge that can be written down, duplicated, and shared. It contains more of this structured knowledge than any person ever could and provides answers to almost any question almost instantly. However, what it lacks—and by its very nature cannot possess—is the elusive quality: the intuition for which answer a specific situation truly needs, and the improvisational wit that takes no fixed form because the world it operates in is constantly changing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For a long time, we ranked that kind of knowing below the others, but that perception is gradually shifting. As measurable knowledge becomes accessible to anyone at no cost, the more elusive kind of intelligence—the ancient, octopus-like form—reveals itself as the most authentic and valuable, and the part that has always belonged to you. We have allowed that word to fade over time, but maybe now is the moment to bring it back.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[There’s a kind of intelligence that reads a shifting situation and adapts to it, rather than relying on force or fixed rules. The Greeks called it mētis. As machines master the kind of knowledge that can be stated, this older, slipperier kind is the part worth having.]]></excerpt:encoded>
+		<wp:post_id>1002</wp:post_id>
+		<wp:post_date><![CDATA[2025-01-06 14:21:58]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-01-06 14:21:58]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[of-many-wiles-the-oldest-kind-of-cleverness-and-why-its-suddenly-in-demand]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="attention"><![CDATA[Attention]]></category>
+		<category domain="category" nicename="technology"><![CDATA[Technology]]></category>
+		<category domain="post_tag" nicename="adaptation"><![CDATA[adaptation]]></category>
+		<category domain="post_tag" nicename="cunning"><![CDATA[cunning]]></category>
+		<category domain="post_tag" nicename="intelligence"><![CDATA[intelligence]]></category>
+		<category domain="post_tag" nicename="magazine"><![CDATA[magazine]]></category>
+		<category domain="post_tag" nicename="metis"><![CDATA[mētis]]></category>
+		<category domain="post_tag" nicename="news"><![CDATA[news]]></category>
+		<category domain="post_tag" nicename="odyssey"><![CDATA[Odyssey]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1159]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Business]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>9000</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-01 09:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-11-01 09:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[business]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[business]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[News]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>9001</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-01 09:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-11-01 09:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[news]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[news]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Magazine]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>9002</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-01 09:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-11-01 09:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[magazine]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[magazine]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Portfolio]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>9003</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-01 09:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-11-01 09:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[portfolio]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[portfolio]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Writer]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>9004</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-01 09:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-11-01 09:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[writer]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[writer]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Personal]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>9005</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-01 09:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-11-01 09:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[personal]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[personal]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title><![CDATA[Navigation]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:navigation-link {"label":"Blog","url":"https://metisdemo.mystagingwebsite.com/category/essays/","kind":"custom"} /-->
+
+<!-- wp:navigation-link {"label":"Business","url":"https://metisdemo.mystagingwebsite.com/business/","kind":"custom"} /-->
+
+<!-- wp:navigation-link {"label":"News","url":"https://metisdemo.mystagingwebsite.com/news/","kind":"custom"} /-->
+
+<!-- wp:navigation-link {"label":"Magazine","url":"https://metisdemo.mystagingwebsite.com/magazine/","kind":"custom"} /-->
+
+<!-- wp:navigation-link {"label":"Portfolio","url":"https://metisdemo.mystagingwebsite.com/portfolio/","kind":"custom"} /-->
+
+<!-- wp:navigation-link {"label":"Writer","url":"https://metisdemo.mystagingwebsite.com/writer/","kind":"custom"} /-->
+
+<!-- wp:navigation-link {"label":"Personal","url":"https://metisdemo.mystagingwebsite.com/personal/","kind":"custom"} /-->]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>9100</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-01 09:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-11-01 09:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[navigation]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[wp_navigation]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+	</item>
+</channel>
+</rss>

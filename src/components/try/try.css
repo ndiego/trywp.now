@@ -571,6 +571,8 @@
 	z-index: 100;
 	display: grid;
 	place-items: center;
+	/* A dialog taller than the window starts at the top, so all of it can be scrolled to. */
+	align-items: safe center;
 	padding: 24px;
 	overflow-y: auto;
 	background: rgb(30 30 30 / 0.55);
@@ -684,6 +686,135 @@
 	padding: 36px;
 }
 
+/* The site picker (see SitesModal.tsx): a card for each site, with its picture. */
+.try-sites .try-modal__dialog {
+	width: min(100%, 1040px);
+	padding: 36px;
+}
+
+.try-sites .try-body {
+	margin-top: 12px;
+}
+
+.try-sites__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+	gap: 16px;
+	margin-top: 24px;
+}
+
+.try-site {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	border: 1px solid var(--wp--preset--color--light-grey-1);
+	border-radius: 12px;
+	overflow: hidden;
+	background: var(--wp--preset--color--white);
+	color: inherit;
+	font: inherit;
+	text-align: start;
+	cursor: pointer;
+	transition:
+		border-color 0.12s ease,
+		box-shadow 0.12s ease;
+}
+
+.try-site:hover {
+	border-color: var(--wp--preset--color--charcoal-4);
+}
+
+.try-site[aria-checked="true"] {
+	border-color: var(--try-blue);
+	box-shadow: 0 0 0 2px var(--try-blue);
+}
+
+.try-site:focus-visible {
+	outline: 2px solid var(--try-blue);
+	outline-offset: 3px;
+}
+
+/* The top of the site's picture, whatever its shape. */
+.try-site__preview {
+	position: relative;
+	display: block;
+	aspect-ratio: 16 / 10;
+	overflow: hidden;
+	background: var(--wp--preset--color--light-grey-1);
+}
+
+.try-site__preview img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+}
+
+.try-site__current {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	padding: 5px 9px;
+	border-radius: 2px;
+	background: var(--wp--preset--color--charcoal-1);
+	color: var(--wp--preset--color--white);
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.try-site__text {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 14px 16px 16px;
+	border-top: 1px solid var(--wp--preset--color--light-grey-1);
+}
+
+.try-site__theme {
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--try-blue);
+}
+
+.try-site__name {
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: -0.3px;
+}
+
+.try-site__description {
+	font-size: 13px;
+	line-height: 1.5;
+	color: var(--wp--preset--color--charcoal-4);
+}
+
+.try-sites__actions {
+	align-items: center;
+}
+
+/* Fills the row, pushing the buttons to the end. */
+.try-sites__note {
+	flex: 1 1 240px;
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.5;
+	color: var(--wp--preset--color--charcoal-4);
+}
+
+.try-btn:disabled {
+	border-color: var(--wp--preset--color--light-grey-1);
+	background: var(--wp--preset--color--light-grey-1);
+	color: var(--wp--preset--color--charcoal-4);
+	cursor: default;
+}
+
 /* Welcome: the release's artwork (see release-art.ts) beside the content, when there is some. */
 .try-welcome .try-modal__dialog {
 	padding: 0;
@@ -758,6 +889,7 @@
 	}
 	.try-modal__dialog,
 	.try-reset .try-modal__dialog,
+	.try-sites .try-modal__dialog,
 	.try-welcome__content,
 	.try-notice__card {
 		padding: 32px 24px;
@@ -765,6 +897,30 @@
 	.try-heading {
 		font-size: 32px;
 		letter-spacing: -1px;
+	}
+	/* The picker's cards become rows: a small picture beside the text. */
+	.try-sites__grid {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+	.try-site {
+		flex-direction: row;
+	}
+	.try-site__preview {
+		flex: 0 0 104px;
+		aspect-ratio: auto;
+	}
+	.try-site__text {
+		flex: 1;
+		padding: 12px 14px;
+		border-top: 0;
+		border-inline-start: 1px solid var(--wp--preset--color--light-grey-1);
+	}
+	.try-site__current {
+		top: 6px;
+		left: 6px;
+		padding: 4px 6px;
+		font-size: 9px;
 	}
 	/* Phones get PhoneDock instead; hidden here too so the prerendered bar doesn't flash. */
 	.try-dock {
