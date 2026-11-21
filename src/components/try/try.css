@@ -90,6 +90,81 @@
 	flex-shrink: 0;
 }
 
+/*
+ * Tooltips (`data-tip`) for the dock's icon buttons and the button it collapses into,
+ * on the side that faces the middle of the screen: above along the bottom edge, below
+ * along the top.
+ */
+.try-icon-button[data-tip] {
+	position: relative;
+}
+
+[data-tip]::after {
+	content: attr(data-tip);
+	position: absolute;
+	left: 50%;
+	translate: -50% 0;
+	padding: 7px 10px;
+	border: 1px solid var(--try-dark-border);
+	border-radius: 6px;
+	background: var(--try-dark-bg);
+	color: var(--wp--preset--color--white);
+	font: 500 12px/1 var(--wp--preset--font-family--inter);
+	white-space: nowrap;
+	box-shadow: 0 4px 14px rgb(0 0 0 / 0.25);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.1s ease;
+}
+
+/* 12px clears the dock's 6px padding and leaves a 6px gap; the collapsed button has no padding. */
+[data-dock-y="bottom"] [data-tip]::after {
+	bottom: calc(100% + 12px);
+}
+
+[data-dock-y="top"] [data-tip]::after {
+	top: calc(100% + 12px);
+}
+
+[data-dock-y="bottom"][data-tip]::after {
+	bottom: calc(100% + 8px);
+}
+
+[data-dock-y="top"][data-tip]::after {
+	top: calc(100% + 8px);
+}
+
+/* In a corner, a tooltip at the screen's edge lines up with its button so it stays on screen. */
+[data-dock-x="right"] [data-tip]:last-child::after,
+[data-dock-x="right"][data-tip]::after {
+	left: auto;
+	right: 0;
+	translate: none;
+}
+
+[data-dock-x="left"][data-tip]::after {
+	left: 0;
+	translate: none;
+}
+
+/* After a short pause, so sweeping across the dock doesn't flash them. */
+@media (hover: hover) {
+	[data-tip]:hover::after {
+		opacity: 1;
+		transition-delay: 0.3s;
+	}
+}
+
+[data-tip]:focus-visible::after {
+	opacity: 1;
+}
+
+.try-dock--dragging [data-tip]::after,
+.try-dock--dragging[data-tip]::after,
+.try-dock--closing [data-tip]::after {
+	opacity: 0;
+}
+
 .try-icon-button:hover:not(:disabled) {
 	background: var(--try-dark-hover);
 	color: var(--wp--preset--color--white);

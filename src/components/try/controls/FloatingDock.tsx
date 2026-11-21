@@ -82,7 +82,7 @@ function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
         type="button"
         className="try-dark try-dock-collapsed"
         aria-label="Show WordPress controls"
-        title="Show controls"
+        data-tip="Show controls"
         onClick={() => setPhase(prefersReducedMotion() ? "open" : "opening")}
       >
         <ControlIcon icon="wordpress" dashicon="wordpress" size={34} />
@@ -130,7 +130,7 @@ function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
         type="button"
         className="try-icon-button"
         aria-label="Try another site"
-        title="Try another site"
+        data-tip="Try another site"
         disabled={!ready}
         onClick={switchSite}
       >
@@ -140,7 +140,7 @@ function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
         type="button"
         className="try-icon-button"
         aria-label="Reset Playground"
-        title="Reset Playground"
+        data-tip="Reset Playground"
         disabled={!ready}
         onClick={reset}
       >
@@ -150,7 +150,7 @@ function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
         type="button"
         className="try-icon-button"
         aria-label="Hide controls"
-        title="Hide controls"
+        data-tip="Hide controls"
         onClick={() => setPhase(prefersReducedMotion() ? "collapsed" : "closing")}
       >
         <ControlIcon icon="close" dashicon="no-alt" size={20} />
