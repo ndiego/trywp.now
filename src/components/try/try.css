@@ -511,6 +511,50 @@
 	color: var(--wp--preset--color--charcoal-4);
 }
 
+/* ---- Preview page without a preview (see TryPreview.tsx) ----
+ *
+ * A card in the dialogs' typography on a soft wash of wordpress.org's blueberry,
+ * sending the visitor to the demo.
+ */
+
+.try-notice {
+	--try-blue: var(--wp--preset--color--blueberry-1);
+	--try-blue-dark: var(--wp--preset--color--deep-blueberry);
+
+	position: absolute;
+	inset: 0;
+	display: grid;
+	place-items: center;
+	padding: 24px;
+	overflow-y: auto;
+	background: linear-gradient(160deg, rgb(56 88 233 / 0.1), rgb(56 88 233 / 0.02) 60%), var(--wp--preset--color--white);
+	animation: try-fade-in 0.2s ease-out;
+}
+
+.try-notice__card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: min(100%, 520px);
+	padding: 48px;
+	border-radius: 16px;
+	background: var(--wp--preset--color--white);
+	color: var(--wp--preset--color--charcoal-1);
+	box-shadow:
+		0 2px 6px rgb(0 0 0 / 0.04),
+		0 24px 64px rgb(56 88 233 / 0.14);
+}
+
+.try-notice__logo {
+	display: flex;
+	margin-bottom: 28px;
+	color: var(--try-blue);
+}
+
+.try-notice__card .try-body {
+	margin: 24px 0 32px;
+}
+
 /* ---- Dialogs (see TryModal.tsx) ----
  *
  * After the WordPress 7.1 release page: light, tightly tracked Inter headings with
@@ -609,6 +653,7 @@
 	background: var(--try-blue);
 	color: var(--wp--preset--color--white);
 	font: 600 16px/1 var(--wp--preset--font-family--inter);
+	text-decoration: none;
 	cursor: pointer;
 }
 
@@ -707,12 +752,14 @@
 	.try {
 		--try-edge: 10px;
 	}
-	.try-modal {
+	.try-modal,
+	.try-notice {
 		padding: 16px;
 	}
 	.try-modal__dialog,
 	.try-reset .try-modal__dialog,
-	.try-welcome__content {
+	.try-welcome__content,
+	.try-notice__card {
 		padding: 32px 24px;
 	}
 	.try-heading {

@@ -90,6 +90,10 @@ menu item can't be rerouted.
 `/preview` only embeds URLs on the hosts listed in `PLAYGROUND_SITE_HOSTS`. If Playground changes where
 it serves sites from, previews show "This preview isn't available" until the new host is added there.
 
+Without a preview to show, `/preview` sends the visitor to the demo instead (`TryPreview.tsx`): when
+someone lands on it directly, when its link isn't to a Playground site, and when WordPress opens the tab
+but its preview hasn't arrived after 15 seconds.
+
 ### Look and feel
 
 The UI uses wordpress.org's design tokens, block styles, fonts (EB Garamond, Inter), and Dashicons. That
