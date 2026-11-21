@@ -1647,7 +1647,7 @@ audio/mpeg
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Three styles, shared by both. The first is for saying one thing loudly.</p>
+<p>One style, shared by both, for saying one thing loudly.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"className":"is-style-text-display"} -->
@@ -1660,32 +1660,6 @@ audio/mpeg
 
 <!-- wp:paragraph {"fontSize":"small"} -->
 <p class="has-small-font-size">Display · <code>is-style-text-display</code></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>The second hangs a quotation mark over a line worth repeating.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"is-style-text-quote-mark","fontSize":"x-large"} -->
-<p class="is-style-text-quote-mark has-x-large-font-size">Write the sentence first. The page can wait.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">Quote Mark · <code>is-style-text-quote-mark</code></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>The third is the same mark for a card in a strong color: it takes the color of the text instead of a faint line.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"radius":{"topLeft":"10px","topRight":"10px","bottomLeft":"10px","bottomRight":"10px"}}},"backgroundColor":"accent-3","textColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-base-color has-accent-3-background-color has-text-color has-background" style="border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)"><!-- wp:heading {"className":"is-style-text-quote-mark-on-color"} -->
-<h2 class="wp-block-heading is-style-text-quote-mark-on-color">The page can wait. It always has.</h2>
-<!-- /wp:heading --></div>
-<!-- /wp:group -->
-
-<!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">Quote Mark on Color · <code>is-style-text-quote-mark-on-color</code></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -1773,6 +1747,14 @@ audio/mpeg
 <p>Plain lets go of the card and keeps the words.</p>
 <!-- /wp:paragraph --><cite>Plain · <code>is-style-plain</code></cite></blockquote>
 <!-- /wp:quote -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"radius":"10px"}},"backgroundColor":"accent-3","textColor":"base","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-base-color has-accent-3-background-color has-text-color has-background" style="border-radius:10px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)"><!-- wp:quote {"className":"is-style-plain-on-color"} -->
+<blockquote class="wp-block-quote is-style-plain-on-color"><!-- wp:paragraph -->
+<p>Plain on Color is the same quote for a card in a strong color: the mark takes the color of the text instead of a faint line.</p>
+<!-- /wp:paragraph --><cite>Plain on Color · <code>is-style-plain-on-color</code></cite></blockquote>
+<!-- /wp:quote --></div>
+<!-- /wp:group -->
 
 <!-- wp:heading -->
 <h2 class="wp-block-heading">Images</h2>
