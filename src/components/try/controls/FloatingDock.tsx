@@ -139,8 +139,8 @@ function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
       <button
         type="button"
         className="try-icon-button"
-        aria-label="Reset Playground"
-        data-tip="Reset Playground"
+        aria-label="Reset site"
+        data-tip="Reset site"
         disabled={!ready}
         onClick={reset}
       >

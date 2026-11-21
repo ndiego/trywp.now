@@ -88,7 +88,7 @@ export function TryWordPress() {
     setError(
       wp === DEFAULT_VERSIONS.wp
         ? { message: "WordPress couldn't start in this browser.", wp: null }
-        : { message: `WordPress ${wp} couldn't start. It may not be a version Playground can run.`, wp },
+        : { message: `WordPress ${wp} couldn't start. It may not be a version that can run here.`, wp },
     );
   }, []);
 
