@@ -15,8 +15,8 @@ npm run lint
 
 ## What visitors get
 
-- **A real WordPress site** running in their browser, logged in as "Administrator", with a demo theme
-  and content.
+- **A real WordPress site** running in their browser, logged in as "Administrator" (with a Wapuu for a
+  profile picture), with a demo theme and content.
 - **A welcome dialog** naming the WordPress version they're running, with that release's artwork.
 - **A choice of sites**: the Ipsum blog, or one of the six starter sites of the Mētis theme, picked from
   a gallery in the control bar.
@@ -131,4 +131,6 @@ at Spacefast, and `www` redirects to the apex.
 
 GPL-2.0-or-later (see `LICENSE`). WordPress, the Ipsum and Mētis themes, and the vendored wordpress.org CSS
 are GPL. The Mētis demo posts and pictures come from the theme's public demo site.
-The release artwork in `public/release-art/` comes from wordpress.org's release pages.
+The release artwork in `public/release-art/` comes from wordpress.org's release pages. The Administrator's picture,
+`public/avatar/wapuu.png`, is the original [Wapuu](https://github.com/jawordpressorg/wapuu) by Kazuko Kaneuchi
+(GPL-2.0-or-later), cropped.

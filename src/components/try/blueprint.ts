@@ -166,6 +166,35 @@ $user = get_user_by('login', 'admin');
 if ($user) wp_update_user(['ID' => $user->ID, 'display_name' => 'Administrator', 'nickname' => 'Administrator']);`,
 };
 
+/**
+ * Gives that account a Wapuu, WordPress's mascot, as its picture: in the admin bar, on
+ * its profile, and beside its posts and comments. WordPress would otherwise ask Gravatar,
+ * which has nothing for Playground's made-up address. The picture is public/avatar/wapuu.png,
+ * the original Wapuu by Kazuko Kaneuchi (GPL-2.0-or-later, github.com/jawordpressorg/wapuu).
+ */
+function wapuuAvatarStep(origin: string): StepDefinition {
+  return {
+    step: "writeFile",
+    path: "/wordpress/wp-content/mu-plugins/trywp-wapuu-avatar.php",
+    data: `<?php
+// Added by trywp.now: a Wapuu as the Administrator account's picture.
+add_filter('pre_get_avatar_data', function ($args, $id_or_email) {
+  $user = false;
+  if (is_numeric($id_or_email)) $user = get_user_by('id', (int) $id_or_email);
+  elseif ($id_or_email instanceof WP_User) $user = $id_or_email;
+  elseif ($id_or_email instanceof WP_Post) $user = get_user_by('id', (int) $id_or_email->post_author);
+  elseif ($id_or_email instanceof WP_Comment) $user = $id_or_email->user_id ? get_user_by('id', (int) $id_or_email->user_id) : get_user_by('email', $id_or_email->comment_author_email);
+  elseif (is_string($id_or_email)) $user = get_user_by('email', $id_or_email);
+  if ($user && $user->user_login === 'admin') {
+    $args['url'] = '${origin}/avatar/wapuu.png';
+    $args['found_avatar'] = true;
+  }
+  return $args;
+}, 10, 2);
+`,
+  };
+}
+
 /** Empty the trash after the blueprint's steps, since demo content can import trashed posts. */
 const emptyTrashStep: StepDefinition = {
   step: "runPHP",
@@ -213,9 +242,10 @@ function isOlderThan(wp: string, min: string) {
 /**
  * The full Playground blueprint for one of `tryBlueprints`: shared setup (removing
  * default content, naming the account), the blueprint's own steps, then emptying the
- * trash and installing the plugin that keeps new tabs on trywp.now (see preview-tabs.ts).
+ * trash, giving the account its picture, and installing the plugin that keeps new tabs on
+ * trywp.now (see preview-tabs.ts).
  * For a WordPress version older than the blueprint supports, it's plain WordPress with
- * just the account name and the new-tab plugin.
+ * just the account's name and picture and the new-tab plugin.
  *
  * Reference: https://wordpress.github.io/wordpress-playground/blueprints
  */
@@ -229,12 +259,13 @@ export function getTryBlueprint(id: string, origin: string, versions = DEFAULT_V
     features: { networking: true },
     login: true,
     steps: plain
-      ? [nameAccountStep, previewTabsStep(origin)]
+      ? [nameAccountStep, wapuuAvatarStep(origin), previewTabsStep(origin)]
       : [
           removeDefaultContentStep,
           nameAccountStep,
           ...blueprint.steps(origin),
           emptyTrashStep,
+          wapuuAvatarStep(origin),
           previewTabsStep(origin),
         ],
   };
