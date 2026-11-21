@@ -10,7 +10,7 @@
 # theme's folder name), and the path of its WXR demo content inside the repo, or the
 # script that builds the content when the repo has none.
 #
-# Also saves preview.jpg, the picture the theme switcher shows: the theme's screenshot
+# Also saves preview.jpg, the picture the site switcher shows: the theme's screenshot
 # by default, or PREVIEWS, a list of "name=url" pictures saved as preview-<name>.jpg.
 
 set -euo pipefail
@@ -61,7 +61,7 @@ else
 	cp "$TMP/$SLUG/$CONTENT" "$OUT/content.xml"
 fi
 
-# Switcher pictures, 800px wide.
+# Switcher pictures: the top of each, 640 by 400, small enough to load with the page.
 rm -f "$OUT"/preview*.jpg
 if [ -n "${PREVIEWS:-}" ]; then
 	while IFS='=' read -r name url; do
@@ -71,7 +71,9 @@ else
 	cp "$TMP/$SLUG/screenshot.jpg" "$OUT/preview.jpg"
 fi
 for preview in "$OUT"/preview*.jpg; do
-	sips --resampleWidth 800 -s formatOptions 80 "$preview" > /dev/null
+	sips --resampleWidth 640 "$preview" > /dev/null
+	# An offset of 0 is ignored (the crop is centered), so start one pixel in.
+	sips --cropOffset 1 1 -c 400 640 -s formatOptions 75 "$preview" > /dev/null
 done
 
 # Theme files only: drop repo tooling, docs, and dev config.

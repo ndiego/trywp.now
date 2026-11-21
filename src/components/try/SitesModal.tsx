@@ -48,7 +48,8 @@ function SitePicker({ currentId, onCancel, onSwitch }: Omit<Props, "open">) {
             onClick={() => setChosenId(site.id)}
           >
             <span className="try-site__preview">
-              <Image src={site.preview} width={400} height={300} alt="" />
+              {/* Already loaded: TryWordPress fetches these pictures while the site boots. */}
+              <Image src={site.preview} width={640} height={400} alt="" loading="eager" />
               {site.id === currentId && <span className="try-site__current">Current</span>}
             </span>
             <span className="try-site__text">

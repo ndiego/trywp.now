@@ -1,8 +1,14 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import type { PlaygroundClient } from "@wp-playground/client";
-import { DEFAULT_BLUEPRINT_ID, DEFAULT_VERSIONS, getRequestedBlueprintId, getRequestedVersions } from "./blueprint";
+import {
+  DEFAULT_BLUEPRINT_ID,
+  DEFAULT_VERSIONS,
+  getRequestedBlueprintId,
+  getRequestedVersions,
+  tryBlueprints,
+} from "./blueprint";
 import { FloatingDock } from "./controls/FloatingDock";
 import { getActivePath, type TryControls } from "./destinations";
 import { PlaygroundFrame, type BootStatus } from "./PlaygroundFrame";
@@ -33,6 +39,18 @@ export function TryWordPress() {
   const [confirmingReset, setConfirmingReset] = useState(false);
   const [choosingSite, setChoosingSite] = useState(false);
   const [wpVersion, setWpVersion] = useState<string | null>(null);
+
+  // Fetch and decode the site switcher's pictures up front, so they're there the moment it opens.
+  useEffect(() => {
+    const pictures = tryBlueprints.map((site) => {
+      const picture = new Image();
+      picture.src = site.preview;
+      picture.decode().catch(() => {});
+      return picture;
+    });
+    // Holding on to them keeps them decoded until the page goes away.
+    return () => void pictures.splice(0);
+  }, []);
 
   /** Boots a fresh site from `blueprintId`, or from the current blueprint when omitted. */
   const boot = useCallback((blueprintId?: string) => {

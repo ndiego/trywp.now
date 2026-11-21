@@ -134,7 +134,7 @@ function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
         disabled={!ready}
         onClick={switchSite}
       >
-        <ControlIcon icon="grid" dashicon="screenoptions" size={24} />
+        <ControlIcon icon="category" dashicon="screenoptions" size={24} />
       </button>
       <button
         type="button"

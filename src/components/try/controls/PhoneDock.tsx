@@ -65,7 +65,7 @@ export function PhoneDock({ ready, activePath, goTo, reset, switchSite }: TryCon
               ))}
             <span className="try-menu__divider" aria-hidden="true" />
             <button type="button" className="try-menu__item" disabled={!ready} onClick={choose(switchSite)}>
-              <ControlIcon icon="grid" dashicon="screenoptions" size={24} />
+              <ControlIcon icon="category" dashicon="screenoptions" size={24} />
               Try Another Site
             </button>
             <button type="button" className="try-menu__item" disabled={!ready} onClick={choose(reset)}>
