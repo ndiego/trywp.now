@@ -5,8 +5,10 @@ import type { PlaygroundClient } from "@wp-playground/client";
 import {
   DEFAULT_BLUEPRINT_ID,
   DEFAULT_VERSIONS,
+  getBlueprint,
   getRequestedBlueprintId,
   getRequestedVersions,
+  isPlainWordPress,
   tryBlueprints,
 } from "./blueprint";
 import { FloatingDock } from "./controls/FloatingDock";
@@ -93,6 +95,10 @@ export function TryWordPress() {
   }, []);
 
   const closeWelcome = useCallback(() => setWelcome("seen"), []);
+  const pickSiteFromWelcome = useCallback(() => {
+    setWelcome("seen");
+    setChoosingSite(true);
+  }, []);
   const cancelReset = useCallback(() => setConfirmingReset(false), []);
   const confirmReset = useCallback(() => {
     setConfirmingReset(false);
@@ -175,7 +181,18 @@ export function TryWordPress() {
         )}
       </div>
 
-      <WelcomeModal open={welcome === "open" && !!client} onClose={closeWelcome} version={wpVersion} />
+      <WelcomeModal
+        open={welcome === "open" && !!client}
+        onClose={closeWelcome}
+        version={wpVersion}
+        // Read once the site is up, so in the browser. A release too old for the theme has no demo to name.
+        running={
+          client && !isPlainWordPress(run.blueprintId, getRequestedVersions(window.location.search))
+            ? getBlueprint(run.blueprintId).running
+            : null
+        }
+        onPickSite={pickSiteFromWelcome}
+      />
       <SitesModal open={choosingSite} currentId={run.blueprintId} onCancel={cancelSwitch} onSwitch={switchSite} />
       <ResetModal open={confirmingReset} onCancel={cancelReset} onConfirm={confirmReset} />
     </div>

@@ -14,6 +14,8 @@ export type TryBlueprint = {
   design: string;
   /** One line for the site switcher. */
   description: string;
+  /** What the site is running, to finish the welcome's "This is a WordPress playground running …". */
+  running: string;
   /** The switcher's picture of the site, a path in public/. */
   preview: string;
   /**
@@ -35,6 +37,7 @@ const ipsum: TryBlueprint = {
   theme: "Ipsum",
   design: "Blog",
   description: "The new default theme: a blank canvas for a blog.",
+  running: "Ipsum, the new default theme",
   preview: "/demo/ipsum/preview.jpg",
   // Ipsum's "Requires at least".
   requiresWp: "7.2",
@@ -65,6 +68,7 @@ function metis(starter: string, site: { name: string; tagline: string; descripti
     theme: "Mētis",
     design: starter[0].toUpperCase() + starter.slice(1),
     description: site.description,
+    running: `the ${starter[0].toUpperCase() + starter.slice(1)} starter site of the Mētis theme`,
     preview: `/demo/metis/preview-${starter}.jpg`,
     // Mētis's "Requires at least".
     requiresWp: "7.1",
@@ -239,6 +243,18 @@ function isOlderThan(wp: string, min: string) {
   return major < minMajor || (major === minMajor && minor < minMinor);
 }
 
+/** The blueprint with this id. */
+export function getBlueprint(id: string): TryBlueprint {
+  const blueprint = tryBlueprints.find((b) => b.id === id);
+  if (!blueprint) throw new Error(`Unknown blueprint "${id}"`);
+  return blueprint;
+}
+
+/** Whether the visitor gets plain WordPress: they asked for a release older than the blueprint's theme supports. */
+export function isPlainWordPress(id: string, versions: TryVersions): boolean {
+  return isOlderThan(versions.wp, getBlueprint(id).requiresWp);
+}
+
 /**
  * The full Playground blueprint for one of `tryBlueprints`: shared setup (removing
  * default content, naming the account), the blueprint's own steps, then emptying the
@@ -250,9 +266,8 @@ function isOlderThan(wp: string, min: string) {
  * Reference: https://wordpress.github.io/wordpress-playground/blueprints
  */
 export function getTryBlueprint(id: string, origin: string, versions = DEFAULT_VERSIONS): Blueprint {
-  const blueprint = tryBlueprints.find((b) => b.id === id);
-  if (!blueprint) throw new Error(`Unknown blueprint "${id}"`);
-  const plain = isOlderThan(versions.wp, blueprint.requiresWp);
+  const blueprint = getBlueprint(id);
+  const plain = isPlainWordPress(id, versions);
   return {
     landingPage: "/",
     preferredVersions: versions,

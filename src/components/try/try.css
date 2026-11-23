@@ -921,8 +921,11 @@
 	margin: 32px 0;
 }
 
-.try-welcome__start {
-	align-self: flex-start;
+/* Start exploring, with the way to the other sites beside it. */
+.try-welcome__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
 	margin-top: auto;
 }
 
