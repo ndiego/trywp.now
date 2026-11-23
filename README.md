@@ -4,6 +4,19 @@ Try WordPress in your browser: a full-screen, live WordPress site with nothing t
 A proof of concept powered by [WordPress Playground](https://wordpress.github.io/wordpress-playground/),
 and a sibling of the (private) wordpress.org download-page redesign demo, where this experience started.
 
+**[Try it at trywp.now →](https://trywp.now)**
+
+[![A WordPress site running the Mētis theme's Business starter site, with the trywp.now control bar along the bottom.](.github/screenshots/metis.jpg)](https://trywp.now/?site=metis-business)
+
+| | |
+| --- | --- |
+| ![The welcome dialog: "Howdy! Your site is ready".](.github/screenshots/welcome.jpg) | ![The Ipsum blog with the control bar.](.github/screenshots/site.jpg) |
+| The welcome names the WordPress version and the site that's running. | The control bar floats over the site and can be dragged to six spots. |
+
+![The site picker: seven sites to try, each with a picture.](.github/screenshots/sites.jpg)
+
+The site picker: the Ipsum blog, or one of the six starter sites of the Mētis theme.
+
 Next.js (App Router), exported as a fully static site.
 
 ```sh
@@ -17,7 +30,8 @@ npm run lint
 
 - **A real WordPress site** running in their browser, logged in as "Administrator" (with a Wapuu for a
   profile picture), with a demo theme and content.
-- **A welcome dialog** naming the WordPress version they're running, with that release's artwork.
+- **A welcome dialog** naming the WordPress version and the site they're running, with that release's
+  artwork and a shortcut to the other sites.
 - **A choice of sites**: the Ipsum blog, or one of the six starter sites of the Mētis theme, picked from
   a gallery in the control bar.
 - **A floating control bar**: Get WordPress, Homepage, Dashboard, Edit Site, Try another site, Reset
