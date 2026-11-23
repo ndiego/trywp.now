@@ -37,6 +37,8 @@ magazine=$UPLOADS/metis-artifact-template-magazine.jpg
 portfolio=$UPLOADS/metis-artifact-template-portfolio.jpg
 writer=$UPLOADS/metis-artifact-template-writer.jpg
 personal=$UPLOADS/metis-artifact-template-personal.jpg"
+		# Those pictures show the 8px frame the theme draws around the page. Trim it off.
+		PREVIEW_INSET=10
 		;;
 	*)
 		echo "Unknown blueprint: $BLUEPRINT" >&2
@@ -71,8 +73,16 @@ else
 	cp "$TMP/$SLUG/screenshot.jpg" "$OUT/preview.jpg"
 fi
 for preview in "$OUT"/preview*.jpg; do
-	sips --resampleWidth 640 "$preview" > /dev/null
-	# An offset of 0 is ignored (the crop is centered), so start one pixel in.
+	if [ -n "${PREVIEW_INSET:-}" ]; then
+		width="$(sips -g pixelWidth "$preview" | awk '/pixelWidth/ {print $2}')"
+		height="$(sips -g pixelHeight "$preview" | awk '/pixelHeight/ {print $2}')"
+		# Off the top and both sides; the bottom is cropped away below anyway.
+		sips --cropOffset "$PREVIEW_INSET" "$PREVIEW_INSET" \
+			-c "$((height - PREVIEW_INSET))" "$((width - 2 * PREVIEW_INSET))" "$preview" > /dev/null
+	fi
+	# sips ignores a crop offset of 0 (it centers the crop instead), so the crop starts one
+	# pixel in. Two pixels wider than needed, so that pixel doesn't run off the far edge.
+	sips --resampleWidth 642 "$preview" > /dev/null
 	sips --cropOffset 1 1 -c 400 640 -s formatOptions 75 "$preview" > /dev/null
 done
 
