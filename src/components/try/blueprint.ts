@@ -73,11 +73,20 @@ type MetisPage =
  * demo posts, whose images WordPress fetches from metisdemo.mystagingwebsite.com
  * during the import; `starter` names the template that becomes the front page.
  * Each site has its own `pages`, and a menu of them, so it reads as one site
- * rather than a tour of the theme's designs.
+ * rather than a tour of the theme's designs. The theme's other templates (pages,
+ * posts, archives) all share one header, footer and color, whatever the starter,
+ * so each site also gives them its starter's.
  */
 function metis(
   starter: string,
-  site: { name: string; tagline: string; description: string; pages: MetisPage[] },
+  site: {
+    name: string;
+    tagline: string;
+    description: string;
+    /** The palette color at the top of the starter's front page ("theme-11"), for the other pages to share. */
+    color: string;
+    pages: MetisPage[];
+  },
 ): TryBlueprint {
   return {
     id: `metis-${starter}`,
@@ -101,6 +110,7 @@ function metis(
         code: `<?php
 require '/wordpress/wp-load.php';
 $starter = ${phpString(starter)};
+$color = ${phpString(site.color)};
 $pages = json_decode(${phpString(JSON.stringify(site.pages))}, true);
 
 // The theme's own front page introduces Mētis itself. Replace it with the starter
@@ -184,7 +194,43 @@ foreach (['header-c', 'navigation-overlay', 'footer-a', 'footer-b', 'footer-c', 
   ]);
   wp_set_object_terms($id, 'metis', 'wp_theme');
   wp_set_object_terms($id, $part->area, 'wp_template_part_area');
-}`,
+}
+
+// The theme's other templates all use one header and footer. Give them the starter's,
+// so the site's pages, posts and archives match its front page.
+$design = $patterns->get_registered('metis/' . $starter)['content'];
+$header = preg_match('/"slug":"(header-[a-z])"/', $design, $found) ? $found[1] : 'header-a';
+$footer = preg_match('/"slug":"(footer-[a-z])"/', $design, $found) ? $found[1] : 'footer-c';
+foreach (['page', 'page-no-title', 'single', 'single-no-image', 'single-with-sidebar', 'index', 'archive', 'search', '404'] as $slug) {
+  $theirs = get_block_template('metis//' . $slug);
+  if (!$theirs || !$patterns->is_registered('metis/' . $slug)) continue;
+  $content = str_replace(
+    ['"slug":"header-a"', '"slug":"footer-c"'],
+    ['"slug":"' . $header . '"', '"slug":"' . $footer . '"'],
+    $patterns->get_registered('metis/' . $slug)['content']
+  );
+  $id = wp_insert_post([
+    'post_type' => 'wp_template',
+    'post_status' => 'publish',
+    'post_name' => $slug,
+    'post_title' => $theirs->title,
+    'post_content' => wp_slash($content),
+  ]);
+  wp_set_object_terms($id, 'metis', 'wp_theme');
+}
+
+// Those templates fade from yellow at the top. Fade from the starter's color instead,
+// with the site's Additional CSS (Styles, in the Site Editor).
+wp_set_current_user(get_user_by('login', 'admin')->ID);
+wp_update_post([
+  'ID' => WP_Theme_JSON_Resolver::get_user_global_styles_post_id(),
+  'post_content' => wp_slash(wp_json_encode([
+    'version' => WP_Theme_JSON::LATEST_SCHEMA,
+    'isGlobalStylesUserThemeJSON' => true,
+    'styles' => ['css' => 'body .wp-block-group.is-style-gradient-flow { --metis-gradient-top: var(--wp--preset--color--' . $color . '); }'],
+  ])),
+]);
+wp_set_current_user(0);`,
       },
     ],
   };
@@ -202,6 +248,7 @@ export const tryBlueprints: TryBlueprint[] = [
     name: "Landmark",
     tagline: "A studio for brands in motion",
     description: "A studio's site: services, clients, team and pricing.",
+    color: "theme-11",
     pages: [
       { title: "Work", patterns: ["work-a"] },
       { title: "About", patterns: ["infos-a", "team-a", "clients-a"] },
@@ -213,6 +260,7 @@ export const tryBlueprints: TryBlueprint[] = [
     name: "Parallel",
     tagline: "The news, side by side",
     description: "A newspaper's front page, led by a featured story.",
+    color: "theme-7",
     pages: [
       { title: "Latest", posts: true },
       { title: "Technology", category: "technology" },
@@ -226,6 +274,8 @@ export const tryBlueprints: TryBlueprint[] = [
     name: "Almanac",
     tagline: "A magazine of slow attention",
     description: "A magazine: the current issue, its makers and the archive.",
+    // The front page is black, which page titles can't be read on. Its black header carries the look instead.
+    color: "theme-4",
     pages: [
       { title: "Archive", posts: true },
       { title: "Essays", category: "essays" },
@@ -237,6 +287,7 @@ export const tryBlueprints: TryBlueprint[] = [
     name: "Cora Vale",
     tagline: "Selected work",
     description: "A designer's portfolio, with awards and a playlist.",
+    color: "theme-10",
     pages: [
       { title: "Work", patterns: ["work-a"] },
       { title: "About", patterns: ["about-b", "career-a"] },
@@ -248,6 +299,7 @@ export const tryBlueprints: TryBlueprint[] = [
     name: "Iris Calder",
     tagline: "Books, writings and talks",
     description: "An author's home: a new book, its reviews and writings.",
+    color: "theme-8",
     pages: [
       { title: "Books", patterns: ["product-list-a", "testimonials-b"] },
       { title: "Writings", posts: true },
@@ -259,6 +311,7 @@ export const tryBlueprints: TryBlueprint[] = [
     name: "Ada Fenn",
     tagline: "Builds and notes",
     description: "A personal site with selected builds and the latest posts.",
+    color: "theme-9",
     pages: [
       { title: "Builds", patterns: ["services-b"] },
       { title: "Notes", posts: true },

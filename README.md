@@ -87,6 +87,9 @@ Today there are seven:
   definition), so it reads as one site rather than a tour of the theme's designs. A page is a stack of
   the theme's section patterns, the page that lists the posts, or a link to a category. The theme's
   headers and footers that list placeholder links are customized to show the site's menu instead.
+  The theme's other templates (pages, posts, archives) share one header, footer and yellow fade
+  whatever the starter, so each site customizes them to use its starter's header and footer, and
+  sets the fade to its `color` with Additional CSS.
 
 A theme's files are served from `public/demo/<theme>/`: the theme zip, `content.xml`, the pictures the
 gallery shows, and a `SOURCE` file recording the commit they came from. Refresh them with
