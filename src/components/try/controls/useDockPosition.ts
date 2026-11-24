@@ -1,9 +1,12 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useSyncExternalStore } from "react";
-import type { DragEvent, MouseEvent, PointerEvent } from "react";
+import type { DragEvent, KeyboardEvent as ReactKeyboardEvent, MouseEvent, PointerEvent } from "react";
 import { prefersReducedMotion } from "../motion";
 
 /** Where the dock sits: one of six spots along the top and bottom edges. */
 export type DockPosition = { y: "top" | "bottom"; x: "left" | "center" | "right" };
+
+/** The id of the hint that describes the controls: how to move them without dragging (see TryWordPress.tsx). */
+export const MOVE_HINT_ID = "try-dock-hint";
 
 const DEFAULT_POSITION: DockPosition = { y: "bottom", x: "center" };
 const STORAGE_KEY = "try-dock-position";
@@ -299,5 +302,23 @@ export function useDockPosition() {
   // Links and images would otherwise start the browser's own drag instead of moving the dock.
   const onDragStart = useCallback((event: DragEvent<HTMLElement>) => event.preventDefault(), []);
 
-  return { position, ref, handlers: { onPointerDown, onClickCapture, onDragStart } };
+  // Without dragging: Shift and an arrow key move the dock one spot that way.
+  const onKeyDown = useCallback((event: ReactKeyboardEvent<HTMLElement>) => {
+    if (!event.shiftKey || event.altKey || event.ctrlKey || event.metaKey) return;
+    const { x, y } = getPosition();
+    const across = ["left", "center", "right"] as const;
+    let spot: DockPosition;
+    if (event.key === "ArrowUp") spot = { x, y: "top" };
+    else if (event.key === "ArrowDown") spot = { x, y: "bottom" };
+    else if (event.key === "ArrowLeft") spot = { x: across[Math.max(across.indexOf(x) - 1, 0)], y };
+    else if (event.key === "ArrowRight") spot = { x: across[Math.min(across.indexOf(x) + 1, 2)], y };
+    else return;
+    event.preventDefault();
+    if (spot.x === x && spot.y === y) return;
+    // Glides there like a dropped dock does.
+    if (ref.current) droppedAt.current = centerOf(ref.current.getBoundingClientRect());
+    setPosition(spot);
+  }, []);
+
+  return { position, ref, handlers: { onPointerDown, onClickCapture, onDragStart, onKeyDown } };
 }

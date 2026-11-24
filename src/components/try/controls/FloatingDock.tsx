@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useState, useSyncExternalStore, type RefObject } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore, type RefObject } from "react";
 import { WP_GET_URL } from "@/lib/wordpress";
 import { destinations, type TryControls } from "../destinations";
 import { ControlIcon } from "../ControlIcon";
 import { prefersReducedMotion } from "../motion";
 import { PhoneDock } from "./PhoneDock";
-import { useDockPosition } from "./useDockPosition";
+import { MOVE_HINT_ID, useDockPosition } from "./useDockPosition";
 
 /** open → closing (pill narrows into the button) → collapsed → opening (pill widens) → open */
 type Phase = "open" | "closing" | "collapsed" | "opening";
@@ -37,7 +37,9 @@ export function FloatingDock(controls: TryControls) {
 
 /**
  * A dark pill with the main destinations always visible, which the visitor can drag
- * to any of six spots along the top and bottom edges. Collapses into a small
+ * to any of six spots along the top and bottom edges (or move with Shift and the
+ * arrow keys). Its buttons stay focusable while the site boots (`aria-disabled`), so
+ * focus isn't lost when a reset turns them off. Collapses into a small
  * WordPress button: toward its center when centered, or into its corner.
  */
 function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
@@ -45,6 +47,10 @@ function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
   // One ref for whichever is showing: the pill, or the button it collapses into.
   const { position, ref: dockRef, handlers } = useDockPosition();
   const placement = { "data-dock-x": position.x, "data-dock-y": position.y };
+  // Escape puts away the tooltip that's showing, until focus or the pointer moves on.
+  const [tipsHidden, setTipsHidden] = useState(false);
+  // Set when the button brings the bar back, so focus can follow it there.
+  const reopened = useRef(false);
 
   // Animate the pill's width between its natural size and the button's. The dock is
   // pinned to its spot's edge (or centered), so changing width alone makes it shrink
@@ -67,9 +73,14 @@ function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
     return () => clearTimeout(timer);
   }, [phase, dockRef]);
 
-  // The dock unmounts on collapse, so hand focus to the button that replaces it.
+  // The dock unmounts on collapse, so hand focus to the button that replaces it, and
+  // back to the bar's hide button when that button brings the bar back.
   useEffect(() => {
     if (phase === "collapsed") dockRef.current?.focus();
+    else if (reopened.current) {
+      reopened.current = false;
+      dockRef.current?.querySelector<HTMLElement>(".try-dock__hide")?.focus();
+    }
   }, [phase, dockRef]);
 
   if (phase === "collapsed") {
@@ -83,7 +94,10 @@ function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
         className="try-dark try-dock-collapsed"
         aria-label="Show WordPress controls"
         data-tip="Show controls"
-        onClick={() => setPhase(prefersReducedMotion() ? "open" : "opening")}
+        onClick={() => {
+          reopened.current = true;
+          setPhase(prefersReducedMotion() ? "open" : "opening");
+        }}
       >
         <ControlIcon icon="wordpress" dashicon="wordpress" size={34} />
       </button>
@@ -95,8 +109,15 @@ function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
       ref={dockRef}
       {...placement}
       {...handlers}
-      className={`try-dark try-dock${phase === "open" ? "" : ` try-dock--${phase}`}`}
+      className={`try-dark try-dock${phase === "open" ? "" : ` try-dock--${phase}`}${tipsHidden ? " try-dock--quiet" : ""}`}
       aria-label="Try WordPress controls"
+      aria-describedby={MOVE_HINT_ID}
+      onKeyDown={(e) => {
+        handlers.onKeyDown(e);
+        if (e.key === "Escape") setTipsHidden(true);
+      }}
+      onFocus={() => setTipsHidden(false)}
+      onPointerMove={() => tipsHidden && setTipsHidden(false)}
     >
       {/* Opens in a new tab so the visitor's Playground site keeps running. */}
       <a className="try-cta" href={WP_GET_URL} target="_blank" rel="noopener">
@@ -115,9 +136,11 @@ function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
             type="button"
             className="try-dock__item"
             aria-current={activePath === d.path ? "page" : undefined}
-            disabled={!ready}
-            title={d.label}
-            onClick={() => goTo(d.path)}
+            // Named here too: on narrower screens the label is hidden and shows as a tooltip instead.
+            aria-label={d.label}
+            data-tip={d.label}
+            aria-disabled={!ready || undefined}
+            onClick={() => ready && goTo(d.path)}
           >
             <ControlIcon icon={d.icon} dashicon={d.dashicon} />
             <span className="try-dock__label">{d.label}</span>
@@ -131,8 +154,8 @@ function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
         className="try-icon-button"
         aria-label="Try another site"
         data-tip="Try another site"
-        disabled={!ready}
-        onClick={switchSite}
+        aria-disabled={!ready || undefined}
+        onClick={() => ready && switchSite()}
       >
         <ControlIcon icon="category" dashicon="screenoptions" size={24} />
       </button>
@@ -141,14 +164,14 @@ function BarDock({ ready, activePath, goTo, reset, switchSite }: TryControls) {
         className="try-icon-button"
         aria-label="Reset site"
         data-tip="Reset site"
-        disabled={!ready}
-        onClick={reset}
+        aria-disabled={!ready || undefined}
+        onClick={() => ready && reset()}
       >
         <ControlIcon icon="rotateRight" dashicon="update" size={24} />
       </button>
       <button
         type="button"
-        className="try-icon-button"
+        className="try-icon-button try-dock__hide"
         aria-label="Hide controls"
         data-tip="Hide controls"
         onClick={() => setPhase(prefersReducedMotion() ? "collapsed" : "closing")}

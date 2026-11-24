@@ -35,7 +35,8 @@ npm run lint
 - **A choice of sites**: the Ipsum blog, or one of the six starter sites of the Mētis theme, picked from
   a gallery in the control bar.
 - **A floating control bar**: Get WordPress, Homepage, Dashboard, Edit Site, Try another site, Reset
-  (which asks first), and hide. It can be dragged to any of six spots along the top and bottom edges, and remembers its spot.
+  (which asks first), and hide. It can be dragged to any of six spots along the top and bottom edges (or moved
+  with Shift and the arrow keys), and remembers its spot.
   On phones it's a round WordPress button that opens a menu of the same options, and drags the same way.
 - **Previews that work**: pages WordPress opens in a new tab, like the editor's Preview, open on
   trywp.now and show the visitor's live site.

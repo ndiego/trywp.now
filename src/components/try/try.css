@@ -159,18 +159,24 @@
 	opacity: 1;
 }
 
+/* `--quiet`: put away with Escape (see FloatingDock.tsx). */
 .try-dock--dragging [data-tip]::after,
 .try-dock--dragging[data-tip]::after,
-.try-dock--closing [data-tip]::after {
+.try-dock--closing [data-tip]::after,
+.try-dock--quiet [data-tip]::after {
 	opacity: 0;
 }
 
-.try-icon-button:hover:not(:disabled) {
+/*
+ * The dock's buttons are turned off with `aria-disabled` rather than `disabled` while
+ * the site boots, so they keep focus.
+ */
+.try-icon-button:hover:not([aria-disabled="true"]) {
 	background: var(--try-dark-hover);
 	color: var(--wp--preset--color--white);
 }
 
-.try-icon-button:disabled {
+.try-icon-button[aria-disabled="true"] {
 	opacity: 0.4;
 	cursor: default;
 }
@@ -323,7 +329,13 @@
 		box-shadow 0.15s ease-out;
 }
 
+/* Its label doubles as a tooltip, shown only once the label itself is hidden (see "Small screens"). */
+.try-dock__item[data-tip]::after {
+	display: none;
+}
+
 .try-dock__item {
+	position: relative;
 	display: inline-flex;
 	align-items: center;
 	gap: 6px;
@@ -337,13 +349,13 @@
 	white-space: nowrap;
 }
 
-.try-dock__item:hover:not(:disabled),
+.try-dock__item:hover:not([aria-disabled="true"]),
 .try-dock__item[aria-current="page"] {
 	background: var(--try-dark-hover);
 	color: var(--wp--preset--color--white);
 }
 
-.try-dock__item:disabled {
+.try-dock__item[aria-disabled="true"] {
 	opacity: 0.4;
 	cursor: default;
 }
@@ -498,13 +510,13 @@
 	cursor: pointer;
 }
 
-.try-menu__item:hover:not(:disabled),
+.try-menu__item:hover:not([aria-disabled="true"]),
 .try-menu__item[aria-current="page"] {
 	background: var(--try-dark-hover);
 	color: var(--wp--preset--color--white);
 }
 
-.try-menu__item:disabled {
+.try-menu__item[aria-disabled="true"] {
 	opacity: 0.4;
 	cursor: default;
 }
@@ -929,6 +941,44 @@
 	margin-top: auto;
 }
 
+/* ---- High contrast ----
+ *
+ * Forced colors (Windows High Contrast) drop shadows and replace backgrounds, which is
+ * all that draws these edges and states. Borders and outlines survive.
+ */
+
+@media (forced-colors: active) {
+	.try-dock,
+	.try-dock-collapsed,
+	.try-menu,
+	.try-modal__dialog,
+	.try-notice__card,
+	.try-loader__bar,
+	[data-tip]::after {
+		border: 1px solid CanvasText;
+	}
+	.try-divider,
+	.try-menu__divider {
+		background: CanvasText;
+	}
+	.try-dock__item[aria-current="page"],
+	.try-menu__item[aria-current="page"] {
+		border: 1px solid Highlight;
+	}
+	/* Inside the card's edge; the focus ring sits outside it. */
+	.try-site[aria-checked="true"] {
+		outline: 3px solid Highlight;
+		outline-offset: -3px;
+	}
+	.try-site[aria-checked="true"]:focus-visible {
+		outline-offset: 3px;
+	}
+	.try-loader__bar span {
+		forced-color-adjust: none;
+		background: Highlight;
+	}
+}
+
 /* ---- Small screens ---- */
 
 @media (max-width: 782px) {
@@ -941,8 +991,16 @@
 	.try-dock__label {
 		display: none;
 	}
+	.try-dock__item[data-tip]::after {
+		display: block;
+	}
+	/* Icons alone: the size of the icon buttons beside them, in the same 36px circle. */
 	.try-dock__item {
-		padding: 0 8px;
+		padding: 0 6px;
+	}
+	.try-dock__item svg {
+		width: 24px;
+		height: 24px;
 	}
 }
 
