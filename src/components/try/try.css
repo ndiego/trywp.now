@@ -642,6 +642,13 @@
 	margin: 24px 0 32px;
 }
 
+/* When there's more than one way out (see UnsupportedNotice.tsx). */
+.try-notice__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
 /* ---- Dialogs (see TryModal.tsx) ----
  *
  * After the WordPress 7.1 release page: light, tightly tracked Inter headings with

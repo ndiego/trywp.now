@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
 import type { PlaygroundClient } from "@wp-playground/client";
 import {
   DEFAULT_BLUEPRINT_ID,
@@ -11,12 +11,14 @@ import {
   isPlainWordPress,
   tryBlueprints,
 } from "./blueprint";
+import { getBrowserSupport } from "./browser-support";
 import { FloatingDock } from "./controls/FloatingDock";
 import { MOVE_HINT_ID } from "./controls/useDockPosition";
 import { getActivePath, type TryControls } from "./destinations";
 import { PlaygroundFrame, type BootStatus } from "./PlaygroundFrame";
 import { SitesModal } from "./SitesModal";
 import { ResetModal } from "./ResetModal";
+import { UnsupportedNotice } from "./UnsupportedNotice";
 import { WelcomeModal } from "./WelcomeModal";
 
 /** The running WordPress's version ("7.1.2"), read from wp-includes/version.php. */
@@ -24,6 +26,8 @@ async function getWordPressVersion(client: PlaygroundClient): Promise<string | n
   const source = await client.readFileAsText("/wordpress/wp-includes/version.php");
   return source.match(/\$wp_version\s*=\s*'([^']+)'/)?.[1] ?? null;
 }
+
+const noSubscribe = () => () => {};
 
 /** Full-screen "Try WordPress" experience: a live Playground with floating controls on top. */
 export function TryWordPress() {
@@ -33,6 +37,8 @@ export function TryWordPress() {
     blueprintId: typeof window === "undefined" ? DEFAULT_BLUEPRINT_ID : getRequestedBlueprintId(window.location.search),
     session: 0,
   }));
+  // Whether this browser can run Playground: `null` while prerendering, when there's no browser to ask.
+  const support = useSyncExternalStore(noSubscribe, getBrowserSupport, () => null);
   const [client, setClient] = useState<PlaygroundClient | null>(null);
   const [status, setStatus] = useState<BootStatus>({ progress: 0, caption: "Starting WordPress" });
   const [path, setPath] = useState("");
@@ -130,6 +136,9 @@ export function TryWordPress() {
     showWelcome: () => setWelcome("open"),
   };
 
+  // An in-app browser would sit on the loader forever; say so, and offer a way out.
+  if (support && support !== "ok") return <UnsupportedNotice support={support} />;
+
   return (
     <div className="try">
       <h1 className="screen-reader-text">Try WordPress</h1>
@@ -144,14 +153,17 @@ export function TryWordPress() {
       </p>
 
       <main className="try-stage">
-        <PlaygroundFrame
-          key={`${run.blueprintId}:${run.session}`}
-          blueprintId={run.blueprintId}
-          onProgress={setStatus}
-          onReady={onReady}
-          onNavigate={setPath}
-          onError={onError}
-        />
+        {/* Not until the browser is known to be able to run it. */}
+        {support === "ok" && (
+          <PlaygroundFrame
+            key={`${run.blueprintId}:${run.session}`}
+            blueprintId={run.blueprintId}
+            onProgress={setStatus}
+            onReady={onReady}
+            onNavigate={setPath}
+            onError={onError}
+          />
+        )}
         {!client && (
           <div className="try-loader">
             {error ? (

@@ -41,6 +41,11 @@ npm run lint
 - **Previews that work**: pages WordPress opens in a new tab, like the editor's Preview, open on
   trywp.now and show the visitor's live site.
 
+Playground needs service workers, which the browsers inside iOS apps (X, LinkedIn, Instagram) don't have.
+Rather than a loader that never finishes, those visitors get a card asking them to open the page in
+Safari, as playground.wordpress.net does, with a button that does it (or opens the share sheet in X) and
+one that copies the link.
+
 ## Choosing versions
 
 Like playground.wordpress.net, the page takes the versions to run from its URL:
@@ -71,6 +76,7 @@ Everything lives in `src/components/try/`; `src/app/page.tsx` renders `TryWordPr
 | `TryModal.tsx` | The dialog shell, used by `WelcomeModal.tsx`, `ResetModal.tsx` and `SitesModal.tsx`. |
 | `release-art.ts` | Which artwork the welcome shows for each WordPress release (see below). |
 | `preview-tabs.ts` | Keeps WordPress's new tabs on trywp.now (see below). |
+| `browser-support.ts` | Spots browsers that can't run Playground, like the ones inside iOS apps; `UnsupportedNotice.tsx` is what they get instead. |
 | `try.css` | All of the above's styles. |
 
 ### Blueprints
