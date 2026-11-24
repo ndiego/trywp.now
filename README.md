@@ -83,7 +83,10 @@ Today there are seven:
 - The [Ipsum](https://github.com/WordPress/ipsum) theme and its demo content.
 - The six starter sites of the [Mētis](https://github.com/WordPress/metis) theme (Business, News,
   Magazine, Portfolio, Writer, Personal). They share one theme and one set of posts; each sets its
-  starter site's design as the Front Page template.
+  starter site's design as the Front Page template, and has its own pages and menu (`pages` in its
+  definition), so it reads as one site rather than a tour of the theme's designs. A page is a stack of
+  the theme's section patterns, the page that lists the posts, or a link to a category. The theme's
+  headers and footers that list placeholder links are customized to show the site's menu instead.
 
 A theme's files are served from `public/demo/<theme>/`: the theme zip, `content.xml`, the pictures the
 gallery shows, and a `SOURCE` file recording the commit they came from. Refresh them with

@@ -4,8 +4,8 @@ Builds public/demo/metis/content.xml, the demo content for the Mētis blueprints
 
 Mētis doesn't publish its demo content yet, so this reads the public demo site
 (https://metisdemo.mystagingwebsite.com/) through the WordPress REST API and writes
-a WXR file: its posts, their featured images, categories, tags, author and comments,
-plus a page for each starter site and a navigation menu.
+a WXR file: its posts, their featured images, categories, tags, author and comments.
+Each site's pages and menu are added by its blueprint (src/components/try/blueprint.ts).
 
 The REST API only gives rendered HTML. The demo's posts are paragraphs, headings and
 quotes, which convert back to blocks exactly; the script stops if it meets anything
@@ -28,10 +28,6 @@ SITE = "https://metisdemo.mystagingwebsite.com"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "public", "demo", "metis", "content.xml")
 
-# The starter sites: page templates in the theme, each with a page that uses it.
-STARTERS = ["business", "news", "magazine", "portfolio", "writer", "personal"]
-PAGE_ID_START = 9000
-NAVIGATION_ID = 9100
 
 
 def get(path):
@@ -217,24 +213,11 @@ def main():
             )
         )
 
-    # A page for each starter site. The page is empty: its template holds the design.
-    for offset, starter in enumerate(STARTERS):
-        out.append(
-            item(PAGE_ID_START + offset, "page", starter.capitalize(), starter, "2026-11-01 09:00:00", extra=meta("_wp_page_template", starter))
-        )
-
-    blog = categories[max(used_categories, key=lambda c: categories[c]["count"])]
-    links = [("Blog", f"/category/{blog['slug']}/")] + [(s.capitalize(), f"/{s}/") for s in STARTERS]
-    navigation = "\n\n".join(
-        f'<!-- wp:navigation-link {{"label":"{label}","url":"{SITE}{path}","kind":"custom"}} /-->' for label, path in links
-    )
-    out.append(item(NAVIGATION_ID, "wp_navigation", "Navigation", "navigation", "2026-11-01 09:00:00", content=navigation))
-
     out.append("\n</channel>\n</rss>\n")
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as file:
         file.write("".join(out))
-    print(f"Wrote {len(posts)} posts, {len(STARTERS)} pages and a menu to {os.path.relpath(OUT, ROOT)}")
+    print(f"Wrote {len(posts)} posts to {os.path.relpath(OUT, ROOT)}")
 
 
 if __name__ == "__main__":

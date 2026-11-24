@@ -57,12 +57,28 @@ const ipsum: TryBlueprint = {
 };
 
 /**
+ * A page of a Mētis site, in the order its menu lists them. One of:
+ * a page built by stacking the theme's section patterns ("about-a" is `metis/about-a`;
+ * its form patterns need Jetpack, which these sites don't have),
+ * the page that lists the site's posts, or a link to one of the demo posts' categories.
+ */
+type MetisPage =
+  | { title: string; patterns: string[] }
+  | { title: string; posts: true }
+  | { title: string; category: string };
+
+/**
  * One of the starter sites of the Mētis theme (https://github.com/WordPress/metis):
  * page templates that each design a whole site. All of them share the theme and its
  * demo posts, whose images WordPress fetches from metisdemo.mystagingwebsite.com
  * during the import; `starter` names the template that becomes the front page.
+ * Each site has its own `pages`, and a menu of them, so it reads as one site
+ * rather than a tour of the theme's designs.
  */
-function metis(starter: string, site: { name: string; tagline: string; description: string }): TryBlueprint {
+function metis(
+  starter: string,
+  site: { name: string; tagline: string; description: string; pages: MetisPage[] },
+): TryBlueprint {
   return {
     id: `metis-${starter}`,
     theme: "Mētis",
@@ -81,22 +97,102 @@ function metis(starter: string, site: { name: string; tagline: string; descripti
       },
       { step: "importWxr", file: { resource: "url", url: `${origin}/demo/metis/content.xml` } },
       {
-        // The theme's own front page introduces Mētis itself. Replace it with the starter
-        // site, the way a visitor would in the Site Editor: as a customized Front Page template.
         step: "runPHP",
         code: `<?php
 require '/wordpress/wp-load.php';
+$starter = ${phpString(starter)};
+$pages = json_decode(${phpString(JSON.stringify(site.pages))}, true);
+
+// The theme's own front page introduces Mētis itself. Replace it with the starter
+// site, the way a visitor would in the Site Editor: as a customized Front Page template.
 $template = wp_insert_post([
   'post_type' => 'wp_template',
   'post_status' => 'publish',
   'post_name' => 'front-page',
   'post_title' => 'Front Page',
-  'post_content' => '<!-- wp:pattern {"slug":"metis/${starter}"} /-->',
+  'post_content' => '<!-- wp:pattern {"slug":"metis/' . $starter . '"} /-->',
 ]);
-wp_set_object_terms($template, 'metis', 'wp_theme');`,
+wp_set_object_terms($template, 'metis', 'wp_theme');
+
+// A static front page, so the site can have a page for its posts too.
+$home = wp_insert_post(['post_type' => 'page', 'post_status' => 'publish', 'post_title' => 'Home']);
+update_option('show_on_front', 'page');
+update_option('page_on_front', $home);
+
+// The site's pages, and a menu linking to each. The theme's headers show the first menu there is.
+$links = [];
+foreach ($pages as $page) {
+  if (isset($page['category'])) {
+    $term = get_category_by_slug($page['category']);
+    if (!$term) continue;
+    $link = ['label' => $page['title'], 'type' => 'category', 'id' => $term->term_id, 'url' => get_category_link($term), 'kind' => 'taxonomy'];
+  } else {
+    $content = '';
+    foreach ($page['patterns'] ?? [] as $pattern) {
+      $content .= '<!-- wp:pattern {"slug":"metis/' . $pattern . '"} /-->' . "\\n\\n";
+    }
+    $id = wp_insert_post([
+      'post_type' => 'page',
+      'post_status' => 'publish',
+      'post_title' => $page['title'],
+      'post_content' => $content,
+      // The patterns bring their own headings.
+      'meta_input' => $content ? ['_wp_page_template' => 'page-no-title'] : [],
+    ]);
+    if (!empty($page['posts'])) update_option('page_for_posts', $id);
+    $link = ['label' => $page['title'], 'type' => 'page', 'id' => $id, 'url' => get_permalink($id), 'kind' => 'post-type'];
+  }
+  $links[] = '<!-- wp:navigation-link ' . wp_json_encode($link, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . ' /-->';
+}
+$menu = wp_insert_post([
+  'post_type' => 'wp_navigation',
+  'post_status' => 'publish',
+  'post_title' => 'Navigation',
+  'post_content' => wp_slash(implode("\\n\\n", $links)),
+]);
+
+// Some of the theme's headers and footers, and the menu its Menu button opens, list
+// placeholder links instead (About, Patterns, Templates, Variations). Show the site's
+// menu there too, by customizing those template parts. A part whose markup no longer
+// matches is left as the theme has it.
+$patterns = WP_Block_Patterns_Registry::get_instance();
+foreach (['header-c', 'navigation-overlay', 'footer-a', 'footer-b', 'footer-c', 'footer-d', 'footer-e'] as $slug) {
+  $part = get_block_template('metis//' . $slug, 'wp_template_part');
+  if (!$part || !$patterns->is_registered('metis/' . $slug)) continue;
+  $theirs = $patterns->get_registered('metis/' . $slug)['content'];
+  $ours = preg_replace_callback(
+    '/<!-- wp:navigation (\\{.*?\\}) -->(.*?)<!-- \\/wp:navigation -->/s',
+    function ($navigation) use ($menu) {
+      $attributes = json_decode($navigation[1], true);
+      if (!is_array($attributes) || strpos($navigation[2], 'Patterns') === false) return $navigation[0];
+      return '<!-- wp:navigation ' . serialize_block_attributes($attributes + ['ref' => $menu]) . ' /-->';
+    },
+    $theirs
+  );
+  if ($slug === 'navigation-overlay') {
+    // It also introduces the theme's own studio, with a button that leads nowhere.
+    $ours = str_replace('Landmark is a studio that holds many things at once.', esc_html(get_bloginfo('description')), $ours);
+    $ours = preg_replace('/<!-- wp:buttons .*?<!-- \\/wp:buttons -->/s', '', $ours);
+  }
+  if (!$ours || $ours === $theirs) continue;
+  $id = wp_insert_post([
+    'post_type' => 'wp_template_part',
+    'post_status' => 'publish',
+    'post_name' => $slug,
+    'post_title' => $part->title,
+    'post_content' => wp_slash($ours),
+  ]);
+  wp_set_object_terms($id, 'metis', 'wp_theme');
+  wp_set_object_terms($id, $part->area, 'wp_template_part_area');
+}`,
       },
     ],
   };
+}
+
+/** A PHP nowdoc string literal, so the value needs no escaping. */
+function phpString(value: string) {
+  return `<<<'TRYWP'\n${value}\nTRYWP`;
 }
 
 /** Every site the visitor can land in. The first is the default. */
@@ -106,31 +202,68 @@ export const tryBlueprints: TryBlueprint[] = [
     name: "Landmark",
     tagline: "A studio for brands in motion",
     description: "A studio's site: services, clients, team and pricing.",
+    pages: [
+      { title: "Work", patterns: ["work-a"] },
+      { title: "About", patterns: ["infos-a", "team-a", "clients-a"] },
+      { title: "Journal", posts: true },
+      { title: "Contact", patterns: ["contact-a"] },
+    ],
   }),
   metis("news", {
     name: "Parallel",
     tagline: "The news, side by side",
     description: "A newspaper's front page, led by a featured story.",
+    pages: [
+      { title: "Latest", posts: true },
+      { title: "Technology", category: "technology" },
+      { title: "Craft", category: "craft" },
+      { title: "Language", category: "language" },
+      { title: "About", patterns: ["infos-d"] },
+      { title: "Subscribe", patterns: ["cta-b"] },
+    ],
   }),
   metis("magazine", {
     name: "Almanac",
     tagline: "A magazine of slow attention",
     description: "A magazine: the current issue, its makers and the archive.",
+    pages: [
+      { title: "Archive", posts: true },
+      { title: "Essays", category: "essays" },
+      { title: "Crew", patterns: ["infos-d"] },
+      { title: "Subscribe", patterns: ["cta-a"] },
+    ],
   }),
   metis("portfolio", {
     name: "Cora Vale",
     tagline: "Selected work",
     description: "A designer's portfolio, with awards and a playlist.",
+    pages: [
+      { title: "Work", patterns: ["work-a"] },
+      { title: "About", patterns: ["about-b", "career-a"] },
+      { title: "Notes", posts: true },
+      { title: "Contact", patterns: ["contact-b"] },
+    ],
   }),
   metis("writer", {
     name: "Iris Calder",
     tagline: "Books, writings and talks",
     description: "An author's home: a new book, its reviews and writings.",
+    pages: [
+      { title: "Books", patterns: ["product-list-a", "testimonials-b"] },
+      { title: "Writings", posts: true },
+      { title: "About", patterns: ["about-a"] },
+      { title: "Newsletter", patterns: ["cta-a"] },
+    ],
   }),
   metis("personal", {
     name: "Ada Fenn",
     tagline: "Builds and notes",
     description: "A personal site with selected builds and the latest posts.",
+    pages: [
+      { title: "Builds", patterns: ["services-b"] },
+      { title: "Notes", posts: true },
+      { title: "About", patterns: ["about-c"] },
+    ],
   }),
 ];
 
