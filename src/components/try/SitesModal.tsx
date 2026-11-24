@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, type KeyboardEvent } from "react";
 import { tryBlueprints } from "./blueprint";
 import { TryModal } from "./TryModal";
 
@@ -30,6 +30,21 @@ function SitePicker({ currentId, onCancel, onSwitch }: Omit<Props, "open">) {
   const [chosenId, setChosenId] = useState(currentId);
   const changed = chosenId !== currentId;
 
+  // A radio group is one stop for Tab, and the arrow keys move through it, choosing as they go.
+  const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    const steps: Record<string, number> = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 };
+    const count = tryBlueprints.length;
+    const at = tryBlueprints.findIndex((site) => site.id === chosenId);
+    let next: number;
+    if (event.key in steps) next = (at + steps[event.key] + count) % count;
+    else if (event.key === "Home") next = 0;
+    else if (event.key === "End") next = count - 1;
+    else return;
+    event.preventDefault();
+    setChosenId(tryBlueprints[next].id);
+    (event.currentTarget.children[next] as HTMLElement).focus();
+  };
+
   return (
     <>
       <h2 id="try-sites-title" className="try-heading">
@@ -37,13 +52,14 @@ function SitePicker({ currentId, onCancel, onSwitch }: Omit<Props, "open">) {
       </h2>
       <p className="try-body">Each one is a real WordPress site with its own theme and content.</p>
 
-      <div className="try-sites__grid" role="radiogroup" aria-labelledby="try-sites-title">
+      <div className="try-sites__grid" role="radiogroup" aria-labelledby="try-sites-title" onKeyDown={onKeyDown}>
         {tryBlueprints.map((site) => (
           <button
             key={site.id}
             type="button"
             role="radio"
             aria-checked={site.id === chosenId}
+            tabIndex={site.id === chosenId ? 0 : -1}
             className="try-site"
             onClick={() => setChosenId(site.id)}
           >

@@ -12,6 +12,7 @@ import {
   tryBlueprints,
 } from "./blueprint";
 import { FloatingDock } from "./controls/FloatingDock";
+import { MOVE_HINT_ID } from "./controls/useDockPosition";
 import { getActivePath, type TryControls } from "./destinations";
 import { PlaygroundFrame, type BootStatus } from "./PlaygroundFrame";
 import { SitesModal } from "./SitesModal";
@@ -131,9 +132,18 @@ export function TryWordPress() {
 
   return (
     <div className="try">
+      <h1 className="screen-reader-text">Try WordPress</h1>
       <FloatingDock {...controls} />
+      <p id={MOVE_HINT_ID} hidden>
+        Hold Shift and press an arrow key to move these controls.
+      </p>
 
-      <div className="try-stage">
+      {/* Tells screen readers when a fresh site starts loading and when it's ready; the loader is for the eyes. */}
+      <p className="screen-reader-text" role="status">
+        {error ? "" : client ? "Your WordPress site is ready." : "Setting up your WordPress site."}
+      </p>
+
+      <main className="try-stage">
         <PlaygroundFrame
           key={`${run.blueprintId}:${run.session}`}
           blueprintId={run.blueprintId}
@@ -143,10 +153,12 @@ export function TryWordPress() {
           onError={onError}
         />
         {!client && (
-          <div className="try-loader" role="status" aria-live="polite">
+          <div className="try-loader">
             {error ? (
               <>
-                <p className="try-loader__title">{error.message}</p>
+                <p className="try-loader__title" role="alert">
+                  {error.message}
+                </p>
                 <div className="wp-block-buttons">
                   {error.wp && (
                     <div className="wp-block-button">
@@ -164,10 +176,14 @@ export function TryWordPress() {
               </>
             ) : (
               <>
-                <p className="try-loader__title">Setting up your WordPress site</p>
+                <p id="try-loader-title" className="try-loader__title">
+                  Setting up your WordPress site
+                </p>
                 <div
                   className="try-loader__bar"
                   role="progressbar"
+                  aria-labelledby="try-loader-title"
+                  aria-valuetext={status.caption}
                   aria-valuemin={0}
                   aria-valuemax={100}
                   aria-valuenow={Math.round(status.progress)}
@@ -179,7 +195,7 @@ export function TryWordPress() {
             )}
           </div>
         )}
-      </div>
+      </main>
 
       <WelcomeModal
         open={welcome === "open" && !!client}
